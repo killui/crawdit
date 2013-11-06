@@ -1,0 +1,10 @@
+ReWriteEngine On
+
+
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-l
+
+#ReWriteBase /~dent/3rd-year/TP-rentree/
+
+ReWriteRule ^([a-zA-Z0-9]*)/?(.*)$ index.php?url=$0 [QSA,L]
