@@ -2,7 +2,7 @@
 
 class index extends Controller {
 
-    function __construct($app, $url) {
+    function __construct() {
         parent::__construct();
         
         $this->View->render('index');
