@@ -3,137 +3,152 @@
 <head>
 	<meta charset="UTF-8"></meta>
 	<title>Crawd It</title>
-</head>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="ressources/css/reset.css">
 <link rel="stylesheet/less" type="text/css" href="ressources/css/style.less">
+
+<!-- Script -->
 <script src="ressources/js/jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="ressources/js/less.js" type="text/javascript"></script>
 <script src="ressources/js/modernizr.js" type="text/javascript"></script>
+<script src="ressources/js/function.js" type="text/javascript"></script>
+</head>
 <body>
 
 <header>
-<a href="#"><img src="ressources/images/logo.png"></a>
+	<div class="container-960">
+		<a href="#"><img src="ressources/images/logo.png"></a>
 
-<nav>
-<a href="#">Projectso</a>
-<a href="#">New Project</a>
-<a href="#">Freelance</a>
-<form>
-<input type="search"/>
-</form>
+		<nav>
+			<a href="#"><strong>Discover</strong><br/> great projects</a>
+			<a href="#"><strong>Create</strong><br/> your project</a>
+			<a href="#"><strong>Find</strong><br/> freelancer</a>
+		
+			<form id="search-bar">
+				<input type="search" placeholder="Comedy, Drama ..."/>
+			</form>
 
-<button id="connect">connect</button>
-</nav>
-
+			<a href="#" id="connect"><img src="ressources/images/connect.png"></a>
+		
+		</nav>
+	</div>
 </header>
+
 <section class="video-container">
-<video autoplay>
+	<video  poster="ressources/images/bg-catchphrase.jpg">
 
-</video>
+	</video>
 
-<h1>make your movies ideas</br>come to life</h1>
+	<div class="container-960">
+		<h1>make your movies ideas</br>come to life</h1>
+	</div>
+	
 
 </section>
 
-<section class="proj-featured">
+<section class="proj-featured padding-30">
 
-	<div class="proj-featured-list">
+	<div class="container-960">
+		<div class="proj-featured-list margin-20">
 
-		<video poster="ressources/images/cover.jpg" id="test">
+			<video poster="ressources/images/cover.jpg" id="test">
 
-			<source src="ressources/video/frankenweenie-ft.mp4" type="video/mp4"></source>
-			<source src="ressources/video/frankenweenie-ft.theora.ogv" type="video/ogg"></source>
+				<source src="ressources/video/frankenweenie-ft.mp4" type="video/mp4"></source>
+				<source src="ressources/video/frankenweenie-ft.theora.ogv" type="video/ogg"></source>
 
-		</video>
-		<div class="proj-list-desc">
+			</video>
+			<div class="proj-list-desc">
 
-			<h3 class="proj-list-title"><a href="#">Frankenweenie</a></h3>
-			<span class="proj-list-tag">Animation - Horor - Halloween</span>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="#"> Read More...</a></p>
+				<h3 class="proj-list-title"><a href="#">Frankenweenie</a></h3>
+				<span class="proj-list-tag">Animation - Horor - Halloween</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="#"> Read More...</a></p>
 
-			<div class="proj-list-stats">
+				<div class="proj-list-stats">
 
-				<div class="funded proj-list-stats-details"><span>60%</span><span>funded</span></div>
-				<div class="pledge proj-list-stats-details"><span>6024€</span><span>pledge</span></div>
-				<div class="freelance proj-list-stats-details"><span>2</span><span>freelance</span></div>
-				<div class="togo proj-list-stats-details"><span>36 days</span><span>to go</span></div>
-				
-				<div class="progress-bar">
-					<div class="progress-bar-value"></div>
+					<div class="funded proj-list-stats-details"><span>60%</span><span>funded</span></div>
+					<div class="pledge proj-list-stats-details"><span>6024€</span><span>pledge</span></div>
+					<div class="freelance proj-list-stats-details"><span>2</span><span>freelance</span></div>
+					<div class="togo proj-list-stats-details"><span>36 days</span><span>to go</span></div>
+					
+					<div class="progress-bar">
+						<div class="progress-bar-value"></div>
+					</div>
+
 				</div>
 
 			</div>
-
+			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
-		<img src="ressources/images/proj-ombre-featured.png">
-	</div>
 
-	<div class="proj-featured-list">
+		<div class="proj-featured-list margin-20">
 
-		<video poster="ressources/images/cover.jpg" id="test">
+			<video poster="ressources/images/cover.jpg" id="test">
 
-			<source src="ressources/video/frankenweenie-ft.mp4" type="video/mp4"></source>
-			<source src="ressources/video/frankenweenie-ft.theora.ogv" type="video/ogg"></source>
+				<source src="ressources/video/frankenweenie-ft.mp4" type="video/mp4"></source>
+				<source src="ressources/video/frankenweenie-ft.theora.ogv" type="video/ogg"></source>
 
-		</video>
-		<div class="proj-list-desc">
+			</video>
+			<div class="proj-list-desc">
 
-			<h3 class="proj-list-title"><a href="#">Frankenweenie</a></h3>
-			<span class="proj-list-tag">Animation - Horor - Halloween</span>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="#"> Read More...</a></p>
+				<h3 class="proj-list-title"><a href="#">Frankenweenie</a></h3>
+				<span class="proj-list-tag">Animation - Horor - Halloween</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="#"> Read More...</a></p>
 
-			<div class="proj-list-stats">
+				<div class="proj-list-stats">
 
-				<div class="funded proj-list-stats-details"><span>60%</span><span>funded</span></div>
-				<div class="pledge proj-list-stats-details"><span>6024€</span><span>pledge</span></div>
-				<div class="freelance proj-list-stats-details"><span>2</span><span>freelance</span></div>
-				<div class="togo proj-list-stats-details"><span>36 days</span><span>to go</span></div>
-				
-				<div class="progress-bar">
-					<div class="progress-bar-value"></div>
+					<div class="funded proj-list-stats-details"><span>60%</span><span>funded</span></div>
+					<div class="pledge proj-list-stats-details"><span>6024€</span><span>pledge</span></div>
+					<div class="freelance proj-list-stats-details"><span>2</span><span>freelance</span></div>
+					<div class="togo proj-list-stats-details"><span>36 days</span><span>to go</span></div>
+					
+					<div class="progress-bar">
+						<div class="progress-bar-value"></div>
+					</div>
+
 				</div>
 
 			</div>
-
+			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
-		<img src="ressources/images/proj-ombre-featured.png">
-	</div>
 
-	<div class="proj-featured-list">
+		<div class="proj-featured-list">
 
-		<video poster="ressources/images/cover.jpg" id="test">
+			<video poster="ressources/images/cover.jpg" id="test">
 
-			<source src="ressources/video/frankenweenie-ft.mp4" type="video/mp4"></source>
-			<source src="ressources/video/frankenweenie-ft.theora.ogv" type="video/ogg"></source>
+				<source src="ressources/video/frankenweenie-ft.mp4" type="video/mp4"></source>
+				<source src="ressources/video/frankenweenie-ft.theora.ogv" type="video/ogg"></source>
 
-		</video>
-		<div class="proj-list-desc">
+			</video>
+			<div class="proj-list-desc">
 
-			<h3 class="proj-list-title"><a href="#">Frankenweenie</a></h3>
-			<span class="proj-list-tag">Animation - Horor - Halloween</span>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="#"> Read More...</a></p>
+				<h3 class="proj-list-title"><a href="#">Frankenweenie</a></h3>
+				<span class="proj-list-tag">Animation - Horor - Halloween</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="#"> Read More...</a></p>
 
-			<div class="proj-list-stats">
+				<div class="proj-list-stats">
 
-				<div class="funded proj-list-stats-details"><span>60%</span><span>funded</span></div>
-				<div class="pledge proj-list-stats-details"><span>6024€</span><span>pledge</span></div>
-				<div class="freelance proj-list-stats-details"><span>2</span><span>freelance</span></div>
-				<div class="togo proj-list-stats-details"><span>36 days</span><span>to go</span></div>
-				
-				<div class="progress-bar">
-					<div class="progress-bar-value"></div>
+					<div class="funded proj-list-stats-details"><span>60%</span><span>funded</span></div>
+					<div class="pledge proj-list-stats-details"><span>6024€</span><span>pledge</span></div>
+					<div class="freelance proj-list-stats-details"><span>2</span><span>freelance</span></div>
+					<div class="togo proj-list-stats-details"><span>36 days</span><span>to go</span></div>
+					
+					<div class="progress-bar">
+						<div class="progress-bar-value"></div>
+					</div>
+
 				</div>
 
 			</div>
-
+			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
-		<img src="ressources/images/proj-ombre-featured.png">
 	</div>
 
 </section>
 
 <section class="proj-new">
 <!--list project-->
-
+	
 	<img src="proj-more.png" alt="more projects"/>
 	<div class="anim-more"></div>
 	<div class="anim-more2"></div>
@@ -142,101 +157,111 @@
 
 <section class="kinduser">
 
-	<div class="crowd-info">
+	<div class="container-960">
+		
+	
+		<div class="info">
 
-		<h2>crowdfunding</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<a href="#">Discover Projects</a>
+			<h2>crowdfunding</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			</p>
+			<a href="#">Discover Projects</a>
 
-	</div>
-	<div class="free-info">
+		</div>
+		<div class="info">
 
-		<h2>freelances</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<a href="#">Find a job</a>
+			<h2>freelances</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			</p>
+			<a href="#" >Find a job</a>
 
-	</div>
-	<div class="start-info">
+		</div>
+		<div class="info">
 
-		<h2>start a project</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<a href="#">Launch your idea</a>
+			<h2>start a project</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			</p>
+			<a href="#">Launch your idea</a>
 
+		</div>
 	</div>
 
 </section>
 
 <section class="infographie">
+	<div class="container-960">
+	
+		<h2>crawd.it this is...</h2>
+		
+		<div class="box-number">
+			<span class="number">2046</span>
+			<br/>
+			<span class="text">projects</span>
+		</div>
+			
+		<div class="box-number">
+			<span class="number">4 678 290 $</span>
+			<br/>
+			<span class="text">funded in 2014</span>
+		</div>
+			
+		<div class="box-number">
+			<span class="number">239</span>
+			<br/>
+			<span class="text">freelancers</span>
+		</div>
 
-<h2>crawd.it this is...</h2>
-	<div><span>2046</span><span>projects</span></div>
-	<div><span>4 678 290 $</span><span>funded in 2014</span></div>
-	<div><span>239</span><span>freelancers</span></div>
+	</div>
 
 </section>
+
 <footer>
-
-	<ul>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-	</ul>
+	
+	<div class="container-960">
+	
+		<ul>
+			<h6>Genres</h6>
+			<li><a href="#">Action</a></li>
+			<li><a href="#">Adventure</a></li>
+			<li><a href="#">Drama</a></li>
+			<li><a href="#">Comedy</a></li>
+			<li><a href="#">Animation</a></li>
+			<li><a href="#">Science-fiction</a></li>
+			<li><a href="#">Horror</a></li>
+			<li><a href="#">Nature</a></li>
+		</ul>
 
 		<ul>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-	</ul>
+			<h6>Crawd.it</h6>
+			<li><a href="#">What's Crawd.it?</a></li>
+			<li><a href="#">How does it work?</a></li>
+			<li><a href="#">Who are we?</a></li>
+			<li><a href="#">Press</a></li>
+			
+		</ul>
 
 		<ul>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-	</ul>
+			<h6>Help</h6>
+			<li><a href="#">F.A.Q</a></li>
+			<li><a href="#">Support</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Ressources</a></li>
+			
+		</ul>
 
 		<ul>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-		<li><a href="#"></a></li>
-	</ul>
+			<h6>Note</h6>
+			
+		</ul>
 
 
-
+	</div>
 
 </footer>
 
