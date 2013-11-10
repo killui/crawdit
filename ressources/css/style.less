@@ -5,6 +5,8 @@
 @darkgrey: #333333;
 @lightgrey: #e8e8e8;
 @white: #ffffff;
+@darkgreyborder:#252525;
+@lightgreyborder:#424242;
 
 
 /***padding***/
@@ -81,33 +83,68 @@ header {
 	left: 0;
 	width: 100%;
 	z-index: 10;
+	/*border-bottom:1px solid @lightgreyborder;*/
 
 	nav {
-		text-align: right;
-		a {
-			width: 115px;
-			.link_white;
-			padding: @p_20 @p_10;
-			margin:0 auto;
-			display: inline-block;
-			text-align: left;
-			vertical-align: middle;
+		text-align:right;
+		.logo{float:left;height:33px;width:214px;}
+		div{
+			float:left;
+			vertical-align: top;
+			display:inline-block;
+			padding-top:21px;
+			padding-bottom:18px;
+	/*		border-left:1px solid @darkgreyborder;
+			border-bottom:1px solid @darkgreyborder;
+			border-right:1px solid @lightgreyborder;*/
+			padding-right:10px;
+			padding-left:10px;
 
-			strong {
-				text-transform: uppercase;
-				font-weight: bold;
-			}
+				&:first-child{
+				border:none;
+				}
+				&:last-child{
+					border:none;
+				}
+		}
+		ul {display:inline-block;
+			float:left;
+			margin-left:0px;
+			height:73px;
+			li{
+				float:left;
+				display:inline-block;
+					/*border-left:1px solid @darkgreyborder;
+					border-bottom:1px solid @darkgreyborder;
+					border-right:1px solid @lightgreyborder;*/
+				a {
+					width: 115px;
+					.link_white;
+					padding: @p_20 @p_10;
+					margin:0;
+					display: inline-block;
+					text-align: left;
+					vertical-align: middle;
+					text-shadow:1px 0px 0px #000;
 
-			&:hover {
-				strong {
-					color: @lightred;
+					strong {
+						text-transform: uppercase;
+						font-weight: bold;
+					}
+
+					&:hover {
+						strong {
+							color: @lightred;
+						}
+					}
+
+					&#connect {
+						width: 30px;
+					}
 				}
 			}
-
-			&#connect {
-				width: 30px;
-			}
 		}
+
 		
 
 	}
@@ -116,8 +153,10 @@ header {
 		display: inline-block;
 
 		input {
-			border: #000;
-			background: #252525;
+			/*border: #fff;*/
+			border: #333 1px solid;
+			/*background: #252525;*/
+			background:none;
 			color: @white;
 			padding: @p_10;
 			width: 223px;
