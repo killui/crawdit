@@ -1,6 +1,22 @@
 $(document).ready(function () {
+
+	/***MORE BUTTON***/
+/*		function showNewProj(){*/
+
+		$('.more-proj-btn').click(function(){
+			console.log('gaga');
+			alert('tta');
+			$('.proj-new').animate({"height":"300px","overflow":"auto"});
+
+
+
+		});
+/*		showNewProj();
+
+
+	}*/
 	
-	//header background
+	/***HEADER BACKGROUND***/
 	var withbg = $('.proj-featured').offset().top;
 	var withoutbg = $('.video-container').offset().top;
 	$(document).scroll(function(){
@@ -20,6 +36,8 @@ $(document).ready(function () {
 		}
 		
 	});
+
+
 
 
 })
