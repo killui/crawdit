@@ -38,11 +38,16 @@
 	padding: @p_10 @p_30;
 	display: inline-block;
 	text-decoration: none;
+	width:150px;
+	font-weight:bold;
 
 	&:hover {
 		background: @lightgrey;
 		color: @darkred;
 		text-shadow:0 1px 0 @darkred;
+		-webkit-transition:all ease-in-out 0.2s;
+		-moz-transition:all ease-in-out 0.2s;
+		transition:all ease-in-out 0.2s;
 	}
 }
 
@@ -207,21 +212,22 @@ header {
 	width:300px;
 	background-color:#f7f7f7;
 	display: inline-block;
+	background:#eee;
 
 	video {
 		display:block;
 		vertical-align:top;
 		width: 100%;
-		//height:135px;
+		height:165px;
 		margin:0;
-		padding:0 5px;
+		padding:0px;
 	}
 
 	.proj-list-desc{
 		display:block;
 		width:295px;
 		line-height:1;
-		padding: 5px;
+		padding-bottom: 5px;
 
 		.proj-list-title { 
 			margin-top:5px;
@@ -343,7 +349,7 @@ header {
 
 .funded, .pledge, .freelance, .togo{
 	display:inline-block;
-	border-right:#eee solid 1px;
+	border-right:#ddd solid 1px;
 	padding: 0 7px;
 	font-size:0.7em;
 }
@@ -357,10 +363,10 @@ header {
 .progress-bar{
 	height:20px;
 	width:288px;
-	border:#ddd solid 1px;
+	border:#ccc solid 1px;
 	position:relative;
 	margin-top:3px;
-	background-color:#eee;
+	background-color:#ddd;
 }
 .progress-bar-value{position:absolute;height:100%;width:50%;
 background: #990100; /* Old browsers */
@@ -409,13 +415,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 .kinduser {
 	background: #f7f7f7;
 	padding: @p_40 0 @p_25;
+	position:relative;
 	.info {
 		width: 300px;
 		overflow: hidden;
 		display: inline-block;
 		vertical-align: top;
 		text-align: center;
-		
+		height:280px;
+		position:relative;
 
 		h2 {
 			text-transform: uppercase;
@@ -432,8 +440,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 
 		a {
 			.btn-dark-grey;
+			position:absolute;
+			bottom:0px;
+			display:block;
+			margin-left:45px;
+
+
 		}
 		&:last-child{padding-right:0;}
+
 
 	}
 }
