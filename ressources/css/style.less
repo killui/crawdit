@@ -15,6 +15,7 @@
 @p_20: 1.25em;
 @p_25: 1.563em;
 @p_30: 1.875em;
+@p_40: 2.5em;
 
 /***margin***/
 
@@ -218,7 +219,7 @@ header {
 
 	.proj-list-desc{
 		display:block;
-		width:350px;
+		width:295px;
 		line-height:1;
 		padding: 5px;
 
@@ -247,6 +248,7 @@ header {
 			font-size:0.75em;
 			line-height:1;
 			margin: 5px 0 15px;
+			width: 100%;
 
 			a {
 				font-size:0.75em;
@@ -268,7 +270,15 @@ header {
 	}
 }
 
+.proj-new {
+	text-align: center;
+	z-index: 2;
 
+	.more {
+		width: 400px;
+		margin: 0 auto -40px;
+	}
+}
 
 /***PROJECT LIST***/
 
@@ -339,15 +349,32 @@ header {
 
 
 
-.funded, .pledge, .freelance, .togo{display:inline-block;border-right:#eee solid 1px;padding-left:10px;padding-right:10px;font-size:0.72em;}
-.togo{border-right:#fff;}
-.funded{padding-left:0;}
-.proj-list-stats>div>span{display:block;color:#333;}
+.funded, .pledge, .freelance, .togo{
+	display:inline-block;
+	border-right:#eee solid 1px;
+	padding:0 5px;
+	font-size:0.7em;
+}
+.togo{
+	border-right:#fff;
+}
+.funded{
+	padding-left:0;
+}
+.proj-list-stats {
+	width: 290px;
+
+	span {
+		display:block;
+		color:#333;
+	}	
+}
+	
 
 .proj-list-stats-details{text-transform:uppercase;}
 .proj-list-stats-details span:first-child{font-weight:bold;color:#990100;font-size:1.4em;margin-bottom:2px;text-transform:lowercase;}
 
-.progress-bar{height:20px;width:345px;border:#ddd solid 1px;position:relative;margin-top:3px;background-color:#eee;}
+.progress-bar{height:20px;width:100%;border:#ddd solid 1px;position:relative;margin-top:3px;background-color:#eee;}
 .progress-bar-value{position:absolute;height:100%;width:50%;
 background: #990100; /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -367,7 +394,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 
 .kinduser {
 	background: #f7f7f7;
-	padding: @p_30 0 @p_25;
+	padding: @p_40 0 @p_25;
 	.info {
 		width: 300px;
 		overflow: hidden;
@@ -378,8 +405,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 		h2 {
 			text-transform: uppercase;
 			color: @lightred;
-			font-size: 1.2em;
-			margin: 0 0 1em;
+			font-size: 1.6em;
+			margin: 1em 0 ;
 		}
 
 		p {
