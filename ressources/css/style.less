@@ -232,6 +232,7 @@ header {
 			margin-top:10px;
 			color:@lightred;
 			margin-bottom:2px;
+			font-weight:bold;
 
 			a {	
 				color:@lightred;
@@ -339,7 +340,7 @@ header {
 
 
 
-.funded, .pledge, .freelance, .togo{display:inline-block;border-right:#eee solid 1px;padding-left:10px;padding-right:10px;font-size:0.72em;}
+.funded, .pledge, .freelance, .togo{display:inline-block;border-right:#eee solid 1px;padding-left:7px;padding-right:7px;font-size:0.72em;}
 .togo{border-right:#fff;}
 .funded{padding-left:0;}
 .proj-list-stats>div>span{display:block;color:#333;}
@@ -362,7 +363,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 
 }
 
+/***NEW PROJECT***/
+.proj-new{
 
+	div{
+		overflow:hidden;
+		height:0px;
+
+	}
+}
+
+
+.more-proj-btn{
+	position:relative;
+	height:100px;
+	text-align:center;
+	img{
+		position:absolute center;
+		
+
+
+	}
+	.proj-minus{
+		display:none;
+	}
+
+}
 /*** KINDUSER ***/
 
 .kinduser {
@@ -374,12 +400,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 		display: inline-block;
 		vertical-align: top;
 		text-align: center;
+		padding-right: 22px;
 
 		h2 {
 			text-transform: uppercase;
 			color: @lightred;
-			font-size: 1.2em;
+			font-size: 1.8em;
 			margin: 0 0 1em;
+			font-weight:bold;
 		}
 
 		p {
@@ -390,6 +418,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 		a {
 			.btn-dark-grey;
 		}
+		&:last-child{padding-right:0;}
+
 	}
 }
 
@@ -404,6 +434,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 	h2 {
 		font-size: 3em;
 		margin: 0 0 1em;
+		text-transform: uppercase;
+		text-shadow:0 1px 0 #000;
 	}
 
 	.box-number {
