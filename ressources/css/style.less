@@ -233,6 +233,7 @@ header {
 			margin-top:10px;
 			color:@lightred;
 			margin-bottom:2px;
+			font-weight:bold;
 
 			a {	
 				color:@lightred;
@@ -267,16 +268,6 @@ header {
 	.proj-list-tag{
 		font-size:0.6em;
 		color:@lightred;
-	}
-}
-
-.proj-new {
-	text-align: center;
-	z-index: 2;
-
-	.more {
-		width: 400px;
-		margin: 0 auto -40px;
 	}
 }
 
@@ -374,7 +365,14 @@ header {
 .proj-list-stats-details{text-transform:uppercase;}
 .proj-list-stats-details span:first-child{font-weight:bold;color:#990100;font-size:1.4em;margin-bottom:2px;text-transform:lowercase;}
 
-.progress-bar{height:20px;width:100%;border:#ddd solid 1px;position:relative;margin-top:3px;background-color:#eee;}
+.progress-bar{
+	height:20px;
+	width:290px;
+	border:#ddd solid 1px;
+	position:relative;
+	margin-top:3px;
+	background-color:#eee;
+}
 .progress-bar-value{position:absolute;height:100%;width:50%;
 background: #990100; /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -389,24 +387,53 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 
 }
 
+/***NEW PROJECT***/
+.proj-new{
+
+	div{
+		overflow:hidden;
+		height:0px;
+
+	}
+}
+
+.more-proj-btn{
+	position:relative;
+	height:100px;
+	text-align:center;
+	margin: 0 0 -40px;
+	z-index: 2;
+
+	img{
+		position:absolute center;
+	}
+	.proj-minus{
+		display:none;
+	}
+
+}
 
 /*** KINDUSER ***/
 
 .kinduser {
 	background: #f7f7f7;
 	padding: @p_40 0 @p_25;
+
 	.info {
 		width: 300px;
 		overflow: hidden;
 		display: inline-block;
 		vertical-align: top;
 		text-align: center;
+		//padding-right: 22px;
 
 		h2 {
 			text-transform: uppercase;
 			color: @lightred;
-			font-size: 1.6em;
-			margin: 1em 0 ;
+			font-size: 1.8em;
+			margin: 1em 0;
+			font-weight:bold;
+
 		}
 
 		p {
@@ -417,6 +444,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 		a {
 			.btn-dark-grey;
 		}
+		//&:last-child{padding-right:0;}
+
 	}
 }
 
@@ -431,6 +460,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 	h2 {
 		font-size: 3em;
 		margin: 0 0 1em;
+		text-transform: uppercase;
+		text-shadow:0 1px 0 #000;
 	}
 
 	.box-number {
