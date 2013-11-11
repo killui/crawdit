@@ -15,6 +15,7 @@
 @p_20: 1.25em;
 @p_25: 1.563em;
 @p_30: 1.875em;
+@p_40: 2.5em;
 
 /***margin***/
 
@@ -218,7 +219,7 @@ header {
 
 	.proj-list-desc{
 		display:block;
-		width:350px;
+		width:295px;
 		line-height:1;
 		padding: 5px;
 
@@ -289,7 +290,7 @@ header {
 
 	.proj-list-desc{
 		display:inline-block;
-		width:350px;
+		width:295px;
 		line-height:0.9;
 
 		.proj-list-title { 
@@ -340,7 +341,12 @@ header {
 
 
 
-.funded, .pledge, .freelance, .togo{display:inline-block;border-right:#eee solid 1px;padding-left:7px;padding-right:7px;font-size:0.72em;}
+.funded, .pledge, .freelance, .togo{
+	display:inline-block;
+	border-right:#eee solid 1px;
+	padding: 0 7px;
+	font-size:0.7em;
+}
 .togo{border-right:#fff;}
 .funded{padding-left:0;}
 .proj-list-stats>div>span{display:block;color:#333;}
@@ -348,7 +354,14 @@ header {
 .proj-list-stats-details{text-transform:uppercase;}
 .proj-list-stats-details span:first-child{font-weight:bold;color:#990100;font-size:1.4em;margin-bottom:2px;text-transform:lowercase;}
 
-.progress-bar{height:20px;width:345px;border:#ddd solid 1px;position:relative;margin-top:3px;background-color:#eee;}
+.progress-bar{
+	height:20px;
+	width:288px;
+	border:#ddd solid 1px;
+	position:relative;
+	margin-top:3px;
+	background-color:#eee;
+}
 .progress-bar-value{position:absolute;height:100%;width:50%;
 background: #990100; /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -378,6 +391,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 	position:relative;
 	height:100px;
 	text-align:center;
+	margin: 0 0 -40px;
+	z-index: 2;
 	img{
 		position:absolute center;
 		
@@ -393,20 +408,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 
 .kinduser {
 	background: #f7f7f7;
-	padding: @p_30 0 @p_25;
+	padding: @p_40 0 @p_25;
 	.info {
 		width: 300px;
 		overflow: hidden;
 		display: inline-block;
 		vertical-align: top;
 		text-align: center;
-		padding-right: 22px;
+		
 
 		h2 {
 			text-transform: uppercase;
 			color: @lightred;
 			font-size: 1.8em;
-			margin: 0 0 1em;
+			margin: 1em 0 ;
 			font-weight:bold;
 		}
 
