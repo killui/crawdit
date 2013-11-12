@@ -10,10 +10,11 @@ class Bootstrap {
             print_r($url);
             
             $file = "controllers/".$url.".php";
-            if (!file_exists($file)){
-                $controller = new error;
-            } else {
+            if (file_exists($file)){
+                
                 $controller = new $url[0];
+            } else {
+                $controller = new error;
             }
             
             
