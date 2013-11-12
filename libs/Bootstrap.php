@@ -9,9 +9,10 @@ class Bootstrap {
             $url = explode('/', rtrim($_GET['url'], '/'));
             print_r($url);
             
-            $file = "controllers/".$url.".php";
+            $file = "controllers/".$url[0].".php";
+
             if (file_exists($file)){
-                
+                require $file;
                 $controller = new $url[0];
             } else {
                 $controller = new error;
