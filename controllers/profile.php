@@ -1,22 +1,11 @@
 <?php
 
-class profile extends Controller{
+class profile {
 
-    function __construct($app, $url) {
+    function __construct() {
         parent::__construct();
         
-        if(isset($url[1])){
-            $id = $url[1];
-            $this->getUser($id);
-        }
-        
-        //$this->View->render('profile');
-    }
-    
-    public function getUser($id){
-        $User = new User;
-        $data = $User->getUser($id);
-        $this->View->profilerender('profile', $data);
+        $this->View->render('profile');
     }
 
 }

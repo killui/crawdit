@@ -10,8 +10,4 @@ class View {
         require 'views/'.$view.'.php';
     }
     
-    public function profilerender($view, $data){
-        require 'views/'.$view.'.php';
-    }
-    
 }
