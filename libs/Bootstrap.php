@@ -13,7 +13,7 @@ class Bootstrap {
 
             if (file_exists($file)){
                 require $file;
-                $controller = new $url[0];
+                $controller = new $url[0]($this, $url);
             } else {
                 $controller = new error;
             }
