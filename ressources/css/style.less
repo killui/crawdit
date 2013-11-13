@@ -260,6 +260,7 @@ header {
 			color: @white;
 			padding: @p_10;
 			width: 223px;
+			height:17px;
 		}
 	}
 }
@@ -273,7 +274,10 @@ header {
 		width: 475px;
 	}
 
-	.desc-proj {
+/*.proj-success{
+	
+}*/
+	.proj-success {
 		display: inline-block;
 		vertical-align: top;
 		width: 425px;
@@ -285,6 +289,15 @@ header {
 			color:@lightred;
 			margin: 0 0 .5em;
 			font-weight:bold;
+			a{
+
+		color:@lightred;
+		text-decoration:none;
+		&:hover{
+
+			text-decoration:underline;
+		}
+	}
 		}
 		.proj-list-tag{
 			font-size:0.6em;
@@ -424,9 +437,11 @@ header {
 
 			p {
 				font-size:0.75em;
-				line-height:1;
+				line-height:1.1;
 				margin: 5px 0 15px;
+				margin-right:5px;
 				margin-top:20px;
+				
 
 				a {
 					font-size:0.75em;
@@ -535,7 +550,7 @@ header {
 .proj-list-stats {
 	background:#eee;
 	position:absolute;
-	bottom:36px;
+	bottom:38px;
 
 	div {
 		
@@ -664,6 +679,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 		p {
 			line-height: 1.2em;
 			margin: 0 0 1em;
+			font-family:'HelveticaNeueLight';
 		}
 
 		a {
@@ -694,6 +710,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 		margin: 0 0 1em;
 		text-transform: uppercase;
 		text-shadow:0 1px 0 #000;
+		font-family:'HelveticaNeueThin';
 	}
 
 	.box-number {
@@ -710,6 +727,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 		.text {
 			font-size:1.5em;
 			text-transform: uppercase;
+			font-family:'HelveticaNeueLight';
 		}
 	}
 }
