@@ -19,7 +19,7 @@ class profile extends Controller{
     }
     
     public function getUser($user) {
-        $User = new User;
+        $User = new UserModel;
         $data = $User->getUser($user);
         $this->View->profileRender('profile',$data);
     }
