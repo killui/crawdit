@@ -17,6 +17,24 @@ $(document).ready(function () {
 
 	}*/
 	
+
+	var height = parseInt($(".desc-proj").height());
+
+	$(".desc-proj aside").height(height);
+	console.log(height);
+
+	/*** Perks checked ***/
+	
+	$('.perks').on('click',function(){
+		$("input").prop("checked",false);
+
+
+		$("input",this).prop("checked",true);
+		
+
+	});
+	
+
 	/***HEADER BACKGROUND***/
 	/*var withbg = $('.proj-featured').offset().top;
 	var withoutbg = $('.video-container').offset().top;

@@ -117,7 +117,7 @@
 /***INIT***/
 body{
 	font-size:100%;
-	font-family:Helvetica;
+	font-family:'HelveticaNeueLight';
 	background: @white;
 
 	&.v2 {
@@ -757,7 +757,7 @@ footer {
 		color: @darkred;
 		text-transform: uppercase;
 		font-size: 2.25em;
-		font-weight: bold;
+		font-family: 'HelveticaNeueBold';
 
 	}
 
@@ -840,7 +840,7 @@ footer {
 
 			h6 {
 				text-shadow:1px 1px 0 #000;
-				font-weight: bold;
+				font-family: 'HelveticaNeueBold';
 				font-size: 0.875em;
 				margin: 0 0 .625em;
 			}
@@ -880,7 +880,7 @@ footer {
 
 
 		a {
-			font-weight: bold;
+			font-family: 'HelveticaNeueBold';
 			border-radius: 2px;
 			margin: .625em auto;
 			text-align: center;
@@ -920,7 +920,7 @@ footer {
 
 		h6 {
 			color: @darkgrey;
-			font-weight: bold;
+			font-family: 'HelveticaNeueBold';
 			margin: 1em 0;
 		}
 		p {
@@ -951,18 +951,16 @@ footer {
 
 	aside {
 		width: 300px;
-		height: 100%;
 		display: inline-block;
 		vertical-align: top;
 		background: #eee;
-		
 		float: right;
 
 		h3 {
 			color: @darkgrey;
 			padding: .865em 0;
 			text-align: center;
-			font-weight: bold;
+			font-family: 'HelveticaNeueBold';
 			font-size: 1.75em;
 			border-bottom:solid 1px #e8e8e8;
 			display: block; 
@@ -976,6 +974,10 @@ footer {
 				padding: .625em;
 				border-top:solid 1px #e8e8e8;
 				cursor: pointer;
+
+				&:hover {
+					background-color: #e0e0e0;
+				}
 				span {
 					
 					display: inline-block;
@@ -1009,6 +1011,7 @@ footer {
 						vertical-align: top;
 						cursor: pointer;
 						position: relative;
+						font-family: helvetica;
 
 						&:before {
 							content: "";
@@ -1022,13 +1025,11 @@ footer {
 					}
 
 					input[type=radio]:checked + label:before {
-						text-align: center;
 						content: "\2022";
 						color: @lightred;
 						font-size: 40px;
-						//text-align: center;
 						line-height: 14px;
-
+						//text-indent: 1px;
 					}
 				}
 				
