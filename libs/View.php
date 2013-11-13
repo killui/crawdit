@@ -10,4 +10,8 @@ class View {
         require 'views/'.$view.'.php';
     }
     
+    public function profileRender($view, $data){
+        require 'views/'.$view.'.php';
+    }
+    
 }
