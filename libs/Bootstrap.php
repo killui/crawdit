@@ -12,8 +12,15 @@ class Bootstrap {
             $file = "controllers/".$url[0].".php";
 
             if (file_exists($file)){
+                
                 require $file;
-                $controller = new $url[0];
+                
+                if($url[0] == 'profile'){
+                    $controller = new profile($this, $url);
+                } else {
+                    $controller = new $url[0];
+                }
+                
             } else {
                 $controller = new error;
             }
