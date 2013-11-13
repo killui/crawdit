@@ -43,7 +43,7 @@ $(document).ready(function () {
 	var height = parseInt($(".desc-proj").height());
 
 	$(".desc-proj aside").height(height);
-	console.log(height);
+	
 
 	/*** Perks checked ***/
 	
@@ -55,8 +55,7 @@ $(document).ready(function () {
 	
 
 	/**** Video mode cinema ***/
-	var videoproj = $('.video-proj').offset().top;
-	var infoproj = $('.info-proj').offset().top;
+	var infoproj = $('.info-proj').offset.top;
 
 	$('.need-proj video, .play').on('click',function(){
 		
