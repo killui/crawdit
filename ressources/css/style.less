@@ -71,6 +71,8 @@
 @white: #ffffff;
 @darkgreyborder:#252525;
 @lightgreyborder:#424242;
+@turquoise:#82dbde;
+@newred:#d54544;
 
 
 /***padding***/
@@ -201,6 +203,21 @@ header {
 		background: @darkgrey;
 		position: relative;	
 	}
+	div{/*border-bottom:@darkgreyborder 1px solid; border:green solid 1px;*/}
+	.signin-container{
+			
+			border-top:@darkgreyborder 1px solid;
+				width:100%;
+				/*padding:1px;*/
+
+			.signin{
+
+				height:0px;
+				width:100%;
+				border-top:@lightgreyborder 1px solid;
+				overflow:hidden;
+			}
+		}
 
 	nav {
 		text-align:right;
@@ -267,9 +284,9 @@ header {
 					}
 				}
 			}
-		}
 
-		
+		}
+	
 
 	}
 
@@ -730,7 +747,7 @@ overflow:hidden;
 
 .more-proj-btn{
 	position:relative;
-	height:100px;
+	height:90px;
 	text-align:center;
 	margin: 0 0 -59px;
 	z-index: 2;
@@ -747,7 +764,7 @@ overflow:hidden;
 		width:450px;
 		position:relative;
 		margin:0 auto;
-		top: 40px;
+		top: 30px;
 		background: -moz-linear-gradient(left,  rgba(153,1,0,0) 0%, rgba(153,1,0,1) 25%, rgba(153,1,0,1) 50%, rgba(153,1,0,1) 75%, rgba(153,1,0,0.01) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(153,1,0,0)), color-stop(25%,rgba(153,1,0,1)), color-stop(50%,rgba(153,1,0,1)), color-stop(75%,rgba(153,1,0,1)), color-stop(100%,rgba(153,1,0,0.01))); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(left,  rgba(153,1,0,0) 0%,rgba(153,1,0,1) 25%,rgba(153,1,0,1) 50%,rgba(153,1,0,1) 75%,rgba(153,1,0,0.01) 100%); /* Chrome10+,Safari5.1+ */
@@ -760,8 +777,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00990100', e
 
 	.more-square{
 
-		height:80px;
-		width:80px;
+		height:60px;
+		width:60px;
 		-webkit-transform: rotate(45deg);
 		-moz-transform: rotate(45deg);
 		transform: rotate(45deg);
@@ -786,8 +803,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00990100', e
 				-moz-transform:rotate(-45deg);
 				transform:rotate(-45deg);
 				position: absolute;
-				left:16px;
-				top:14px;
+				left:0px;
+				top:0px;
+				padding:15px;
 				-webkit-transition:0.3s ease-in all;
 				-moz-transition:0.3s ease-in all;
 				transition:0.3s ease-in all;
@@ -1247,4 +1265,29 @@ footer {
 	}
 
 	
+}
+
+footer{
+
+	ul{margin-left:200px;
+		text-shadow:#333 1px 0px 0px;
+		strong{
+
+			font-weight:bold;
+			color:#fff;
+			font-size:1.3em;
+			line-height:2.5;
+			text-transform:uppercase;
+
+		}
+		li{
+			line-height:1.5;
+		}
+
+			&:first-child{
+				margin-left:0;
+			}
+
+	}
+
 }
