@@ -3,6 +3,18 @@ $(document).ready(function () {
 	/***MORE BUTTON***/
 /*		function showNewProj(){*/
 
+	$('#connect-btn').click(function(){
+
+		var signHeight = $('.signin').height();
+
+			if(signHeight<3){
+		$('.signin').animate({'height':'300px'},'slow');
+			}else{
+				$('.signin').animate({'height':'0px'},'slow');
+			}
+
+	});
+
 		$('.more-proj-btn').click(function(){
 			console.log('gaga');
 			$('.proj-new').animate({"height":"420px","overflow":"auto"},'slow');
@@ -124,17 +136,23 @@ $(document).ready(function () {
 		}
 		
 	});*/
+/*$('.more-square').mouseover(function(e){
+e.stopPropagation();
 
-$('.more-square').mouseover(function(e){
+});*/
 
-	$('.more-line').animate({'width':'900px'},'slow');
-	e.stopPropagation();
+var morePropag = 0;
+$('.more-square img').mouseover(function(e){
+	
+	$('.more-line').animate({'width':'900px'},'fast');
+	
 
 
 });
-$('.more-square').mouseout(function(e){
-	$('.more-line').animate({'width':'450px'},'slow');
-	e.stopPropagation();
+$('.more-square img').mouseout(function(e){
+	
+	$('.more-line').animate({'width':'450px'},'fast');
+
 
 });
 
