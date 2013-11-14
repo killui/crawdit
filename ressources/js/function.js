@@ -55,11 +55,12 @@ $(document).ready(function () {
 	
 
 	/**** Video mode cinema ***/
-	var infoproj = $('.info-proj').offset.top;
+	var videoproj = $('.video-proj');
+	var infoproj = $('.info-proj');
 
 	$('.need-proj video, .play').on('click',function(){
 		
-		$(document).scrollTo(infoproj,500);
+		$(document).scrollTo(videoproj,500);
 		$('.cine-mode').fadeIn(500);
 		$('.play').fadeOut(500);
 		$(".video-proj").animate({

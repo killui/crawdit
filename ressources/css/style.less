@@ -85,7 +85,40 @@
 
 /***mixin***/
 
-
+.btn-disabled {
+	font-family:  'HelveticaNeueBold';
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	text-shadow:1px 2px 0 #cacaca;
+	display: block;
+	width: 275px;
+	padding: 1.125em 0;
+	border: solid 1px #cacaca;
+	background: #e8e8e8; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iI2NhY2FjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top, #e8e8e8 0%, #cacaca 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(99%,#cacaca)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e8e8e8 0%,#cacaca 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e8e8e8 0%,#cacaca 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #e8e8e8 0%,#cacaca 99%); /* IE10+ */
+	background: linear-gradient(to bottom, #e8e8e8 0%,#cacaca 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#cacaca',GradientType=0 ); /* IE6-8 */
+}
+.hover-btn-red {
+	border: solid 1px #6c0100;
+	background: #7f0100; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdmMDEwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzZjMDEwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top, #7f0100 0%, #6c0100 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7f0100), color-stop(99%,#6c0100)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7f0100 0%,#6c0100 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7f0100 0%,#6c0100 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #7f0100 0%,#6c0100 99%); /* IE10+ */
+	background: linear-gradient(to bottom, #7f0100 0%,#6c0100 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f0100', endColorstr='#6c0100',GradientType=0 ); /* IE6-8 */
+}
 .btn-red {
 	font-family:  'HelveticaNeueBold';
 	text-align: center;
@@ -106,6 +139,11 @@
 	background: -ms-linear-gradient(top,  #990100 0%,#7f0100 99%); /* IE10+ */
 	background: linear-gradient(to bottom,  #990100 0%,#7f0100 99%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', endColorstr='#7f0100',GradientType=0 ); /* IE6-8 */
+
+
+	&:hover {
+		.hover-btn-red;
+	}
 }
 
 .link_white {
@@ -1030,20 +1068,24 @@ footer {
 		#number-need {
 			border-top: solid 1px #252525;
 			border-bottom:solid 1px #424242;
+			//text-align: left;
 			
 			li {
 				text-shadow:1px 1px 0 #000;
 				margin: 0 0 0 -4px;
-				padding:.625em ; 
+				padding:.625em 0; 
 				display: inline-block;
 				font-size: 1em;
 				border-right: solid 1px #252525;
 				border-left: solid 1px #424242;
+				text-align: center;
+				width: 158px;
 
 				&:last-child {
 					border:none;
 					border-left: solid 1px #424242;
 					margin-left: -4px;
+					//text-align: center;
 				}
 
 				span {
@@ -1055,9 +1097,10 @@ footer {
 
 		#human-need {
 			border-top: solid 1px #252525;
-			
+			height: 70px;
+			overflow: hidden;
 			//border-bottom:solid 1px #424242;
-			
+			position: relative;
 			padding: .625em;
 
 			h6 {
@@ -1066,24 +1109,32 @@ footer {
 				font-size: 0.875em;
 				margin: 0 0 .625em;
 			}
-			li {
-				font-size: 0.750em;
-				width: 130px;
-				clear: both;
-				span {
-					
-					&:first-child {
-						float:left
-						width: 110px;
-					}
-					&:last-child {
-						float: right;
-						width: 20px;
-					}
-					
+			ul {
+				display: inline-block;
+				&:last-child {
+					margin-left: 50px;
 				}
+				li {
+					font-size: 0.750em;
+					width: 130px;
+					clear: both;
+					display: block;
+					span {
+						
+						&:first-child {
+							float:left
+							width: 110px;
+						}
+						&:last-child {
+							float: right;
+							width: 20px;
+						}
+						
+					}
 
+				}
 			}
+			
 			.abuse {
 				float: right;
 			}
@@ -1105,7 +1156,7 @@ footer {
 			font-family: 'HelveticaNeueBold';
 			border-radius: 2px;
 			margin: .875em auto;
-			.btn-red;
+			
 		}
 	}
 }
@@ -1113,10 +1164,11 @@ footer {
 .desc-proj {
 	
 	article {
-		width: 640px;
+		width: 620px;
 		display: inline-block;
 		float: left;
 		overflow:hidden;
+		padding: 0 20px 0 0;
 		.update {
 			color: @lightred;
 			padding: 1em 0;
@@ -1144,7 +1196,7 @@ footer {
 			.api {
 				display: inline-block;
 				vertical-align: top;
-				width: 210px;
+				width: 200px;
 				text-align: center;
 				img {
 					width: 47px;
@@ -1154,7 +1206,7 @@ footer {
 	}
 
 	aside {
-		width: 300px;
+		width: 320px;
 		display: inline-block;
 		vertical-align: top;
 		background: #eee;
@@ -1224,8 +1276,8 @@ footer {
 						&:before {
 							content: "";
 							display: inline-block;
-							width: 14px;
-							height: 14px;
+							width: 12px;
+							height: 12px;
 							background: #fff;
 							border: solid 1px #ccc;
 							border-radius:16px;
@@ -1233,10 +1285,12 @@ footer {
 					}
 
 					input[type=radio]:checked + label:before {
-						content: "\2022";
-						color: @lightred;
-						font-size: 40px;
-						line-height: 14px;
+						//content: "\2022";
+						//color: @lightred;
+						//font-size: 40px;
+						//line-height: 14px;
+						background: @lightred;
+						border: solid 1px #e8e8e8;
 						//text-indent: 1px;
 					}
 				}
