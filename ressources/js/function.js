@@ -52,7 +52,7 @@ $(document).ready(function () {
 	}*/
 	
 
-	var height = parseInt($(".desc-proj").height());
+	var height = $(".desc-proj").load().height();
 
 	$(".desc-proj aside").height(height);
 	
