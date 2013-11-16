@@ -156,4 +156,24 @@ $('.more-square img').mouseout(function(e){
 
 });
 
+
+
+	//Avancement don
+	var pledged = 10000;
+	//console.log(pledged);
+	var funded = 4000;
+
+	$('.input-don').keyup(function(){
+		var don = $(this).val();
+		console.log(don);
+
+		var widthdon =(958*(don/100))/100;
+		$('.don').fadeIn(200);
+		$('.don').animate({
+			"width":widthdon
+			
+		},500);
+	})
+
+
 })
