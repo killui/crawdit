@@ -228,9 +228,17 @@ section {
 	top: 0px;
 }
 
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
+}
 .clear {
 	clear: both;
 }
+
 .container-960 {
 	width:960px;
 	margin: 0 auto;
@@ -1358,6 +1366,9 @@ footer{
 		margin: 20px 0;
 	}
 
+	button {
+		margin: 30px 0;
+	}
 
 	.progress-bar-don {
 		width:958px;
@@ -1365,21 +1376,23 @@ footer{
 		background: #eee;
 		border: solid 1px #cacaca;
 		overflow: hidden;
-
+		position: relative;
 		.avancement {
 			height: 34px;
 			background: @lightred;
 			width: 40%;
 			display: inline-block;
 			z-index: 4;
+			position: absolute;
 		}
 		.don {
 			display: inline-block;
 			background: @darkgrey;
 			height: 34px;
 			display: inline-block;
-			margin-left: -4px;
+			//margin-left: -4px;
 			z-index: 2;
+			position: absolute;
 		}
 
 	}
@@ -1432,7 +1445,8 @@ footer{
 		h4 {
 			font-size: 30px;
 			font-family: 'HelveticaNeueBold';
-			margin: 50px 0;
+			margin: 40px 0;
+			vertical-align: middle;
 		}
 
 		.perks-big {

@@ -59,7 +59,7 @@ $(document).ready(function () {
 
 	/*** Perks checked ***/
 	
-	$('.perks').on('click',function(){
+	$('.perks,.choice').on('click',function(){
 		$("input").prop("checked",false);
 
 		$("input",this).prop("checked",true);
@@ -161,7 +161,8 @@ $('.more-square img').mouseout(function(e){
 	//Avancement don
 	var pledged = 10000;
 	//console.log(pledged);
-	var funded = 4000;
+	var funded = $('.avancement').width();
+	console.log(funded);
 
 	$('.input-don').keyup(function(){
 		var don = $(this).val();
@@ -170,8 +171,8 @@ $('.more-square img').mouseout(function(e){
 		var widthdon =(958*(don/100))/100;
 		$('.don').fadeIn(200);
 		$('.don').animate({
-			"width":widthdon
-			
+			"width":widthdon,
+			"margin-left":funded
 		},500);
 	})
 
