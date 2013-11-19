@@ -23,12 +23,14 @@ $(document).ready(function () {
 
 		});
 
-		$('.proj-featured-list video').mouseover(function(e){
+		$('.proj-featured-list video, .proj-list video').mouseover(function(e){
 			var player = this;
+			console.log('fefe');
 			player.play();
+			player.muted = true;
 		});
 
-			$('.proj-featured-list video').mouseout(function(e){
+			$('.proj-featured-list video, .proj-list video').mouseout(function(e){
 			var player = this;
 			player.pause()
 		});
