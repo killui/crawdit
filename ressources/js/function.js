@@ -165,11 +165,11 @@ $('.more-square img').mouseout(function(e){
 	var pledged = 10000;
 	//console.log(pledged);
 	var funded = $('.avancement').width();
-	console.log(funded);
+	//console.log(funded);
 
 	$('.input-don').keyup(function(){
 		var don = $(this).val();
-		console.log(don);
+		//console.log(don);
 
 		var widthdon =(958*(don/100))/100;
 		$('.don').fadeIn(200);
