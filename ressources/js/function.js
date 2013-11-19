@@ -33,6 +33,7 @@ $(document).ready(function () {
 			$('.proj-featured-list video, .proj-list video').mouseout(function(e){
 			var player = this;
 			player.pause()
+			player.load();
 		});
 
 
