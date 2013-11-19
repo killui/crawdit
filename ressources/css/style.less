@@ -1370,7 +1370,7 @@ footer{
 		margin: 20px 0;
 	}
 
-	button {
+	a {
 		margin: 30px 0;
 	}
 
@@ -1519,7 +1519,7 @@ footer{
 	}
 
 	p {
-		text-align: justify;
+		text-align: center;
 		font-family: 14px;
 		margin: 10px 0 40px;
 	}
@@ -1532,8 +1532,52 @@ footer{
 .proj-similaires {
 	background: #eee;
 	padding: 20px 0;
-	
+
 	h4 {
 		color: @darkgrey;
+	}
+
+
+	.carousels {
+		margin: 20px 0;
+		text-align: center;
+		.c-left, .c-right {
+			width: 55px;
+			height: 30px;
+			vertical-align: middle;
+			display: inline-block;
+			font-size: 40px;
+			color: @darkgrey;
+			font-weight: bold;
+			line-height: 0.5;
+		}
+		
+
+		.carousel-content {
+			text-align: center;
+			width: 825px;
+			overflow: hidden;
+			display: inline-block;
+			vertical-align: middle;
+			.carousel {
+				display: inline-block;
+				vertical-align: middle;
+				width: 380px;
+				margin: 0 px ;
+				position:relative;
+				overflow: hidden;
+
+				
+				p {
+					text-align: left;
+					position: absolute;
+					bottom: 0;
+					background: rgba(0, 0, 0, 0.5);
+					color: #fff;
+					width: 100%;
+					padding: 5px 0;
+				}
+			}
+		}
 	}
 }
