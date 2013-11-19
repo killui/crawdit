@@ -671,28 +671,12 @@ header {
 	}
 }
 
-
-
-
-
-/*.funded, .pledge, .freelance, .togo{
-	display:inline-block;
-	border-right:#ddd solid 1px;
-	padding: 0 7px;
-	font-size:0.7em;
-}
-.togo{border-right:#fff;}
-.funded{padding-left:0;}
-.proj-list-stats>div>span{display:block;color:#333;}*/
-
 .proj-list-stats {
 	background:#eee;
 	position:absolute;
 	bottom:38px;
 
 	div {
-		
-
 		
 
 		&.proj-list-stats-details {
@@ -729,7 +713,7 @@ header {
 	border:#ccc solid 1px;
 	position:relative;
 	margin-top:3px;
-	/*background-color:#ddd;*/
+
 
 	background-color:#ddd;
 
@@ -1542,7 +1526,6 @@ footer{
 		color: @darkgrey;
 	}
 
-
 	.carousels {
 		margin: 20px 0;
 		text-align: center;
@@ -1586,3 +1569,122 @@ footer{
 		}
 	}
 }
+
+
+
+
+
+/***project list page***/
+.list-960{
+	margin-top:50px;
+	margin-bottom:50px;
+
+	.proj-list-filter{
+	float:left;
+	margin-top:50px;
+	background:#eee;
+	width:300px;
+	margin-top:30px;
+
+	ul{margin:0;padding:0;
+		background:#eee;
+		font-weight:bold;
+
+		&:first-child{
+
+			ul{
+				li{
+
+					&:after{content:"x";}
+				}
+			}
+		}
+		li{
+			ul{
+				li{
+					background:#eee;
+					color:#333;
+					padding:10px;
+					border-bottom:#ccc 1px solid;
+					border-top:#fff 1px solid;
+					cursor:pointer;
+					/*text-shadow:#fff 1px 0px 0px;*/
+					position:relative;
+					font-weight:normal;
+					&:last-child{
+						border-bottom:#eee;
+					}
+					&:first-child{
+						border-top:#eee;
+					}
+					&:hover{
+						background:#ccc;
+						-webkit-transition:ease-out all 0.2s;
+						-moz-transition:ease-out all 0.2s;
+						transition:ease-out all 0.2s;
+					}
+					&::after{
+						content:"+";
+						position:absolute;
+						right:10px;
+						font-weight:normal;
+					}
+
+				}	
+			}
+
+			h4{
+			padding:10px;
+			background:@darkgrey;
+			color:#fff;
+			text-shadow:#000 1px 0px 0px;
+
+			
+			}
+			#tag-selection{
+
+				background:@lightred;
+			}
+		}
+	}
+}
+.proj-list-container{
+	/*margin-top:80px;*/
+	float:right;
+
+	.proj-list{
+		margin-top:30px;
+		&:last-child{
+			margin-bottom:30px;
+		}
+		h3{
+			font-weight:bold;
+		}
+		p{
+			line-height:1.1;
+			margin-top:10px;
+			width:355px;
+		}
+		.proj-list-stats{
+
+		position:absolute;
+		bottom:-67px;
+		}
+
+		.progress-bar{
+			width:355px;
+		}
+		div{
+			.proj-list-stats-details{
+				padding:0 21px;
+
+				&:first-child{
+					padding:0;
+
+				}
+			}
+		}
+	}
+}
+}
+
