@@ -877,7 +877,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00990100', e
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', endColorstr='#7f0100',GradientType=0 ); /* IE6-8 */
 			cursor:pointer;
 
-
+			&:after{
+				content:"projects";
+				padding-left:23px;
+				margin-top:-52px;
+				position:absolute;
+				transform:rotate(-45deg);
+				text-transform:uppercase;
+				width:100px;
+				color:@darkred;
+			}
+			&:before{
+			content:"See more";
+			padding-bottom:377px;
+			margin-top:38px;
+			position:absolute;
+			transform:rotate(-45deg);
+			text-transform:uppercase;
+			width: 100px;
+			color:@darkred;
+			}
 			img{
 
 				-webkit-transform:rotate(-45deg);
