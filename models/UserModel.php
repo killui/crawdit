@@ -6,10 +6,10 @@ class UserModel extends Model {
         parent::__construct();
     }
     
-    public function userinsert($name, $mail, $mdp) {
+    public function userInsert($name, $mail, $mdp) {
         global $database;
 
-        $query = $database->prepare('INSERT INTO users (user_name, user_email, user_password)
+        $query = $database->prepare('INSERT INTO user (user_name, user_email, user_password)
 		values(:name, :mail, :mdp)');
 
         $query->bindParam(':name', $name);
