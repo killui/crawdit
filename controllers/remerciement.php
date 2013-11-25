@@ -17,8 +17,12 @@ class remerciement extends Controller {
     }
     
     public function crawdInsert($crawd) {
+        
+        $user = 3;
+        $project = 1;
+        
         $Crawd = new CrawdModel;
-        $Crawd->crawdInsert($crawd, 2, 1);
+        $Crawd->crawdInsert($crawd, $user, $project);
     }
 
 }
