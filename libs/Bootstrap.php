@@ -7,7 +7,7 @@ class Bootstrap {
         if (isset($_GET['url'])) {
             
             $url = explode('/', rtrim($_GET['url'], '/'));
-            print_r($url);
+            //print_r($url);
             
             $file = "controllers/".$url[0].".php";
 
