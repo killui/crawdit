@@ -58,10 +58,13 @@ $(document).ready(function () {
 
 	/*** Perks checked ***/
 	
-	$('.perks,.choice').on('click',function(){
+	$('.choice').on('click',function(){
 		$("input").prop("checked",false);
 
+
 		$("input",this).prop("checked",true);
+		$('.choice').removeClass('checked');
+		$(this).addClass('checked');
 	});
 	
 
@@ -99,22 +102,22 @@ $(document).ready(function () {
 
 	/***HEADER BACKGROUND***/
 
-var morePropag = 0;
-$('.more-square img').mouseover(function(e){
-	
-	$('.more-line').animate({'width':'900px'},'fast');
-	
+	var morePropag = 0;
+	$('.more-square img').mouseover(function(e){
+		
+		$('.more-line').animate({'width':'900px'},'fast');
+		
 
 
-});
-$('.more-square img').mouseout(function(e){
-	
-	$('.more-line').animate({'width':'450px'},'fast');
+	});
+	$('.more-square img').mouseout(function(e){
+		
+		$('.more-line').animate({'width':'450px'},'fast');
 
 
-});
+	});
 
-/*$('.more-square img').attr('src')*/
+	/*$('.more-square img').attr('src')*/
 
 
 
@@ -122,20 +125,39 @@ $('.more-square img').mouseout(function(e){
 	//Avancement don
 	var pledged = 10000;
 	//console.log(pledged);
-	var funded = $('.avancement').width();
-	//console.log(funded);
+	var funded = (838/pledged)*4000;
+	var widthfunded = $('.avancement').width(funded);
+	console.log(funded);
 
-	$('.input-don').keyup(function(){
+	$('.input-don').stop().keyup(function(){
 		var don = $(this).val();
-		//console.log(don);
+		console.log(don);
 
-		var widthdon =(958*(don/100))/100;
+		var widthdon = (838/pledged)*don;
 		$('.don').fadeIn(200);
 		$('.don').animate({
 			"width":widthdon,
 			"margin-left":funded
 		},500);
 	})
+
+	//POPUP CLOSE
+	$('.close').on('click',function(){
+		$('.popup-mode').fadeOut(500);
+		$('.popups').fadeOut(500);
+	})
+	//Popup
+	$('.back_project').on('click',function(){
+		$('.popup-mode').fadeIn(500);
+		$('.popups,.donate').fadeIn(500);
+	})
+	//POPUP STEP
+	$('.next').on('click',function(){
+		$('.donate').fadeOut(500);
+
+		$('.payement').fadeIn(800);
+	})
+	
 
 
 })
