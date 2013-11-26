@@ -12,7 +12,7 @@ class profile extends Controller{
             
         } else {
             
-            
+            //$this->View->render('error');
             
         }
         
