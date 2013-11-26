@@ -1,0 +1,69 @@
+
+//VARIABLE
+@darkgrey: #333333;
+@lightgrey: #eeeeee;
+@white: #ffffff;
+@darkgreyborder:#252525;
+@lightgreyborder:#424242;
+@turquoise:#82dbde;
+@newred:#d54544;
+
+
+//
+.borderradius(@width){
+	border-radius:@width;
+	-moz-border-radius:@width;
+	-webkit-border-radius:@width;
+	-ms-border-radius:@width;
+	-o-border-radius:@width;
+}
+
+
+//ICON
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	
+	&.check {
+		width: 15px;
+		height: 12px;
+		background: url('../images/check.png')no-repeat ;
+	}
+
+}
+
+
+// BUTTON
+.btn-cta {
+	font-family: "ff-dagny-web-pro",sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	border:solid 3px @white;
+	padding: 15px 0;
+	display: block;
+	width: 372px;
+	margin: 0 auto;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.btn-red {
+	.btn-cta;
+	.borderradius(3px);
+	
+	&:hover {
+		background: @white;
+		color: @newred;
+	}
+}
+
+.btn-blue {
+	.btn-cta;
+	.borderradius(3px);
+	
+	&:hover {
+		background: @white;
+		color: @turquoise;
+	}
+}
