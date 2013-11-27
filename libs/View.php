@@ -14,7 +14,7 @@ class View {
         require 'views/'.$view.'.php';
     }
     
-    public function projectRender($view, $data){
+    public function projectRender($view, $project, $perks, $ressources, $genres){
         require 'views/'.$view.'.php';
     }
     

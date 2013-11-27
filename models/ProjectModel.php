@@ -33,8 +33,8 @@ class ProjectModel extends Model {
         $query->bindParam(':id', $id);
 
         $query->execute();
-        $data = $query->fetchAll();
-        return $data;
+        $genres = $query->fetchAll();
+        return $genres;
     }
     
     public function getPerks($id) {
@@ -48,8 +48,8 @@ class ProjectModel extends Model {
         $query->bindParam(':id', $id);
 
         $query->execute();
-        $data = $query->fetchAll();
-        return $data;
+        $perks = $query->fetchAll();
+        return $perks;
     }
     
     public function getRessources($id) {
@@ -64,8 +64,8 @@ class ProjectModel extends Model {
         $query->bindParam(':id', $id);
 
         $query->execute();
-        $data = $query->fetchAll();
-        return $data;
+        $ressources = $query->fetchAll();
+        return $ressources;
     }
 
 }

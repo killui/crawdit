@@ -12,16 +12,16 @@ class projectdev extends Controller{
         
         $dataProject = $Project->getProject($projectId);
         
-        $genre = $Project->getGenres($projectId);
-        array_push($dataProject, $genre);
+        $genres = $Project->getGenres($projectId);
+        //array_push($dataProject, $genre);
         
         $perks = $Project->getPerks($projectId);
-        array_push($dataProject, $perks);
+        //array_push($dataProject, $perks);
         
         $ressources = $Project->getRessources($projectId);
-        array_push($dataProject, $ressources);
+        //array_push($dataProject, $ressources);
         
-        $this->View->projectRender('projectdev', $dataProject);
+        $this->View->projectRender('projectdev', $dataProject, $perks, $ressources, $genres);
     }
 
 }
