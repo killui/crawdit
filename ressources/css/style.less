@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***LESS VAR***/
 /***FONT***/
 @font-face {
@@ -1748,8 +1749,17 @@ footer{
 **/
 
 
+=======
+>>>>>>> 26f08501570c9501b7036d1145bb9deecf1df046
 
 @import 'variable.less';
+
+/** Page PROJET **/
+@import 'page-home.less';
+@import 'fiche.less';
+@import 'page-list-projet.less';
+@import 'page-projet.less';
+@import 'popup-projet.less';
 
 /***mixin***/
 
@@ -1956,6 +1966,7 @@ header {
 			width: 223px;
 			height:17px;
 			.borderradius(30px);
+<<<<<<< HEAD
 		}
 	}
 }
@@ -2378,41 +2389,18 @@ header {
 				text-transform:lowercase;
 				margin:0;
 			}
+=======
+>>>>>>> 26f08501570c9501b7036d1145bb9deecf1df046
 		}
 	}
-
 }
 
-.progress-bar{
-	height:20px;
-	width:288px;
-	border:#ccc solid 1px;
-	position:relative;
-	margin-top:3px;
 
 
-	background-color:#ddd;
 
-	&.big {
-		width: 100%;
-	}
-
-}
-.progress-bar-value{position:absolute;height:100%;width:50%;
-background: #990100; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk5MDEwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZjAxMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #990100 0%, #7f0100 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#990100), color-stop(100%,#7f0100)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #990100 0%,#7f0100 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #990100 0%,#7f0100 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #990100 0%,#7f0100 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #990100 0%,#7f0100 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', endColorstr='#7f0100',GradientType=0 ); /* IE6-8 */
-
-}
 
 /***NEW PROJECT***/
+<<<<<<< HEAD
 	.proj-list-cta{
 			width:100%;
 			height:100%;
@@ -2673,20 +2661,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00990100', e
 		text-transform: uppercase;
 		text-shadow:0 1px 0 #000;
 		//font-family:'dinprolight';
+=======
+>>>>>>> 26f08501570c9501b7036d1145bb9deecf1df046
 
-	}
 
-	.box-number {
-		width: 300px;
-		vertical-align: top;
-		display: inline-block;
 
-		.number {
-			font-weight: bold;
-			text-shadow:0 1px 0 #000;
-			font-size: 3em;
-		}
 
+<<<<<<< HEAD
 		.text {
 			font-size:1.5em;
 			text-transform: uppercase;
@@ -2694,16 +2675,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00990100', e
 		}
 	}
 }
+=======
+>>>>>>> 26f08501570c9501b7036d1145bb9deecf1df046
 
 /*** FOOTER ***/
 
 footer {
-	background: @darkgrey;
-	padding: 25px 0;
+	
+	
 
 	ul {
 		display: inline-block;
 		vertical-align: top;
+		margin-left: 200px;
+		color: @darkgrey;
+
+		&:first-child {
+			margin-left:0;
+		}
 
 		h6 {
 			text-transform: uppercase;
@@ -2714,13 +2703,22 @@ footer {
 
 		li {
 			font-size: .8em;
+			color: @darkgrey;
+			line-height: 1.5;
+			
 
+			strong {
+				font-weight: bold;
+				line-height: 2.5;
+				text-transform: uppercase;
+				font-size: 1.3em;
+			}
 			a {
-				color: @white;
+				color: @darkgrey;
 				text-decoration: none;
 
 				&:hover {
-					color: @lightgrey;
+					color: #000;
 					text-decoration: underline;
 				}
 			}
@@ -2728,6 +2726,7 @@ footer {
 	}
 }
 
+<<<<<<< HEAD
 
 /*** PAGE PROJECT ***/
 
@@ -3543,3 +3542,5 @@ font-family: 'dinprobold';
 }
 
 >>>>>>> c955ca2a554f70c8fc3fe95b168de4aa8327a384
+=======
+>>>>>>> 26f08501570c9501b7036d1145bb9deecf1df046
