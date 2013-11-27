@@ -14,4 +14,8 @@ class View {
         require 'views/'.$view.'.php';
     }
     
+    public function projectRender($view, $data){
+        require 'views/'.$view.'.php';
+    }
+    
 }
