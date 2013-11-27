@@ -54,17 +54,7 @@
 
 }
 **/
-@font-face {
-    font-family: 'dinprobold';
-    src: url('../font/main/dinpro-bold-webfont.eot');
-    src: url('../font/main/dinpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/main/dinpro-bold-webfont.woff') format('woff'),
-         url('../font/main/dinpro-bold-webfont.ttf') format('truetype'),
-         url('../font/main/dinpro-bold-webfont.svg#dinprobold') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
-}
 
 
 @import 'variable.less';
@@ -122,7 +112,7 @@
 /***INIT***/
 body{
 	font-size:100%;
-	font-family: 'dinprobold';
+	font-family: 'dinpro-regularregular';
 	background: @white;
 
 	&.v2 {
@@ -143,13 +133,14 @@ section {
 
 header {
 
-	background: @darkgrey;
+	background: @white;
+	color:@darkgrey;
 	position:relative;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 10;
-	border-bottom:1px solid @lightgreyborder;
+	/*border-bottom:1px solid @lightgreyborder;*/
 
 	&.no-fixed {
 		background: @darkgrey;
@@ -158,7 +149,7 @@ header {
 	
 	.signin-container{
 			
-			border-top:@darkgreyborder 1px solid;
+			/*border-top:@darkgreyborder 1px solid;*/
 				width:100%;
 				/*padding:1px;*/
 
@@ -166,7 +157,7 @@ header {
 
 				height:0px;
 				width:100%;
-				border-top:@lightgreyborder 1px solid;
+				/*border-top:@lightgreyborder 1px solid;*/
 				overflow:hidden;
 			}
 		}
@@ -180,24 +171,25 @@ header {
 			display:inline-block;
 			padding-top:21px;
 			padding-bottom:18px;
-			border-left:1px solid @darkgreyborder;
+			/*border-left:1px solid @darkgreyborder;
 			border-bottom:1px solid @darkgreyborder;
-			border-right:1px solid @lightgreyborder;
+			border-right:1px solid @lightgreyborder;*/
 			padding-right:10px;
 			padding-left:10px;
 
-				&:first-child{
+			/*	&:first-child{
 				border:none;
 				border-right:@lightgreyborder 1px solid;
-				}
+				}*/
+
 				&:last-child{
 					/*border:none;
 					border-left:@darkgreyborder 1px solid;*/
 					width:63px;
 					text-align:center;
-					padding-top:25px;
+					padding-top:29px;
 					padding-bottom:21px;
-					&:hover{background:@darkgreyborder;}
+					&:hover{background:@lightgrey;}
 				}
 		}
 		ul {display:inline-block;
@@ -207,23 +199,29 @@ header {
 			li{
 				float:left;
 				display:inline-block;
-					border-left:1px solid @darkgreyborder;
+					/*border-left:1px solid @darkgreyborder;
 					border-bottom:1px solid @darkgreyborder;
-					border-right:1px solid @lightgreyborder;
+					border-right:1px solid @lightgreyborder;*/
+					&:hover{
+					background:@lightgrey;
+				}
 				a {
 					width: 115px;
-					.link_white;
+					color:@darkgrey;
+					text-decoration:none;
+					font-size:1.06em;
+					font-family:'dinpro-regularregular';
 					padding: 20px 10px;
 					margin:0;
 					display: inline-block;
 					text-align: left;
 					vertical-align: middle;
-					text-shadow:1px 0px 0px #000;
+					/*text-shadow:1px 0px 0px #000;*/
 					
 
 					strong {
 						/*text-transform: uppercase;*/
-						font-weight: bold;
+						font-family:'dinprobold';
 					}
 
 					&:hover {
@@ -246,16 +244,157 @@ header {
 
 		input {
 			border: #fff;
-			/*border: #333 1px solid;*/
-			background: #252525;
+			border: #ddd 1px solid;
+			background: @lightgrey;
 			/*background:none;*/
-			color: @white;
-			padding: 10px;
+			color: darkgrey;
+			padding: 9px;
 			width: 223px;
-			//height:17px;
+			height:17px;
+			.borderradius(30px);
 		}
 	}
 }
+/***INTRO HOME PAGE***/
+#intro-project, #intro-freelance{
+	height:50px;
+	width:50%;
+	h2{
+		color:@white;
+		text-transform:uppercase;
+		font-family:'dinprobold';
+		font-size:24px;
+		line-height:2;
+		text-shadow:0px 1px 0 rgba(0,0,0,0.4);
+	}
+}
+#intro-project{
+
+	background:@newred;
+	text-align:right;
+	h2{
+		padding-right:60px;
+	}
+}
+
+.intro{
+	height:246px;position:relative;
+	width:100%;
+	margin:0 auto;
+	overflow:visible !important;
+}
+#intro-freelance{
+	background:@turquoise;
+	h2{
+		padding-left:60px;
+		
+	}
+}
+
+#intro-project-content, #intro-freelance-content{
+
+	/*background:#ccc;*/
+	width:480px;
+	height:246px;
+	position:absolute;
+	opacity:0.1;
+
+}
+#intro-freelance-content{
+	right:-480px;
+	text-align:left;
+	font-family:'dinprobold';
+	img{
+		position:absolute;
+		left:20px;
+		top:-14px;
+	}
+	p{
+		margin-left:60px;
+		margin-top:20px;
+		font-size:14px;
+		line-height:1.25;
+		color:@darkgrey;
+
+		span{
+			color:@turquoise;
+		}
+
+	}
+	a{
+		font-size:14px;
+		margin-left:60px;
+		color:@white;
+		text-decoration:none;
+		background:@turquoise;
+		text-shadow:1px 0px 0 rgba(0,0,0,0.4);
+		font-family:'dinpro-regularregular';
+		padding:10px 20px;
+		display:inline-block;
+		margin-top:20px;
+		width:173px;
+		text-align:center;
+		-webkit-transition:all ease-in-out 0.3s;
+		-moz-transition:all ease-in-out 0.3s;
+		transition:all ease-in-out 0.3s;
+		.borderradius(5px);
+		&:hover{
+			padding:10px 24px;
+			text-shadow:1px 0px 0px rgba(0,0,0,0.5),
+						0px 0px 20px rgba(0,0,0,0.7);
+
+		}
+	}	
+}
+#intro-project-content{
+	left:-480px;
+	text-align:right;
+	font-family:'dinprobold';
+	img{
+		position:absolute;
+		right:20px;
+		top:-14px;
+	}
+	p{
+		margin-right:60px;
+		margin-top:20px;
+		font-size:14px;
+		line-height:1.25;
+		color:@darkgrey;
+
+		span{
+			color:@newred;
+		}
+		
+	}
+
+	a{
+		font-size:14px;
+		margin-right:60px;
+		color:@white;
+		text-decoration:none;
+		background:@newred;
+		text-shadow:1px 0px 0 rgba(0,0,0,0.4);
+		font-family:'dinpro-regularregular';
+		padding:10px 20px;
+		display:inline-block;
+		margin-top:20px;
+		width:173px;
+		text-align:center;
+		-webkit-transition:all ease-in-out 0.3s;
+		-moz-transition:all ease-in-out 0.3s;
+		transition:all ease-in-out 0.3s;
+		.borderradius(5px);
+		&:hover{
+			
+			padding:10px 24px;
+			text-shadow:1px 0px 1px rgba(0,0,0,1),
+						1px 0px 20px rgba(0,0,0,0.6);
+
+		}
+	}
+}
+
 
 /*** FIRST PROJECT ***/
 
@@ -305,7 +444,7 @@ header {
 
 /*** VIDEO CONTAINER ***/
 
-.video-container {
+/*.video-container {
 	position: relative;
 	height: 340px;
 	overflow: hidden;
@@ -329,7 +468,7 @@ header {
 			z-index: 2;
 			text-align: center;
 			//font-family:dinprobold,HelveticaNeueBold;
-			/*padding: 3.125em 0 0;*/
+			/*padding: 3.125em 0 0;
 
 
 		}
@@ -341,10 +480,18 @@ header {
 
 
 	}
-}
+}*/
 
 
 .proj-featured {
+	background-color:@lightgrey;
+	padding-bottom:100px;
+	h2{
+		color:@newred;
+		font-size:28px;
+		font-family:'dinpromedium';
+		padding:25px 0;
+	}
 	&.v2 {
 		background-color: @lightgrey;
 	}
@@ -368,12 +515,14 @@ header {
 
 		.proj-list-desc{
 			display:block;
-			width:295px;
+			width:299px;
 			line-height:1;
-			padding: 5px;
+			padding: 0px;
 			background:#eee;
 			height:200px;
+			position:relative;
 
+			h3{margin:0!important;padding-top:10px!important;}
 			.proj-list-title { 
 				margin-top:5px;
 				padding-top:0;
@@ -560,6 +709,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990100', end
 }
 
 /***NEW PROJECT***/
+	.proj-list-cta{
+			width:100%;
+			height:100%;
+			background:@newred;
+			position:absolute;
+			z-index:9999;
+			opacity:0.9;
+			display:none;
+		}
 .proj-new{
 height:0px;
 overflow:hidden;
@@ -569,7 +727,7 @@ overflow:hidden;
 	div{
 		
 			.proj-featured-list {
-		//height:135px;
+		
 		overflow: hidden;
 		position:relative;
 		width:300px;
@@ -653,8 +811,9 @@ overflow:hidden;
 	position:relative;
 	height:90px;
 	text-align:center;
-	margin: 0 0 -59px;
+	margin: -45px 0 -59px;
 	z-index: 2;
+	padding-top:14px;
 
 	
 	img{
@@ -778,7 +937,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00990100', e
 		p {
 			line-height: 1.2em;
 			margin: 0 0 1em;
-			//font-family:'HelveticaNeueLight';
+			//font-family:'dinprolight';
 		}
 
 		a {
@@ -809,7 +968,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00990100', e
 		margin: 0 0 0.5em;
 		text-transform: uppercase;
 		text-shadow:0 1px 0 #000;
-		//font-family:'HelveticaNeueThin';
+		//font-family:'dinprolight';
 
 	}
 
@@ -827,7 +986,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00990100', e
 		.text {
 			font-size:1.5em;
 			text-transform: uppercase;
-			//font-family:'HelveticaNeueLight';
+			font-family:'dinprolight';
 		}
 	}
 }
@@ -888,7 +1047,7 @@ footer {
 		text-transform: uppercase;
 		font-size: 2.25em;
 		font-weight: bold;
-		//font-family: 'HelveticaNeueBold';
+		//font-family: 'dinprobold';
 
 	}
 
@@ -904,12 +1063,12 @@ footer {
 				color: @newred;
 				display: block;
 
-				//font-family: 'HelveticaNeueLight';
+				//font-family: 'dinprolight';
 				
 
 				&.first {
 					font-weight: bold;
-					//font-family: 'HelveticaNeueBold';
+					//font-family: 'dinprobold';
 
 				}
 			}
@@ -1075,7 +1234,7 @@ footer {
 
 		h6 {
 			color: @darkgrey;
-			//font-family: 'HelveticaNeueBold';
+			//font-family: 'dinprobold';
 			margin: 1em 0;
 		}
 		p {
@@ -1107,7 +1266,7 @@ footer {
 			color: @darkgrey;
 			padding: .865em 0;
 			text-align: center;
-			//font-family: 'HelveticaNeueBold';
+			//font-family: 'dinprobold';
 			font-size: 1.75em;
 			border-bottom:solid 1px #e8e8e8;
 			display: block; 
@@ -1192,7 +1351,7 @@ footer{
 		color: @newred;
 		text-transform: uppercase;
 		font-size: 2.25em;
-		//font-family: 'HelveticaNeueBold';
+		//font-family: 'dinprobold';
 		text-align: center;
 		margin: 20px 0;
 	}
@@ -1233,10 +1392,10 @@ footer{
 		
 		form {
 			width: 360px;
-			//background: #eee;
-			//border: solid 1 #cacaca;
+			background: #eee;
+			border: solid 1 #cacaca;
 			font-size: 60px;
-			//font-family: 'HelveticaNeueBold';
+			font-family: 'dinprobold';
 			display: inline-block;
 
 			label {
@@ -1252,7 +1411,7 @@ footer{
 				border: solid 1px #cacaca;
 				text-align: center;
 				width: 298px;
-				//font-family: 'HelveticaNeueBold';
+				//font-family: 'dinprobold';
 			}
 		}
 		.info-don {
@@ -1275,7 +1434,7 @@ footer{
 
 		h4 {
 			font-size: 30px;
-			//font-family: 'HelveticaNeueBold';
+			//font-family: 'dinprobold';
 			margin: 40px 0;
 			vertical-align: middle;
 		}
@@ -1308,7 +1467,7 @@ footer{
 						margin-left: 25px;
 
 						&:first-child {
-							//font-family: 'HelveticaNeueBold';
+							//font-family: 'dinprobold';
 							font-size: 22px;
 							width: 85px;
 							text-align: center;
@@ -1347,7 +1506,7 @@ footer{
 
 	p {
 		text-align: center;
-		font-family: 14px;
+		font-size: 14px;
 		margin: 10px 0 40px;
 	}
 
