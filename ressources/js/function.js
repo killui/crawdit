@@ -138,11 +138,16 @@ $(document).ready(function () {
 	//console.log(pledged);
 	var funded = (838/pledged)*4000;
 	var widthfunded = $('.avancement').width(funded);
-	console.log(funded);
+	//console.log(funded);
+	var value = $('.choice input[type=radio]').each(function(){ parseInt($(this).val()); });
+	//var value = parseInt($('.choice input[value=""]').val());
+	//console.log(value);
+	var arrayvalue = $.makeArray(value);
+	console.log(arrayvalue);
 
 	$('.input-don').stop().keyup(function(){
 		var don = $(this).val();
-		console.log(don);
+		//console.log(don);
 
 		var widthdon = (838/pledged)*don;
 		$('.don').fadeIn(200);
@@ -152,7 +157,7 @@ $(document).ready(function () {
 		},500);
 
 
-		if(don == $('.radio').val()){
+		if(don <= arrayvalue[i]){
 			$('choice',this).addClass('checked');
 		}
 	})
@@ -175,6 +180,25 @@ $(document).ready(function () {
 		$('.payement').fadeIn(800);
 	})
 	
+
+	// JOBS scroll
+	var scroll = 0;
+	$('.more-jobs').bind('click',function(){
+		
+		var fmjobs = $('#jobs li').last();
+		var lmjobs = $('#jobs li').first();
+		console.log(scroll);
+
+		if(scroll == 0) {
+			scroll ++;
+			$('#jobs').scrollTo(lmjobs,400);
+		}
+		else{
+			scroll --;
+			$('#jobs').scrollTo(fmjobs,400);
+		}
+		
+	})
 
 
 })
