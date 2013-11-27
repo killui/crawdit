@@ -144,7 +144,7 @@ $(document).ready(function () {
 	//POPUP CLOSE
 	$('.close').on('click',function(){
 		$('.popup-mode').fadeOut(500);
-		$('.popups').fadeOut(500);
+		$('.popups, .donate, .payement, .confirmation').fadeOut(500);
 	})
 	//Popup
 	$('.back_project').on('click',function(){
