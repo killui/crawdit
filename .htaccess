@@ -5,7 +5,7 @@ ReWriteCond %{REQUEST_FILENAME} !-d
 ReWriteCond %{REQUEST_FILENAME} !-f
 ReWriteCond %{REQUEST_FILENAME} !-l
 
-ReWriteBase /v1/
+#ReWriteBase /v1/
 
-#ReWriteRule ^([a-zA-Z0-9]*)/?(.*)$ index.php?url=$0 [QSA,L]
+
 ReWriteRule ^(.*)$ index.php?url=$0 [QSA,L]

@@ -5,16 +5,38 @@ class UserModel extends Model {
     function __construct() {
         parent::__construct();
     }
+
+    function verif_log($name, $mdp)
+        {
+            global $database;
+
+            $query = $database->prepare('SELECT * FROM user WHERE user_name = :name AND user_password = :mdp');
+
+            $query->bindParam(':name', $name);
+            $query->bindParam(':mdp', md5($mdp));
+            
+            $query->execute();
+            $nbrligne = $query->rowCount();
+            
+
+            if ($nbrligne == 1) 
+            {   
+                $infocompte = $query->fetch(PDO::FETCH_OBJ);    
+                return $infocompte;
+            }
+        }
     
-    public function userInsert($name, $mail, $mdp) {
+    public function userInsert($name, $mail, $mdp, $freelance, $manager) {
         global $database;
 
-        $query = $database->prepare('INSERT INTO user (user_name, user_email, user_password)
-		values(:name, :mail, :mdp)');
+        $query = $database->prepare('INSERT INTO user (user_name, user_email, user_password, user_freelance, user_manager)
+		values(:name, :mail, :mdp, :freelance, :manager)');
 
         $query->bindParam(':name', $name);
         $query->bindParam(':mail', $mail);
         $query->bindParam(':mdp', md5($mdp));
+        $query->bindParam(':freelance', $freelance);
+        $query->bindParam(':manager', $manager);
 
         $userinsert = $query->execute();
         return $userinsert;

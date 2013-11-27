@@ -18,7 +18,31 @@
 </head>
 <body >
 
+	<?php 
+		print_r($_SESSION)
+	 ?>
 
+<form Method="POST" action="login" id="formco">
+	<h2>Connexion compte</h2>
+	Nom : <input type="text" name="nomco" /><br />
+	Mot de passe : <input type="text" name="mdpco" /><br/>
+	Se souvenir: <input type="checkbox" name="remember" value="checked"><br/>
+	<input type="submit" value="Se connecter" class="btn btn-primary"/>
+</form>
+
+<p>Inscription</p>
+
+<form Method="POST" action="signup" id="forminscr">
+	<h2>Inscription</h2>
+	Nom : <input type="text" name="nominscr" /><br />
+	Mot de passe : <input type="text" name="mdpinscr" /><br/>
+	email: <input type="text" name="emailinscr" /><br/>
+	<input type="submit" value="S'inscrir" class="btn btn-primary"/>
+</form>
+
+<form Method="POST" action="deco" id="deco">
+	<input type="submit" value="deco" class="btn btn-primary"/>
+</form>
 
 <header>
 	<div class="container-960">
