@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+	/***Anim Intro Home page***/
+
+	$('#intro-freelance-content').animate({'right':'0','opacity':'1'},1600);
+	$('#intro-project-content').animate({'left':'0','opacity':'1'},1600);
+	$('.intro').animate({'width':'960px'},1500);
+
 	/***MORE BUTTON***/
 
 	$('#connect-btn').click(function(){
@@ -28,24 +34,27 @@ $(document).ready(function () {
 			$('.proj-new').animate({"height":"0px","overflow":"hidden"},'slow');
 			$(this).children().attr('src','ressources/images/croix.png')
 			gaga = 0;
-			console.log(gaga);
 		}
 
 
 		});
 
-		$('.proj-featured-list video, .proj-list video').mouseover(function(e){
-			var player = this;
-			player.play();
-			player.muted = true;
-		});
+		$('.proj-featured-list').bind("mouseover", function(e){
 
-			$('.proj-featured-list video, .proj-list video').mouseout(function(e){
-			var player = this;
-			player.pause()
-			player.load();
-		});
+				console.log(e.relatedTarget);
+			var player = $(this);
+			player.children()[0].play();
+			player.children()[0].muted = true;
 
+			$('.proj-list-cta', this).show();
+
+		}).bind('mouseout', function(){
+
+			var player = $(this);
+			player.children()[0].pause()
+			player.children()[0].load();
+			$('.proj-list-cta', this).hide();
+		});
 
 
 		$('.video-container>div>hr').animate({'width':'777px'},'slow');
