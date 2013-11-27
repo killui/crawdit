@@ -50,9 +50,8 @@
 </header>
 
 
-<div class="cine-mode">
-	
-</div>
+<div class="cine-mode"></div>
+<div class="popup-mode"></div>
 
 <section class="info-proj">
 	
@@ -102,7 +101,7 @@
 
 		<div id="finance" class="need f-left">
 
-			<a href="don.html" class="btn-red">Back this project</a>
+			<a href="#" class="btn-red back_project">Back this project</a>
 
 			<ul id="number">
 				<li><span>$5678</span> Pledged</li>
@@ -171,6 +170,7 @@
 		<p>Maecenas sit amet bibendum nulla, eget convallis metus. Sed malesuada adipiscing ipsum nec viverra. Curabitur luctus eros sed iaculis egestas. Proin et dui sagittis, fringilla libero at, varius metus. Donec justo dolor, tristique non rutrum ut, adipiscing id sapien. Curabitur fringilla sit amet mauris ut pretium. Sed consectetur metus sit amet nulla porta, sed faucibus mauris laoreet. Praesent auctor lacus augue, sed auctor ante hendrerit sit amet. Sed sit amet nisl ornare, adipiscing augue sit amet, tincidunt lorem. Morbi fermentum, massa sit amet consectetur venenatis, elit odio suscipit justo, quis aliquam metus arcu eget purus. Donec condimentum purus elementum tellus mollis fermentum a nec libero. Quisque nec varius turpis. Vestibulum porttitor fringilla est, eget vestibulum dolor fringilla nec.</p>
 
 		<div class="share">
+			<h5>Share the love about this project :</h5>
 			<div class="api "><img src="ressources/images/fb.png" alt="facebook" class="small" /></div>
 			<div class="api"><img src="ressources/images/tw.png" alt="twitter" class="small"/></div>
 			<div class="api"><img src="ressources/images/rd.png" alt="reddit" class="small"/></div>
@@ -182,53 +182,35 @@
 		
 		<form class="pre-select">
 			
-			<div class="perks">
-				<span>$5</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio" />
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$5</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
-			<div class="perks">
-				<span>$20</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio"/>
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$20</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
-			<div class="perks">
-				<span>$50</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio"/>
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$50</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
-			<div class="perks">
-				<span>$100</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio"/>
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$100</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
-			<div class="perks">
-				<span>$250</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio"/>
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$250</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
-			<div class="perks">
-				<span>$1000</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio"/>
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$1000</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
 
 		</form>
@@ -239,7 +221,149 @@
 
 </section>
 
+<!-- POPUP-->
+<div class="popups">
+	
+	<div class="popup">
 
+		<!-- STEP -->
+		<div class="steps">
+			<div class="step">
+				<p>Amount & Perks</p>
+			</div>
+			<div class="step">
+				<p>Payement Information</p>
+			</div>
+			<div class="step">
+				<p>Thank you!</p>
+			</div>
+
+			<div class="close f-right"><i class="icon close"></i></div>
+
+			<div class="clear"></div>
+		</div>
+
+		<!-- DONATE -->
+		<div class="donate">
+			
+		
+			<div class="proj-don">
+
+				<h2>Frankenweenie</h2>
+				
+
+				<div class="progress-bar-don" >
+					<div class="avancement"></div>
+					<div class="don"></div>
+				</div>
+
+				<div class="form-don">
+					<form>
+						<label>$</label>
+						<input type="text" placeholder="1" class="input-don"/>
+					</form>
+					<div class="info-don">
+						<ul>
+							<li>1.Minimum donnation is $1.</li>
+							<li>2.Donations are based on a principle of pledge. The amount on the left will be charged only if the project reach 100% of its objectives. Otherwise, the amount of your donation won’t be debited from your account.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="choose-perk">
+					<h4>Please select a perk :</h4>
+					
+					<form>
+						<div class="choice">
+							<span class="amount">No perk</span>
+							<span class="gift">I don't want any perk.</span>
+							<div class="radio">
+								<input type="radio" />
+								<label></label>
+							</div>
+						</div>
+
+						<div class="choice">
+							<span class="amount">$5</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" />
+								<label></label>
+							</div>
+						</div>
+
+						<div class="choice">
+							<span class="amount">$20</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" />
+								<label></label>
+							</div>
+						</div>
+						<div class="choice">
+							<span class="amount">$50</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" />
+								<label></label>
+							</div>
+						</div>
+
+						<div class="choice">
+							<span class="amount">$100</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" />
+								<label></label>
+							</div>
+						</div>
+						<div class="choice">
+							<span class="amount">$250</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" />
+								<label></label>
+							</div>
+						</div>
+						<div class="choice">
+							<span class="amount">$1000</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" />
+								<label></label>
+							</div>
+						</div>
+					</form>
+
+					<a href="#" class="next">Next Step ></a>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- PAYEMENT -->
+		<div class="payement">
+		
+			<p>You will be redirected to Paypal in a second...<br/>
+			<span>If it doesn't redirect you automatically, <a href="#">click here.</a></span></p>
+
+		</div>
+
+
+		<!-- CONFIRMATION -->
+
+		<div class="confirmation">
+		
+			<p>You will be redirected to Paypal in a second...<br/>
+			<span>If it doesn't redirect you automatically, <a href="#">click here.</a></span></p>
+
+		</div>
+
+	</div>
+
+	
+
+</div>
 
 <footer>
 	
