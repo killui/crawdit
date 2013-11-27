@@ -65,16 +65,7 @@ $(document).ready(function () {
 	$(".desc-proj aside").height(height);
 	
 
-	/*** Perks checked ***/
 	
-	$('.choice').on('click',function(){
-		$("input").prop("checked",false);
-
-
-		$("input",this).prop("checked",true);
-		$('.choice').removeClass('checked');
-		$(this).addClass('checked');
-	});
 	
 
 	/**** Video mode cinema ***/
@@ -128,7 +119,18 @@ $(document).ready(function () {
 
 	/*$('.more-square img').attr('src')*/
 
+	/*** Perks checked ***/
+	
+	$('.choice').on('click',function(){
+		$("input").prop("checked",false);
 
+
+		$("input",this).prop("checked",true);
+		$('.choice').removeClass('checked');
+		$(this).addClass('checked');
+	});
+	
+	
 
 
 	//Avancement don
@@ -148,12 +150,18 @@ $(document).ready(function () {
 			"width":widthdon,
 			"margin-left":funded
 		},500);
+
+
+		if(don == $('.radio').val()){
+			$('choice',this).addClass('checked');
+		}
 	})
+
 
 	//POPUP CLOSE
 	$('.close').on('click',function(){
 		$('.popup-mode').fadeOut(500);
-		$('.popups').fadeOut(500);
+		$('.popups, .donate, .payement, .confirmation').fadeOut(500);
 	})
 	//Popup
 	$('.back_project').on('click',function(){
