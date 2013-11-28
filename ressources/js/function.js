@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 $(document).ready(function () {
 
@@ -348,12 +347,6 @@ $('.more-square img').mouseout(function(e){
 
 		$('.payement').fadeIn(800);
 	})
-	
-
-
-
-=======
-$(document).ready(function () {
 
 	/***Anim Intro Home page***/
 
@@ -529,8 +522,5 @@ $(document).ready(function () {
 
 		$('.payement').fadeIn(800);
 	})
-	
 
-
->>>>>>> 26f08501570c9501b7036d1145bb9deecf1df046
 })
