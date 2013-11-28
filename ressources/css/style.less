@@ -6,6 +6,7 @@
 @import 'page-list-projet.less';
 @import 'page-projet.less';
 @import 'popup-projet.less';
+@import 'page-404.less';
 
 /***mixin***/
 
@@ -279,40 +280,51 @@ header {
 
 /*** FOOTER ***/
 
-footer{
-	ul{
-		display:inline-block;
-		vertical-align:top;
-		margin-left:200px;
-		color:@darkgrey;
-		&:first-child{
+footer {
+	
+	
+
+	ul {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 200px;
+		color: @darkgrey;
+
+		&:first-child {
 			margin-left:0;
 		}
-		h6{
-			text-transform:uppercase;
-			font-size:0.8em;
-			color:@darkgrey;
+
+		h6 {
+			text-transform: uppercase;
+			font-size: 1em;
+			color: @white;
 			margin: 1em;
-			line-height:1.5;
 		}
-		li{
-			font-size:0.8em;
-			color:@darkgrey;
+
+		li {
+			font-size: .8em;
+			color: @darkgrey;
 			line-height: 1.5;
-			strong{
-				font-weight:bold;
-				line-height:2.5;
-				text-transform:uppercase;
-				font-size:1.3em;
-				}
-			a{
-				color:@darkgrey;
-				text-decoration:none;
-				&:hover{
-					color:#000;
-					text-decoration:underline;
+			
+
+			strong {
+				font-weight: bold;
+				line-height: 2.5;
+				text-transform: uppercase;
+				font-size: 1.3em;
+			}
+			a {
+				color: @darkgrey;
+				text-decoration: none;
+
+				&:hover {
+					color: #000;
+					text-decoration: underline;
 				}
 			}
 		}
 	}
 }
+
+
+
