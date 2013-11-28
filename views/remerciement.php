@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8"></meta>
-	<title>Donnation</title>
+	<title>Project</title>
 
 <!-- Style -->
 <link rel="stylesheet" type="text/css" href="ressources/css/reset.css">
@@ -47,7 +47,45 @@
 
 </header>
 
+<section class="proj-thanks container-960">
 
+	<h2>Thanks for your participation</h2>
+	<p>Maecenas quis quam neque. Etiam gravida eu augue porttitor commodo. Cras sit amet felis augue. In hac habitasse platea dictumst. Nulla neque dui, vestibulum sed rhoncus a, venenatis eu neque. Nullam tincidunt bibendum massa ut tristique. Fusce lacinia diam nunc, nec pellentesque augue adipiscing in. Donec iaculis tellus eget ante aliquam, eget varius diam aliquet.</p>
+	<a href="#" class="btn-red">Leave a comment</a>
+
+	<div class="share">
+		<div class="api"><img src="ressources/images/fb.png" alt="facebook"/></div>
+		<div class="api"><img src="ressources/images/tw.png" alt="twitter"/></div>
+		<div class="api"><img src="ressources/images/rd.png" alt="reddit"/></div>
+	</div>
+</section>
+
+<section class="proj-similaires">
+	
+	<div class="container-960">
+		<h4>Projets similaires</h4>
+		
+		<div class="carousels">
+			<div class="c-left"> < </div>
+
+			<div class="carousel-content">
+				
+				<div class="carousel">
+					<img src="ressources/images/retro-cover.jpg" alt="image">
+					<p>La mère et le fils</p>
+				</div>
+				<div class="carousel">
+					<img src="ressources/images/robot-cover.jpg" alt="image">
+					<p>La mère et le fils</p>
+				</div>
+
+			</div>
+			<div class="c-right"> > </div>
+		</div>
+
+	</div>
+
+</section>
 
 <footer>
 	
@@ -92,7 +130,8 @@
 	</div>
 
 </footer>
-<script type="text/javascript">
+
+ <script type="text/javascript">
 
 var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-45578759-1']);

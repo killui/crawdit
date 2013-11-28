@@ -5,7 +5,8 @@ class index extends Controller {
     function __construct() {
         parent::__construct();
         
-        $this->View->render('index');
+        require('index.html');
+        //$this->View->render('index');
     }
 
 }

@@ -8,7 +8,7 @@ class Model {
             require_once 'libs/Config.php';
             //config de la base de données
             $dbtype = 'mysql';
-            $dbhost = 'localhost';
+            $dbhost = DB_HOST;
             $dbname = DB_NAME;
             $dbuser = DB_USER;
             $dbpass = DB_PASS;
