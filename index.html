@@ -40,8 +40,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<div class="logo"><a href="index.html"><img src="ressources/images/logo.png" alt="Crawdit"></a></div>
 			<ul>
 				<li><a href="project-list.html"><strong>Browse</strong><br/>projects</a></li>
+				<li><a href="fail.html"><strong>Meet</strong><br/>freelancers</a></li>
 				<li><a href="fail.html"><strong>Start</strong><br/>your project</a></li>
-				<li><a href="fail.html"><strong>Get in touch</strong><br/>with freelancer</a></li>
 			</ul>
 			<div>
 				<form id="search-bar">
@@ -60,42 +60,48 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<div class="signin-container">
 
 		<div class="signin">
+			<div class="container-960">
+			<div class="account f-left">
+				<h4>Already have an account?</h4>
+				<form id="search-bar">
+					<input type="text" placeholder="Email" required/>
+					<input type="password" placeholder="Password" required/>
+					<button type="submit" onclick="formSubmit()" >Log in</button>
+				</form>
+				<!-- <a href="#">Log in</a> -->
+			</div>
+			<div class="sign f-right">
+				<h4>If not, sign up now!</h4>
+				<!-- <img src="ressources/images/sign-in.png" alt="sign-in"/> -->
+				<a href="#" class="classic-sign">Sign in</a>
+				<a href="#" class="fb-sign">Log in with Facebook</a>
+				<!-- <img src="ressources/images/facebooklog.png" alt="facebook-connect"> -->
+			</div>
+			</div>
 		</div>
 	</div>
 </header>
 
-<!-- <section class="video-container">
-	<video   autoplay loop>
-		<source src="ressources/video/backgroundvid.mp4" type="video/mp4"></source>
-		<source src="ressources/video/backgroundvid.ogv" type="video/ogg"></source>
-		<source src="ressources/video/frankenweenie-ft.webm" type="video/webm"></source>
-	</video>
-
-	<div class="container-960">
-		<h1>make your movies ideas</h1><hr/><h1>come to life</h1>
-	</div>
-	
-
-</section> -->
 <div id="intro-project" class="f-left"><h2>Discover great projects</h2></div>
-<div id="intro-freelance" class="f-right"><h2>Meet awesome freelancer</h2></div>
+<div id="intro-freelance" class="f-right"><h2>Meet awesome freelancers</h2></div>
 <div class="clear"></div>
 <div class="intro">
 		<div id="intro-project-content">
+
 			<img src="ressources/images/intro-fleche-red.png" alt="fleche-project">
 			<p>Discover cool <span>short movies or animation projects</span> from all around the world.</p>
 			<p>Learn more about their story and <span>back them if you want to see them come to life!</span></p>
 			<p><span>Gain perks from your donation.</span> The more you help the project, the more you will be rewarded!</p>
 			<a href="project-list.html">View some of these projects</a>
+
 		</div>
 		<div id="intro-freelance-content">
 			<img src="ressources/images/intro-fleche-blue.png" alt="fleche-project">
-						<p>See a list of badass <span>freelancers free to work on film projects.</span> They’re motivated & full of skill, just like you.</p>
+							
 			<p>Filter them by aptitudes, skills, locations... And much more.
-<span>Find the perfect guy to work on your project.</span></p>
-			<p><span>Contact them instantly</span> and convince to work on your project.
-You’re ready to go!</p>
-<a href="#">Meet cool people</a>
+			<span>Find the perfect guy to work on your project.</span></p>
+			<p><span>Contact them instantly</span> and convince to work on your project.You’re ready to go!</p><p><span>Contact them instantly</span>and convince to work on your project. You're ready to go!</p><a href="#">Meet cool people</a>
+
 		</div>
 </div>
 
@@ -142,7 +148,7 @@ You’re ready to go!</p>
 			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
 
-		<div class="proj-featured-list margin-20">
+		<div class="proj-featured-list">
 
 			<video poster="ressources/images/robot-cover.jpg" id="test">
 
@@ -151,6 +157,11 @@ You’re ready to go!</p>
 
 			</video>
 			<div class="proj-list-desc">
+				<div class="proj-list-cta">
+
+					<a href="project.html">learn more</a>
+
+				</div>
 
 				<h3 class="proj-list-title"><a href="project.html">Burning Robot</a></h3>
 				<span class="proj-list-tag">Animation - Enfance</span>
@@ -183,6 +194,12 @@ You’re ready to go!</p>
 			</video>
 			<div class="proj-list-desc">
 
+				<div class="proj-list-cta">
+
+					<a href="project.html">learn more</a>
+
+				</div>
+
 				<h3 class="proj-list-title"><a href="project.html">Frankenweenie</a></h3>
 				<span class="proj-list-tag">Animation - Horor - Halloween</span>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet.<a href="project.html"> Read More...</a></p>
@@ -211,7 +228,7 @@ You’re ready to go!</p>
 
 	<div class="container-960">
 
-		<div class="proj-featured-list margin-20">
+		<div class="proj-featured-list">
 
 			<video poster="ressources/images/frankenweenie-cover.jpg" id="test">
 
@@ -220,6 +237,12 @@ You’re ready to go!</p>
 
 			</video>
 			<div class="proj-list-desc">
+
+				<div class="proj-list-cta">
+
+					<a href="project.html">learn more</a>
+
+				</div>
 
 				<h3 class="proj-list-title"><a href="project.html">Frankenweenie</a></h3>
 				<span class="proj-list-tag">Animation - Horor - Halloween</span>
@@ -240,7 +263,7 @@ You’re ready to go!</p>
 
 			</div>
 			<img src="ressources/images/proj-ombre-featured.png">
-		</div><div class="proj-featured-list margin-20">
+		</div><div class="proj-featured-list">
 
 			<video poster="ressources/images/frankenweenie-cover.jpg" id="test">
 
@@ -249,6 +272,11 @@ You’re ready to go!</p>
 
 			</video>
 			<div class="proj-list-desc">
+				<div class="proj-list-cta">
+
+					<a href="project.html">learn more</a>
+
+				</div>
 
 				<h3 class="proj-list-title"><a href="project.html">Frankenweenie</a></h3>
 				<span class="proj-list-tag">Animation - Horor - Halloween</span>
@@ -269,7 +297,7 @@ You’re ready to go!</p>
 
 			</div>
 			<img src="ressources/images/proj-ombre-featured.png">
-		</div><div class="proj-featured-list margin-20">
+		</div><div class="proj-featured-list">
 
 			<video poster="ressources/images/frankenweenie-cover.jpg" id="test">
 
@@ -278,6 +306,12 @@ You’re ready to go!</p>
 
 			</video>
 			<div class="proj-list-desc">
+
+				<div class="proj-list-cta">
+
+					<a href="project.html">learn more</a>
+
+				</div>
 
 				<h3 class="proj-list-title"><a href="project.html">Frankenweenie</a></h3>
 				<span class="proj-list-tag">Animation - Horor - Halloween</span>
@@ -309,30 +343,178 @@ You’re ready to go!</p>
 
 </section>
 
-	<div class="more-proj-btn">
+<div class="more-proj-btn">
 
-<div class="more-line"></div>
+	<div class="more-line"></div>
 
 		<div class="more-square">
 			
 			<img src="ressources/images/croix.png"/>
 			
 		</div>
+
+</div>
+
+
+<section class="freelance-featured">
+
+	<div class="container-960">
+		<h2>Meet awesome freelancers</h2>
+
+		<div class="freelance-featured-list">
+
+				<div class="freelance-pics">
+					<img src="ressources/images/freelancers/thomas.jpg">
+				</div>
+
+			<div class="freelance-list-desc">
+
+				<div class="freelance-list-cta">
+
+					<a href="freelance-list.html">learn more</a>
+
+				</div>
+
+				<h3 class="freelance-list-title"><a href="freelance-list.html">Frankenweenie</a></h3>
+				<span class="freelance-list-tag">Camera</span><span class="freelance-list-tag">Assistant</span><span class="freelance-list-tag">Actor</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="freelance-list.html"> Read More...</a></p>
+
+			</div>
+			<img src="ressources/images/proj-ombre-featured.png">
+		</div>
+
 		
 
-	<!-- 	<img class="proj-plus" src="ressources/images/proj-more.png" alt="more projects"/>
-		<img class="proj-minus" src="ressources/images/proj-more2.png" alt="more projects"/>
-		<div class="anim-more"></div>
-		<div class="anim-more2"></div> -->
-
 	</div>
+</section>
+
+<section class="freelance-new">
+
+	<div class="container-960">
+				<div class="freelance-featured-list">
+
+				<div class="freelance-pics">
+					<img src="ressources/images/freelancers/thomas.jpg">
+				</div>
+
+			<div class="freelance-list-desc">
+
+				<div class="freelance-list-cta">
+
+					<a href="freelance-list.html">learn more</a>
+
+				</div>
+
+				<h3 class="freelance-list-title"><a href="freelance-list.html">Claire Smith</a></h3>
+				<span class="freelance-list-tag">Animation</span><span class="freelance-list-tag">Halloween</span><span class="freelance-list-tag">Anima</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="freelance-list.html"> Read More...</a></p>
+
+				<div class="freelance-list-stats">
+
+					<div class="funded freelance-list-stats-details"><span>60%</span><span>funded</span></div>
+					<div class="pledge freelance-list-stats-details"><span>6024€</span><span>pledge</span></div>
+					<div class="freelance freelance-list-stats-details"><span>2</span><span>freelance</span></div>
+					<div class="togo freelance-list-stats-details"><span>36 days</span><span>to go</span></div>
+					
+					<div class="progress-bar">
+						<div class="progress-bar-value"></div>
+					</div>
+
+				</div>
+
+			</div>
+			<img src="ressources/images/proj-ombre-featured.png">
+		</div>
+
+		<div class="freelance-featured-list">
+
+				<div class="freelance-pics">
+					<img src="ressources/images/freelancers/thomas.jpg">
+				</div>
+
+			<div class="freelance-list-desc">
+
+				<div class="freelance-list-cta">
+
+					<a href="freelance-list.html">learn more</a>
+
+				</div>
+
+				<h3 class="freelance-list-title"><a href="freelance-list.html">Frankenweenie</a></h3>
+				<span class="freelance-list-tag">Animation - Horor - Halloween</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="freelance-list.html"> Read More...</a></p>
+
+				<div class="freelance-list-stats">
+
+					<div class="funded freelance-list-stats-details"><span>60%</span><span>funded</span></div>
+					<div class="pledge freelance-list-stats-details"><span>6024€</span><span>pledge</span></div>
+					<div class="freelance freelance-list-stats-details"><span>2</span><span>freelance</span></div>
+					<div class="togo freelance-list-stats-details"><span>36 days</span><span>to go</span></div>
+					
+					<div class="progress-bar">
+						<div class="progress-bar-value"></div>
+					</div>
+
+				</div>
+
+			</div>
+			<img src="ressources/images/proj-ombre-featured.png">
+		</div>
+
+		<div class="freelance-featured-list">
+
+				<div class="freelance-pics">
+					<img src="ressources/images/freelancers/thomas.jpg">
+				</div>
+
+			<div class="freelance-list-desc">
+
+				<div class="freelance-list-cta">
+
+					<a href="freelance-list.html">learn more</a>
+
+				</div>
+
+				<h3 class="freelance-list-title"><a href="freelance-list.html">Frankenweenie</a></h3>
+				<span class="freelance-list-tag">Animation - Horor - Halloween</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="freelance-list.html"> Read More...</a></p>
+
+				<div class="freelance-list-stats">
+
+					<div class="funded freelance-list-stats-details"><span>60%</span><span>funded</span></div>
+					<div class="pledge freelance-list-stats-details"><span>6024€</span><span>pledge</span></div>
+					<div class="freelance freelance-list-stats-details"><span>2</span><span>freelance</span></div>
+					<div class="togo freelance-list-stats-details"><span>36 days</span><span>to go</span></div>
+					
+					<div class="progress-bar">
+						<div class="progress-bar-value"></div>
+					</div>
+
+				</div>
+
+			</div>
+			<img src="ressources/images/proj-ombre-featured.png">
+		</div>
+	</div>
+</section>
+<div class="more-freelance-btn">
+
+	<div class="more-freelance-line"></div>
+
+		<div class="more-freelance-square">
+			
+			<img src="ressources/images/croix.png"/>
+			
+		</div>
+
+</div>
 
 <section class="kinduser">
 
 	<div class="container-960">
 		
 	
-		<div class="info margin-20">
+		<div class="info">
 
 			<h2>crowdfunding</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -342,7 +524,7 @@ You’re ready to go!</p>
 			<a href="fail.html">Discover Projects</a>
 
 		</div>
-		<div class="info margin-20">
+		<div class="info">
 
 			<h2>freelances</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -435,38 +617,6 @@ You’re ready to go!</p>
 	</div>
 
 </footer>
-
-	<!-- <div class="proj-list">
-
-		<video poster="images/cover.jpg" id="test">
-
-			<source src="video/frankenweenie-ft.mp4" type="video/mp4"></source>
-			<source src="video/frankenweenie-ft.theora.ogv" type="video/ogg"></source>
-
-		</video>
-		<div class="proj-list-desc">
-
-			<h3 class="proj-list-title"><a href="#">Frankenweenie</a></h3>
-			<span class="proj-list-tag">Animation - Horor - Halloween</span>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="#"> Read More...</a></p>
-
-			<div class="proj-list-stats">
-
-				<div class="funded proj-list-stats-details"><span>60%</span><span>funded</span></div>
-				<div class="pledge proj-list-stats-details"><span>6024â‚¬</span><span>pledge</span></div>
-				<div class="freelance proj-list-stats-details"><span>2</span><span>freelance</span></div>
-				<div class="togo proj-list-stats-details"><span>36 days</span><span>to go</span></div>
-				
-				<div class="progress-bar">
-					<div class="progress-bar-value"></div>
-				</div>
-
-			</div>
-
-		</div>
-		<img src="images/proj-ombre.png">
-	</div>
- -->
 
  <!--
 <script type="text/javascript">
