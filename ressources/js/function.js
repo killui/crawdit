@@ -306,7 +306,7 @@ $('.freelance-featured-list').on('mouseover',function(){
 		$('.cine-mode').fadeOut(1500);
 		$('.play').fadeIn(1000);
 		$('.video-proj').animate({
-			"height":"300px"
+			"height":"90px"
 			
 		},{
 			queue:true,
@@ -390,7 +390,6 @@ $('.freelance-featured-list').on('mouseover',function(){
 
 		$('.payement').fadeIn(800);
 	})
-	
 
 	/***Anim Intro Home page***/
 
@@ -405,7 +404,7 @@ $('.freelance-featured-list').on('mouseover',function(){
 		var signHeight = $('.signin').height();
 
 			if(signHeight<3){
-		$('.signin').animate({'height':'300px'},'slow');
+		$('.signin').animate({'height':'90px'},'slow');
 			}else{
 				$('.signin').animate({'height':'0px'},'slow');
 			}
@@ -602,5 +601,4 @@ $('.freelance-featured-list').on('mouseover',function(){
 		$('#jobs').scrollTo(fmjobs,300);
 		$('.more-jobs .icon').removeClass('arrow-up').addClass('arrow-down');		
 	})
-
 })
