@@ -7,5 +7,4 @@ ReWriteCond %{REQUEST_FILENAME} !-l
 
 #ReWriteBase /v1/
 
-
 ReWriteRule ^(.*)$ index.php?url=$0 [QSA,L]
