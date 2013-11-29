@@ -74,7 +74,7 @@ $(document).ready(function () {
 
 
 
-$('.proj-featured-list').on('mouseover',function(){
+/*$('.proj-featured-list').on('mouseover',function(){
  $('.proj-list-cta', this).show();
 
  var player = $('video',this)[0];
@@ -88,7 +88,44 @@ $('.proj-featured-list').on('mouseover',function(){
    player.pause();
     //player.load();
    
+ });*/
+
+
+
+$('.proj-featured-list').on('mouseover',function(){
+ $('.proj-list-cta', this).show();
+
+
+	}).on('mouseout',function(){
+
+  $('.proj-list-cta', this).hide();
+  
+   
  });
+
+
+	$('.proj-list-cta a').on('mouseover',function(){
+		console.log('in');
+
+	var player = $(this).closest('.proj-featured-list').children()[0];
+	console.log(player);
+	player.play();
+ 	player.muted = true;
+
+	}).on('mouseout',function(){
+
+	var player = $(this).closest('.proj-featured-list').children()[0];
+
+console.log('out');
+ 	player.pause();
+    player.load();
+		
+	});
+
+
+
+
+
 
 $('.freelance-featured-list').on('mouseover',function(){
  $('.freelance-list-cta', this).show();
@@ -101,13 +138,13 @@ $('.freelance-list-cta a').on('mouseover',function(){
 
 	var zoomFreelancer = $($(this).closest('.freelance-featured-list').children()[0]).children();
 
-	zoomFreelancer.animate({'width':'105%'},'slow');
+	zoomFreelancer.stop().animate({'width':'105%'},'slow');
 
 }).on('mouseout',function(){
 
 var zoomFreelancer = $($(this).closest('.freelance-featured-list').children()[0]).children();
 
-	zoomFreelancer.animate({'width':'100%'},'slow');
+	zoomFreelancer.stop().animate({'width':'100%'},'slow');
 
 });
 
@@ -439,7 +476,7 @@ var zoomFreelancer = $($(this).closest('.freelance-featured-list').children()[0]
 		});
 
 
-		$('.proj-featured-list').bind('mouseover',function(){
+/*		$('.proj-featured-list').bind('mouseover',function(){
 			$('.proj-list-cta', this).show();
 			var player = $('video',this)[0];
 			player.play();
@@ -459,10 +496,10 @@ var zoomFreelancer = $($(this).closest('.freelance-featured-list').children()[0]
 			//player.children()[0].pause()
 			//player.children()[0].load();
 			
-		});
+		});*/
 
 
-		$('.video-container>div>hr').animate({'width':'777px'},'slow');
+		/*$('.video-container>div>hr').animate({'width':'777px'},'slow');*/
 	
 
 	var height = $(".desc-proj").load().height();
