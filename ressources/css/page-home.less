@@ -70,7 +70,7 @@
 		color:@white;
 		text-decoration:none;
 		background:@turquoise;
-		text-shadow:1px 0px 0 rgba(0,0,0,0.4);
+		/*text-shadow:1px 0px 0 rgba(0,0,0,0.4);*/
 		font-family:'dinpro-regularregular';
 		padding:10px 20px;
 		display:inline-block;
@@ -118,7 +118,7 @@
 		color:@white;
 		text-decoration:none;
 		background:@newred;
-		text-shadow:1px 0px 0 rgba(0,0,0,0.4);
+		/*text-shadow:1px 0px 0 rgba(0,0,0,0.4);*/
 		font-family:'dinpro-regularregular';
 		padding:10px 20px;
 		display:inline-block;
@@ -145,16 +145,10 @@
 /*** KINDUSER ***/
 
 .kinduser {
-	background: #f7f7f7;
+	background: #eeeeee;
 	padding: 40px 0 25px;
 
 /*	position:relative;*/
-
-
-	&.v2 {
-		padding: 40px 0 ;
-		background: #fff;
-	}
 
 
 	.info {
@@ -172,6 +166,13 @@
 			font-size: 1.8em;
 			margin: 1em 0 ;
 			font-weight:bold;
+			font-family:'dinpromedium';
+			&.freelance-desc{
+				color:@turquoise;
+			}
+			&.start-proj-desc{
+				color:#333333;
+			}
 		}
 
 		p {
@@ -185,7 +186,32 @@
 			position:absolute;
 			bottom:0px;
 			display:block;
-			margin-left:45px;
+			margin-left:50px;
+			text-decoration:none;
+			text-align:center;
+			background:@newred;
+			color:@white;
+			width:200px;
+			padding-top:10px;
+			padding-bottom:10px;
+			.borderradius(5px);
+			text-shadow:1px 0 0 rgba(0,0,0,0.5);
+			font-family:'dinpromedium';
+			&:hover{
+				background:#cc4241;
+			}
+			&.freelance-desc-link{
+				background:@turquoise;
+				&:hover{
+					background:#7ad0d3;
+				}
+			}
+			&.start-proj-desc-link{
+				background:#333;
+				&:hover{
+					background:#232323;
+				}
+			}
 
 
 		}
@@ -378,6 +404,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0082dbde', e
 				padding-left:23px;
 				margin-top:-52px;
 				position:absolute;
+				-webkit-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
 				transform:rotate(-45deg);
 				text-transform:uppercase;
 				width:100px;
@@ -388,6 +416,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0082dbde', e
 			padding-bottom:377px;
 			margin-top:38px;
 			position:absolute;
+			-webkit-transform:rotate(-45deg);
+			-moz-transform:rotate(-45deg);
 			transform:rotate(-45deg);
 			text-transform:uppercase;
 			width: 100px;

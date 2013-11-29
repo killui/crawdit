@@ -55,6 +55,7 @@
 
 
 //VARIABLE
+/***color***/
 @darkgrey: #444444;
 @lightgrey: #eeeeee;
 @white: #ffffff;
@@ -63,6 +64,10 @@
 @turquoise:#82dbde;
 @newred:#d54544;
 
+/***hover btn***/
+@timing: 0.15s;
+@translatex:0px;
+@translatey:-53px;
 
 //MIXIN
 .borderradius(@width){
@@ -71,6 +76,14 @@
 	-webkit-border-radius:@width;
 	-ms-border-radius:@width;
 	-o-border-radius:@width;
+}
+
+.transition-timing{
+	transition: all @timing ease-in;
+}
+
+.translate{
+	transform:translate(@translatex, @translatey);
 }
 
 .transition(@a,@b,@c){
@@ -156,6 +169,14 @@
 	margin: 0 auto;
 	text-decoration: none;
 	font-size: 18px;
+	/***thomas modif***/
+	position:relative;
+	overflow:hidden;
+	height:18px;
+}&:hover div.btn-background-hover{
+
+.translate;
+
 	.borderradius(3px);
 	.transition(all,.2s,linear);
 }
@@ -164,7 +185,7 @@
 	.btn-cta;
 	
 	&:hover {
-		background: @white;
+		/*background: @white;*/
 		color: @newred;
 	}
 }
@@ -173,7 +194,23 @@
 	.btn-cta;
 	
 	&:hover {
-		background: @white;
+		/*background: @white;*/
 		color: @turquoise;
 	}
+.btn-background-hover{
+
+	position:absolute;
+	width:100%;
+	height:48px;
+	margin-top:38px;
+	background:@white;
+	.transition-timing;
+	z-index:2;
+
+}
+.btn.txt{
+	width:100%;
+	position:absolute;
+	z-index:3;
+}
 }

@@ -140,7 +140,7 @@
 		#jobs {
 			margin: 10px 0 0;
 			height: 100px;
-			overflow: hidden;
+			overflow: scroll;
 			li {
 				background: @white;
 				.borderradius(3px);
@@ -159,6 +159,11 @@
 					font-weight: lighter;
 				}
 			}
+		}
+
+		.more-jobs {
+			display: block;
+			cursor: pointer;
 		}
 	}
 }

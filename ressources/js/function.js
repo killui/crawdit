@@ -21,41 +21,7 @@ $(document).ready(function () {
 	});
 
 
-		var gaga;
-		
-		$('.more-square').click(function(){
-			if(gaga == 0 || gaga == undefined){
-			$('.proj-new').animate({"height":"420px","overflow":"auto"},'slow');
-			$(this).children().attr('src','ressources/images/croix-2.png')
-			console.log('tr')
-			gaga = 1;
-			console.log(gaga);
-		}else if(gaga = 1){
-			$('.proj-new').animate({"height":"0px","overflow":"hidden"},'slow');
-			$(this).children().attr('src','ressources/images/croix.png')
-			gaga = 0;
-		}
 
-
-		});
-
-				var fafa;
-		
-		$('.more-freelance-square').click(function(){
-			if(fafa == 0 || fafa == undefined){
-			$('.freelance-new').animate({"height":"420px","overflow":"auto"},'slow');
-			$(this).children().attr('src','ressources/images/croix-2.png')
-			console.log('tr')
-			fafa = 1;
-			console.log(fafa);
-		}else if(fafa = 1){
-			$('.freelance-new').animate({"height":"0px","overflow":"hidden"},'slow');
-			$(this).children().attr('src','ressources/images/croix.png')
-			gaga = 0;
-		}
-
-
-		});
 /*			test=0;
 		$('.proj-featured-list').bind("mouseover", function(e){
 			if(test == 0){
@@ -108,7 +74,7 @@ $(document).ready(function () {
 
 
 
-$('.proj-featured-list').on('mouseover',function(){
+/*$('.proj-featured-list').on('mouseover',function(){
  $('.proj-list-cta', this).show();
 
  var player = $('video',this)[0];
@@ -122,31 +88,60 @@ $('.proj-featured-list').on('mouseover',function(){
    player.pause();
     //player.load();
    
- });
+ });*/
 
-$('.freelance-featured-list').on('mouseover',function(){
- $('.freelance-list-cta', this).show();
+
+
+	$('.proj-featured-list').on('mouseover',function(){
+	 	$('.proj-list-cta', this).show();
 	}).on('mouseout',function(){
-  $('.freelance-list-cta', this).hide();
- });
+		$('.proj-list-cta', this).hide();
+	});
+
+
+	$('.proj-list-cta a').on('mouseover',function(){
+		console.log('in');
+
+		var player = $(this).closest('.proj-featured-list').children()[0];
+		console.log(player);
+		player.play();
+	 	player.muted = true;
+
+	}).on('mouseout',function(){
+
+		var player = $(this).closest('.proj-featured-list').children()[0];
+
+	console.log('out');
+	 	player.pause();
+	    player.load();
+		
+	});
 
 
 
 
 
 
+	$('.freelance-featured-list').on('mouseover',function(){
+	 $('.freelance-list-cta', this).show();
 
+		}).on('mouseout',function(){
+	  $('.freelance-list-cta', this).hide();
+	 });
 
+	$('.freelance-list-cta a').on('mouseover',function(){
 
+		var zoomFreelancer = $($(this).closest('.freelance-featured-list').children()[0]).children();
 
+		zoomFreelancer.stop().animate({'width':'105%'},'slow');
 
+	}).on('mouseout',function(){
 
+	var zoomFreelancer = $($(this).closest('.freelance-featured-list').children()[0]).children();
 
+		zoomFreelancer.stop().animate({'width':'100%'},'slow');
 
-
-
-
-
+	});
 
 
 /*		$('.proj-featured-list').bind("mouseover", function(e){
@@ -275,63 +270,22 @@ $('.freelance-featured-list').on('mouseover',function(){
 
 /*		$('.video-container>div>hr').animate({'width':'777px'},'slow');*/
 	
-
-	var height = $(".desc-proj").load().height();
-
-	$(".desc-proj aside").height(height);
-	
-
-	
-	
-
-	/**** Video mode cinema ***/
-	var videoproj = $('.video-proj');
-	var infoproj = $('.info-proj');
-
-	$('.need-proj video, .play').on('click',function(){
-		
-		$(document).scrollTo(videoproj,500);
-		$('.cine-mode').fadeIn(500);
-		$('.play').fadeOut(500);
-		$(".video-proj").animate({
-			"height":"600px"			
-
-		},{
-			queue:true,
-			duration:500
-		});
-	})
-
-	$('.hide-cine-mode').on('click',function(){
-		$('.cine-mode').fadeOut(1500);
-		$('.play').fadeIn(1000);
-		$('.video-proj').animate({
-			"height":"90px"
-			
-		},{
-			queue:true,
-			duration:1000
-		});
-		
-		$(document).scrollTo(infoproj,1000);
-	})
-
 	/***HEADER BACKGROUND***/
 
-	var morePropag = 0;
-	$('.more-square img').mouseover(function(e){
+	/*var morePropag = 0;*/
+	// $('.more-square img').mouseover(function(e){
 		
-		$('.more-line').animate({'width':'900px'},'fast');
+	// 	$('.more-line').animate({'width':'900px'},'fast');
 		
 
 
-	});
-	$('.more-square img').mouseout(function(e){
+	// });
+	// $('.more-square img').mouseout(function(e){
 		
-		$('.more-line').animate({'width':'450px'},'fast');
+	// 	$('.more-line').animate({'width':'450px'},'fast');
 
 
-	});
+	// });
 
 	/*$('.more-square img').attr('src')*/
 
@@ -346,50 +300,6 @@ $('.freelance-featured-list').on('mouseover',function(){
 		$(this).addClass('checked');
 	});
 	
-	
-
-
-	//Avancement don
-	var pledged = 10000;
-	//console.log(pledged);
-	var funded = (838/pledged)*4000;
-	var widthfunded = $('.avancement').width(funded);
-	console.log(funded);
-
-	$('.input-don').stop().keyup(function(){
-		var don = $(this).val();
-		console.log(don);
-
-		var widthdon = (838/pledged)*don;
-		$('.don').fadeIn(200);
-		$('.don').animate({
-			"width":widthdon,
-			"margin-left":funded
-		},500);
-
-
-		if(don == $('.radio').val()){
-			$('choice',this).addClass('checked');
-		}
-	})
-
-
-	//POPUP CLOSE
-	$('.close').on('click',function(){
-		$('.popup-mode').fadeOut(500);
-		$('.popups, .donate, .payement, .confirmation').fadeOut(500);
-	})
-	//Popup
-	$('.back_project').on('click',function(){
-		$('.popup-mode').fadeIn(500);
-		$('.popups,.donate').fadeIn(500);
-	})
-	//POPUP STEP
-	$('.next').on('click',function(){
-		$('.donate').fadeOut(500);
-
-		$('.payement').fadeIn(800);
-	})
 
 	/***Anim Intro Home page***/
 
@@ -415,13 +325,18 @@ $('.freelance-featured-list').on('mouseover',function(){
 		var gaga;
 		
 		$('.more-square').click(function(){
+			var scrollNewProj = scrollY + 400;
+			var scrollNewProjReverse = scrollY - 400;
 			if(gaga == 0 || gaga == undefined){
+			
+			$('html, body').animate({scrollTop:scrollNewProj},700);
 			$('.proj-new').animate({"height":"420px","overflow":"auto"},'slow');
 			$(this).children().attr('src','ressources/images/croix-2.png')
 			console.log('tr')
 			gaga = 1;
 			console.log(gaga);
 		}else if(gaga = 1){
+			$('html, body').animate({scrollTop:-scrollNewProjReverse},700);
 			$('.proj-new').animate({"height":"0px","overflow":"hidden"},'slow');
 			$(this).children().attr('src','ressources/images/croix.png')
 			gaga = 0;
@@ -430,9 +345,30 @@ $('.freelance-featured-list').on('mouseover',function(){
 
 		});
 
+		var fafa;
 		
+		$('.more-freelance-square').click(function(){
+			var scrollNewProj = scrollY + 400;
+			var scrollNewProjReverse = scrollY - 400;
 
-		$('.proj-featured-list').bind('mouseover',function(){
+			if(fafa == 0 || fafa == undefined){
+				$('html, body').animate({scrollTop:scrollNewProj},700);
+			$('.freelance-new').animate({"height":"420px","overflow":"auto"},'slow');
+			$(this).children().attr('src','ressources/images/croix-2.png')
+
+			fafa = 1;
+		}else if(fafa = 1){
+			$('html, body').animate({scrollTop:scrollNewProjReverse},700);
+			$('.freelance-new').animate({"height":"0px","overflow":"hidden"},'slow');
+			$(this).children().attr('src','ressources/images/croix.png')
+			fafa = 0;
+		}
+
+
+		});
+
+
+/*		$('.proj-featured-list').bind('mouseover',function(){
 			$('.proj-list-cta', this).show();
 			var player = $('video',this)[0];
 			player.play();
@@ -452,19 +388,10 @@ $('.freelance-featured-list').on('mouseover',function(){
 			//player.children()[0].pause()
 			//player.children()[0].load();
 			
-		});
+		});*/
 
 
-		$('.video-container>div>hr').animate({'width':'777px'},'slow');
-	
-
-	var height = $(".desc-proj").load().height();
-
-	$(".desc-proj aside").height(height);
-	
-
-	
-	
+		/*$('.video-container>div>hr').animate({'width':'777px'},'slow');*/
 
 	/**** Video mode cinema ***/
 	var videoproj = $('.video-proj');
@@ -500,22 +427,58 @@ $('.freelance-featured-list').on('mouseover',function(){
 
 	/***HEADER BACKGROUND***/
 
-	var morePropag = 0;
+	/*var morePropag = 0;*/
 	$('.more-square img').mouseover(function(e){
 		
-		$('.more-line').animate({'width':'900px'},'fast');
+		$('.more-line').stop().animate({'width':'900px'},'fast');
 		
 
 
 	});
 	$('.more-square img').mouseout(function(e){
 		
-		$('.more-line').animate({'width':'450px'},'fast');
+		$('.more-line').stop().animate({'width':'450px'},'fast');
+
+
+	});
+
+		$('.more-freelance-square img').mouseover(function(e){
+		
+		$('.more-freelance-line').stop().animate({'width':'900px'},'fast');
+		
+
+
+	});
+	$('.more-freelance-square img').mouseout(function(e){
+		
+		$('.more-freelance-line').stop().animate({'width':'450px'},'fast');
 
 
 	});
 
 	/*$('.more-square img').attr('src')*/
+
+
+
+	// JOBS scroll
+	var scroll = 0;
+	var lmjobs = $('#jobs li').last();
+	var fmjobs = $('#jobs li').first();
+	console.log(lmjobs);
+	console.log(fmjobs);
+
+	$('.more-jobs.down ').bind('click',function(){
+		$('#jobs').scrollTo(lmjobs,300);
+		$('.more-jobs .icon').removeClass('arrow-down').addClass('arrow-up');
+		$('.more-jobs').removeClass('down').addClass('up');	
+	});
+
+	$('.more-jobs.up').bind('click',function(){
+		$('#jobs').scrollTo(fmjobs,300);
+		$('more-jobs .icon').removeClass('arrow-up').addClass('arrow-down');
+		$('.more-jobs').removeClass('up').addClass('down');
+	})
+
 
 	/*** Perks checked ***/
 	
@@ -535,29 +498,36 @@ $('.freelance-featured-list').on('mouseover',function(){
 	var widthfunded = $('.avancement').width(funded);
 	//console.log(funded);
 	//var value = $('.choice input[type=radio]').each(function(){ $(this).prop('defaultValue');});
-	var value = $('.choice').each(function(){ $(this).attr('id'); });
-	var arrayvalue = $.makeArray(value);
-	
-	
-	console.log(arrayvalue);
+	//var value = $('.choice').each(function(){ $(this).attr('id'); });
+	var array = new Object();
+	var value = $('input[type=radio]').each(function(){ array[$(this).attr('value')] = $(this).val(); });
+	//var arrayvalue = $.makeArray(value);
+	console.log(array);
 
-	$('.input-don').keyup(function(event){
+	$('.input-don').keyup(function(){
+
+		
+		//var value = $('.choice input[type=radio]').val();
+
 		var don = $(this).val();
 
-		if(don == 5){
-			$("input").val(don).prop("checked",true);
-			$('.choice').addClass('checked');
-		}
-		// for (i=0;i<arrayvalue.length;i++) {
-		// 	console.log('success for'+i);
-		// 	console.log(don);
-		// 	console.log('array='+arrayvalue[i]);
-		// 	if(don == arrayvalue[i]){
-		// 		console.log('success while'+i);
-		// 		$("input").val(don).prop("checked",true);
-		// 		$('.choice').addClass('checked');
+		// if(don <= array[1]){
+		// 	console.log(success);
+		// 	$("input").val(don).prop("checked",true);
+		// 	$('.choice').addClass('checked');
+		// }
+		// 
 
-		// 	}
+		// for (i=0;i<array.length;i++) {
+		//  	console.log('success for'+i);
+		//  	console.log(don);
+		//  	console.log('array='+array[i]);
+		//  	if(don == array[i]){
+		//  		console.log('success while'+i);
+		//  		$("input").val(don).prop("checked",true);
+		//  		$('.choice').addClass('checked');
+
+		//  	}
 		// };
 
 		
@@ -585,21 +555,9 @@ $('.freelance-featured-list').on('mouseover',function(){
 	//POPUP STEP
 	$('.next').on('click',function(){
 		$('.donate').fadeOut(500);
-
 		$('.payement').fadeIn(800);
 	})
 	
 
-	// JOBS scroll
-	var scroll = 0;
-	var fmjobs = $('#jobs li').first();
-	var lmjobs = $('#jobs li').last();
-	$('.more-jobs').bind('click',function(){
-		$('#jobs').scrollTo(lmjobs,300);
-		$('.more-jobs .icon').removeClass('arrow-down').addClass('arrow-up');	
-	})
-	$('.arrow-up').bind('click', function(){
-		$('#jobs').scrollTo(fmjobs,300);
-		$('.more-jobs .icon').removeClass('arrow-up').addClass('arrow-down');		
-	})
-})
+
+});
