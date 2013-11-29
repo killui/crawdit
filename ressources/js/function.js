@@ -411,21 +411,56 @@ $('.freelance-featured-list').on('mouseover',function(){
 
 	});
 
+<<<<<<< HEAD
 		$('.proj-featured-list').bind("mouseover", function(e){
 
 				console.log(e.relatedTarget);
 			var player = $(this);
 			player.children()[0].play();
 			player.children()[0].muted = true;
+=======
 
+		var gaga;
+		
+		$('.more-square').click(function(){
+			if(gaga == 0 || gaga == undefined){
+			$('.proj-new').animate({"height":"420px","overflow":"auto"},'slow');
+			$(this).children().attr('src','ressources/images/croix-2.png')
+			console.log('tr')
+			gaga = 1;
+			console.log(gaga);
+		}else if(gaga = 1){
+			$('.proj-new').animate({"height":"0px","overflow":"hidden"},'slow');
+			$(this).children().attr('src','ressources/images/croix.png')
+			gaga = 0;
+		}
+
+
+		});
+
+		
+>>>>>>> 4f3e6ef61eb51b9e06518403dad8504fc9d2b2a5
+
+		$('.proj-featured-list').bind('mouseover',function(){
 			$('.proj-list-cta', this).show();
+			var player = $('video',this)[0];
+			player.play();
+			player.muted = true;
+			//console.log(e.relatedTarget);
+			//var player = $(this);
+			//player.children()[0].play();
+			//player.children()[0].muted = true;
 
-		}).bind('mouseout', function(){
-
-			var player = $(this);
-			player.children()[0].pause()
-			player.children()[0].load();
+		}).bind('mouseout',function(){
 			$('.proj-list-cta', this).hide();
+			var player = $('video',this)[0];
+			var pauseTime = player.currentTime;
+			player.pause();
+			//player.load();
+			//var player = $(this);
+			//player.children()[0].pause()
+			//player.children()[0].load();
+			
 		});
 
 
@@ -502,25 +537,39 @@ $('.freelance-featured-list').on('mouseover',function(){
 		$(this).addClass('checked');
 	});
 	
-	
-
-
 	//Avancement don
 	var pledged = 10000;
 	//console.log(pledged);
 	var funded = (838/pledged)*4000;
 	var widthfunded = $('.avancement').width(funded);
 	//console.log(funded);
-	var value = $('.choice input[type=radio]').each(function(){ parseInt($(this).val()); });
-	//var value = parseInt($('.choice input[value=""]').val());
-	//console.log(value);
+	var value = $('.choice input[type=radio]').each(function(){ $(this).prop('defaultValue');});
 	var arrayvalue = $.makeArray(value);
-	console.log(arrayvalue);
+	
+	
+	console.log(value);
 
-	$('.input-don').stop().keyup(function(){
+	$('.input-don').keyup(function(event){
 		var don = $(this).val();
-		//console.log(don);
 
+		if(don == 5){
+			$("input").val(don).prop("checked",true);
+			$('.choice').addClass('checked');
+		}
+		// for (i=0;i<arrayvalue.length;i++) {
+		// 	console.log('success for'+i);
+		// 	console.log(don);
+		// 	console.log('array='+arrayvalue[i]);
+		// 	if(don == arrayvalue[i]){
+		// 		console.log('success while'+i);
+		// 		$("input").val(don).prop("checked",true);
+		// 		$('.choice').addClass('checked');
+
+		// 	}
+		// };
+
+		
+		//var findperk = arrayvalue.find(don);
 		var widthdon = (838/pledged)*don;
 		$('.don').fadeIn(200);
 		$('.don').animate({
@@ -528,22 +577,18 @@ $('.freelance-featured-list').on('mouseover',function(){
 			"margin-left":funded
 		},500);
 
-
-		if(don <= arrayvalue[i]){
-			$('choice',this).addClass('checked');
-		}
 	})
 
 
 	//POPUP CLOSE
-	$('.close').on('click',function(){
+	$('.close,.finish').on('click',function(){
 		$('.popup-mode').fadeOut(500);
 		$('.popups, .donate, .payement, .confirmation').fadeOut(500);
 	})
 	//Popup
 	$('.back_project').on('click',function(){
-		$('.popup-mode').fadeIn(500);
-		$('.popups,.donate').fadeIn(500);
+		 $('.popup-mode').fadeIn(500);
+		 $('.popups').fadeIn(500);
 	})
 	//POPUP STEP
 	$('.next').on('click',function(){
@@ -555,20 +600,14 @@ $('.freelance-featured-list').on('mouseover',function(){
 
 	// JOBS scroll
 	var scroll = 0;
+	var fmjobs = $('#jobs li').first();
+	var lmjobs = $('#jobs li').last();
 	$('.more-jobs').bind('click',function(){
-		
-		var fmjobs = $('#jobs li').last();
-		var lmjobs = $('#jobs li').first();
-		console.log(scroll);
-
-		if(scroll == 0) {
-			scroll ++;
-			$('#jobs').scrollTo(lmjobs,400);
-		}
-		else{
-			scroll --;
-			$('#jobs').scrollTo(fmjobs,400);
-		}
-		
+		$('#jobs').scrollTo(lmjobs,300);
+		$('.more-jobs .icon').removeClass('arrow-down').addClass('arrow-up');	
+	})
+	$('.arrow-up').bind('click', function(){
+		$('#jobs').scrollTo(fmjobs,300);
+		$('.more-jobs .icon').removeClass('arrow-up').addClass('arrow-down');		
 	})
 })

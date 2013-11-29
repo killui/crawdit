@@ -69,7 +69,7 @@
 @translatex:0px;
 @translatey:-53px;
 
-//
+//MIXIN
 .borderradius(@width){
 	border-radius:@width;
 	-moz-border-radius:@width;
@@ -78,6 +78,7 @@
 	-o-border-radius:@width;
 }
 
+<<<<<<< HEAD
 .transition-timing{
 	transition: all @timing ease-in;
 }
@@ -86,6 +87,25 @@
 	transform:translate(@translatex, @translatey);
 }
 
+=======
+.transition(@a,@b,@c){
+	transition-property:@a;
+	transition-duration:@b;
+	transition-timing-function:@c;
+	-webkit-transition-property:@a;
+	-webkit-transition-duration:@b;
+	-webkit-transition-timing-function:@c;
+	-moz-transition-property:@a;
+	-moz-transition-duration:@b;
+	-moz-transition-timing-function:@c;
+	-ms-transition-property:@a;
+	-ms-transition-duration:@b;
+	-ms-transition-timing-function:@c;
+	-o-transition-property:@a;
+	-o-transition-duration:@b;
+	-o-transition-timing-function:@c;
+}
+>>>>>>> 4f3e6ef61eb51b9e06518403dad8504fc9d2b2a5
 
 //ICON
 .icon {
@@ -105,6 +125,25 @@
 		background: url('../images/close.png')no-repeat ;
 	}
 
+	&.arrow-up{
+		cursor: pointer;
+		width: 13px;
+		height: 9px;
+		background: url('../images/flèche-haut.png')no-repeat ;
+	}
+	&.arrow-down{
+		cursor: pointer;
+		width: 13px;
+		height: 9px;
+		background: url('../images/flèche-bas.png')no-repeat ;
+	}
+
+	&.ellipse {
+		width: 21px;
+		height: 19px;
+		background: url('../images/ellipse.png')no-repeat ;
+	}
+
 }
 
 
@@ -119,6 +158,7 @@
 	margin: 0 auto;
 	text-decoration: none;
 	font-size: 18px;
+	.transition(all,.3s,linear);
 }
 .btn-cta {
 	font-family: "ff-dagny-web-pro",sans-serif;
@@ -132,6 +172,7 @@
 	margin: 0 auto;
 	text-decoration: none;
 	font-size: 18px;
+<<<<<<< HEAD
 	/***thomas modif***/
 	position:relative;
 	overflow:hidden;
@@ -140,11 +181,14 @@
 
 .translate;
 
+=======
+	.borderradius(3px);
+	.transition(all,.2s,linear);
+>>>>>>> 4f3e6ef61eb51b9e06518403dad8504fc9d2b2a5
 }
 
 .btn-red {
 	.btn-cta;
-	.borderradius(3px);
 	
 	&:hover {
 		/*background: @white;*/
@@ -154,7 +198,6 @@
 
 .btn-blue {
 	.btn-cta;
-	.borderradius(3px);
 	
 	&:hover {
 		/*background: @white;*/

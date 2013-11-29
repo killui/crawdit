@@ -27,9 +27,7 @@
 		margin: 75px auto 0;
 		padding: 15px 0;
 
-		.payement, .confirmation {
-			display: none;
-		}
+		
 	
 
 		.steps {
@@ -37,17 +35,38 @@
 			border-bottom:solid 1px #eeeeee;
 			text-align: center;
 			padding: 0 0 15px;
+			position: relative;
+
+			.trait-step {
+				width: 600px;
+				position: absolute;
+				z-index: 1px;
+				height: 3px;
+				background: #eeeeee;
+				//background: url('../images/trait-step.png')repeat;
+				left: 160px;
+				top: 9px;
+			}
 
 			.step {
-				color: @newred;
+				color: @lightgrey;
 				display: inline-block;
+				position: relative;
+				z-index: 2;
+				width: 300px;
+				//margin: 0 20px;
+
+				&.active {
+					color: @newred;
+					font-weight: bold;
+				}
 			}
 
 		}
 
 		/** POPUP DONATE ***/
 		.donate {
-
+			display: none;
 		
 			.proj-don {
 				padding: 0 50px;
@@ -136,11 +155,13 @@
 				}
 
 				.choose-perk {
-
+					text-align: center;
 					h4 {
 						font-size: 30px;
 						margin: 30px 0 20px ;
 						vertical-align: middle;
+						color: @newred;
+						text-align: left;
 					}
 						.choice {
 							display: inline-block;
@@ -202,6 +223,7 @@
 		/*** POPUP PAYEMENT ***/
 
 		.payement {
+			display: none;
 			height: 795px;
 			padding: 20px 0;
 
@@ -220,6 +242,57 @@
 						
 					}
 				}
+			}
+		}
+
+
+		/*** POPUP CONFIRMATION ***/
+
+		.confirmation {
+			padding: 0 50px;
+			p {
+				ont-size: 36px;
+				text-align: center;
+				color: @newred;
+				margin: 20px 0;
+			}
+
+			form {
+				width: 350px;
+				text-align: center;
+				display: inline-block;
+				vertical-align: top;
+				textarea {
+					.borderradius(5px);
+					padding: 15px 10px;
+					background: @lightgrey;
+					border: none;
+					display: block;
+					min-width: 350px;
+					max-width: 350px;
+					min-height: 175px;
+					max-height:175px;
+				}
+
+				button {
+					display: block;
+					.btn;
+					.borderradius(5px);
+					padding: 15px 0;
+					width: 374px;
+					background: @newred;
+					cursor: pointer;
+				}
+			}
+
+			.finish {
+				width: 170px;
+				padding: 20px 0;
+				font-size: 24px;
+				margin:20px 0;
+				.btn;
+				.borderradius(5px);
+				background: @darkgrey;
 			}
 		}
 	}

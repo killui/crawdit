@@ -10,21 +10,41 @@
 
 /***mixin***/
 
-.link_white{ 
-	color: @white; text-decoration: none;
-	 }
 
-.link_d-red{
- color: @newred; text-decoration: none;
-  }
+.link_white {
+	color: @white;
+	text-decoration: none;
+}
 
-.share{
-  text-align: center; margin: 40px 0 0;
-  background: @lightgrey;
-  padding: 15px 0;
-  .borderradius(5px);
-  width: 610px;
-	h5{
+.link_d-red {
+	color: @newred;
+	text-decoration: none;
+}
+
+.share {
+	text-align: center;
+	margin: 40px 0 0;
+	background: @lightgrey;
+	padding: 15px 0;
+	.borderradius(5px);
+	width: 610px;
+
+	&.share-thanks {
+		background: none;
+		display: inline-block;
+		width: 400px;
+		vertical-align: top;
+		margin-left: 50px;
+		padding: 0;
+
+		.api {
+			width: 100px;
+		}
+
+	}
+
+	h5 {
+
 		color: @newred;
 		text-align: left;
 		font-size: 20px;
