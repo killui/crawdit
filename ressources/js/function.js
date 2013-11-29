@@ -21,24 +21,6 @@ $(document).ready(function () {
 	});
 
 
-		var gaga;
-		
-		$('.more-square').click(function(){
-			if(gaga == 0 || gaga == undefined){
-			$('.proj-new').animate({"height":"420px","overflow":"auto"},'slow');
-			$(this).children().attr('src','ressources/images/croix-2.png')
-			console.log('tr')
-			gaga = 1;
-			console.log(gaga);
-		}else if(gaga = 1){
-			$('.proj-new').animate({"height":"0px","overflow":"hidden"},'slow');
-			$(this).children().attr('src','ressources/images/croix.png')
-			gaga = 0;
-		}
-
-
-		});
-
 				var fafa;
 		
 		$('.more-freelance-square').click(function(){
