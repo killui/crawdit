@@ -534,11 +534,12 @@ $('.freelance-featured-list').on('mouseover',function(){
 	var funded = (838/pledged)*4000;
 	var widthfunded = $('.avancement').width(funded);
 	//console.log(funded);
-	var value = $('.choice input[type=radio]').each(function(){ $(this).prop('defaultValue');});
+	//var value = $('.choice input[type=radio]').each(function(){ $(this).prop('defaultValue');});
+	var value = $('.choice').each(function(){ $(this).attr('id'); });
 	var arrayvalue = $.makeArray(value);
 	
 	
-	console.log(value);
+	console.log(arrayvalue);
 
 	$('.input-don').keyup(function(event){
 		var don = $(this).val();
