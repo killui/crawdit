@@ -411,14 +411,6 @@ $('.freelance-featured-list').on('mouseover',function(){
 
 	});
 
-<<<<<<< HEAD
-		$('.proj-featured-list').bind("mouseover", function(e){
-
-				console.log(e.relatedTarget);
-			var player = $(this);
-			player.children()[0].play();
-			player.children()[0].muted = true;
-=======
 
 		var gaga;
 		
@@ -438,8 +430,6 @@ $('.freelance-featured-list').on('mouseover',function(){
 
 		});
 
-		
->>>>>>> 4f3e6ef61eb51b9e06518403dad8504fc9d2b2a5
 
 		$('.proj-featured-list').bind('mouseover',function(){
 			$('.proj-list-cta', this).show();
