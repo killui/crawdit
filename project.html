@@ -16,6 +16,7 @@
 <script src="ressources/js/modernizr.js" type="text/javascript"></script>
 <script src="ressources/js/scrollTo.js" type="text/javascript"></script>
 <script src="ressources/js/function.js" type="text/javascript"></script>
+<script src="ressources/js/don.js" type="text/javascript"></script>
 
 </head>
 <body >
@@ -271,7 +272,7 @@
 				</div>
 
 				<div class="form-don">
-					<form>
+					<form id="form-donate">
 						<label>$</label>
 						<input type="text" placeholder="1" class="input-don"/>
 					</form>
@@ -287,16 +288,16 @@
 					<h4>Please select a perk :</h4>
 					
 					<form>
-						<div class="choice" id="0">
+						<div class="choice" >
 							<span class="amount">No perk</span>
 							<span class="gift">I don't want any perk.</span>
 							<div class="radio">
-								<input type="radio" value="0" />
+								<input type="radio" value="1" />
 								<label></label>
 							</div>
 						</div>
 
-						<div class="choice" id="5">
+						<div class="choice" >
 							<span class="amount">$5</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -305,7 +306,7 @@
 							</div>
 						</div>
 
-						<div class="choice" id="20">
+						<div class="choice">
 							<span class="amount">$20</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -313,7 +314,7 @@
 								<label></label>
 							</div>
 						</div>
-						<div class="choice" id="50">
+						<div class="choice" >
 							<span class="amount">$50</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -322,7 +323,7 @@
 							</div>
 						</div>
 
-						<div class="choice" id="100">
+						<div class="choice">
 							<span class="amount">$100</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -330,7 +331,7 @@
 								<label></label>
 							</div>
 						</div>
-						<div class="choice" id="250">
+						<div class="choice">
 							<span class="amount">$250</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -338,7 +339,7 @@
 								<label></label>
 							</div>
 						</div>
-						<div class="choice" id="1000">
+						<div class="choice" >
 							<span class="amount">$1000</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">

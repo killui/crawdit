@@ -464,8 +464,8 @@ $(document).ready(function () {
 	var scroll = 0;
 	var lmjobs = $('#jobs li').last();
 	var fmjobs = $('#jobs li').first();
-	console.log(lmjobs);
-	console.log(fmjobs);
+	// console.log(lmjobs);
+	// console.log(fmjobs);
 
 	$('.more-jobs.down ').bind('click',function(){
 		$('#jobs').scrollTo(lmjobs,300);
@@ -480,84 +480,8 @@ $(document).ready(function () {
 	})
 
 
-	/*** Perks checked ***/
 	
-	$('.choice').on('click',function(){
-		$("input").prop("checked",false);
 
-
-		$("input",this).prop("checked",true);
-		$('.choice').removeClass('checked');
-		$(this).addClass('checked');
-	});
-	
-	//Avancement don
-	var pledged = 10000;
-	//console.log(pledged);
-	var funded = (838/pledged)*4000;
-	var widthfunded = $('.avancement').width(funded);
-	//console.log(funded);
-	//var value = $('.choice input[type=radio]').each(function(){ $(this).prop('defaultValue');});
-	//var value = $('.choice').each(function(){ $(this).attr('id'); });
-	var array = new Object();
-	var value = $('input[type=radio]').each(function(){ array[$(this).attr('value')] = $(this).val(); });
-	//var arrayvalue = $.makeArray(value);
-	console.log(array);
-
-	$('.input-don').keyup(function(){
-
-		
-		//var value = $('.choice input[type=radio]').val();
-
-		var don = $(this).val();
-
-		// if(don <= array[1]){
-		// 	console.log(success);
-		// 	$("input").val(don).prop("checked",true);
-		// 	$('.choice').addClass('checked');
-		// }
-		// 
-
-		// for (i=0;i<array.length;i++) {
-		//  	console.log('success for'+i);
-		//  	console.log(don);
-		//  	console.log('array='+array[i]);
-		//  	if(don == array[i]){
-		//  		console.log('success while'+i);
-		//  		$("input").val(don).prop("checked",true);
-		//  		$('.choice').addClass('checked');
-
-		//  	}
-		// };
-
-		
-		//var findperk = arrayvalue.find(don);
-		var widthdon = (838/pledged)*don;
-		$('.don').fadeIn(200);
-		$('.don').animate({
-			"width":widthdon,
-			"margin-left":funded
-		},500);
-
-	})
-
-
-	//POPUP CLOSE
-	$('.close,.finish').on('click',function(){
-		$('.popup-mode').fadeOut(500);
-		$('.popups, .donate, .payement, .confirmation').fadeOut(500);
-	})
-	//Popup
-	$('.back_project').on('click',function(){
-		 $('.popup-mode').fadeIn(500);
-		 $('.popups').fadeIn(500);
-	})
-	//POPUP STEP
-	$('.next').on('click',function(){
-		$('.donate').fadeOut(500);
-		$('.payement').fadeIn(800);
-	})
-	
 
 
 });
