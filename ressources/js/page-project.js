@@ -2,7 +2,14 @@ $(document).ready(function(){
 	
 
 	// JOBS scroll
-	
+	var firstjobs = $('#jobs').first('.job');
+	var lastjobs = $('#jobs').last('.job');
+	var jobs = $('.jobs').length;
+	console.log(jobs);
+
+	$('.more-jobs down').bind('click', function(){
+
+	});
 
 	/**** Video mode cinema ***/
 	var videoproj = $('.video-proj');
@@ -20,7 +27,7 @@ $(document).ready(function(){
 			queue:true,
 			duration:500
 		});
-	})
+	});
 
 	$('.hide-cine-mode').on('click',function(){
 		$('.cine-mode').fadeOut(1500);
@@ -34,6 +41,6 @@ $(document).ready(function(){
 		});
 		
 		$(document).scrollTo(infoproj,1000);
-	})
+	});
 
 })

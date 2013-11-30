@@ -137,7 +137,7 @@ $(document).ready(function () {
 	$('.freelance-featured-list').on('mouseover',function(){
 		$('.freelance-list-cta', this).show();
 	}).on('mouseout',function(){
-		$('.proj-list-cta', this).hide();
+		$('.freelance-list-cta', this).hide();
 	});
 
 

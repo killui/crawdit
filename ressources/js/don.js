@@ -9,11 +9,9 @@ $(document).ready(function () {
 	//Popup
 	$('.back_project').on('click',function(){
 		 $('.popup-mode').fadeIn(500);
-		 $('.popups').fadeIn(500);
+		 $('.popups, .donate').fadeIn(500);
 	})
 	
-	
-
 	var don = $('.input-don').val();
 
     $('.next').on('click',function (){
@@ -42,16 +40,17 @@ $(document).ready(function () {
 
 	//GET the closest value in the array
 	Array.prototype.closest = function(t) {
- 	  	var res = 0;
- 	  	
-	 	for (i = 0; res < array[i]; i++) {
-	 	  	if (array[i] >= res && array[i] <= t) res = array[i];	        
+		var don = $('.input-don').val();
+		var res = 0;
+ 	  	for (i = 0; res < array[i]; i++) {
+	 	   	if (array[i] >= res && array[i] <= t) res = array[i];	        
 	 	}
+	 	console.log(don);
 	 	console.log(res);
 	 	return res;
 	};
 	//console.log(value);
-    console.log(array);
+    //console.log(array);
 
 	$('.input-don').stop().keyup(function(){
 		//unchecked perks
@@ -62,7 +61,7 @@ $(document).ready(function () {
 		var don = $(this).val();
 		//console.log(don);
 		var numb = array.closest(don);
-		//console.log(numb);
+		console.log(numb);
 
 		//checked perks
 		$("input[type=radio]").attr("checked",false);
