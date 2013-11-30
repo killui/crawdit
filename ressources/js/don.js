@@ -34,22 +34,24 @@ $(document).ready(function () {
 	var funded = (838/pledged)*4000;
 	var widthfunded = $('.avancement').width(funded);
 	//console.log(funded);
-	//var value = $('.choice input[type=radio]').each(function(){ $(this).prop('defaultValue');});
-	//var value = $('.choice').each(function(){ $(this).attr('id'); });
-	var array = new Array();
-	var value = $('input[type=radio]').each(function(){ array[$(this).attr('value')] = $(this).val(); });
+	//var array = new Array();
+	var array = [];
+	var value = $('input[type=radio]').each(function(){ var arr = $(this).val(); array.push(arr); });
 	//var arrayvalue = $.makeArray(value);
 	//console.log(array);
 
 	//GET the closest value in the array
-	Array.prototype.closest = function(value) {
-        var res = 0;
-        for (var i=0; i<array.length; i++) {
-            if (array[i] > res && array[i] < value) res=array[i];
+	Array.prototype.closest = function(t) {
+		var don = $('.input-don').val();
+        var res = don;
+        console.log(res);
+        for (i = 0; res == array[i]; i++) {
+            if (array[i] > res && array[i] < t) res == array[i];
         }
         return res;
     };
-    //console.log(array);
+    //console.log(value);
+    console.log(array);
 
 	$('.input-don').stop().keyup(function(){
 		//unchecked perks
@@ -57,7 +59,7 @@ $(document).ready(function () {
 		uncheck.removeClass('checked');
 		$("input[type=radio]").prop("checked",false);
 
-		//var don = $(this).val();
+		var don = $(this).val();
 		//console.log(don);
 		var numb = array.closest(don);
 		//console.log(numb);
@@ -103,9 +105,5 @@ $(document).ready(function () {
 
 		avancement();
 	});
-
-
-
-
 
 });
