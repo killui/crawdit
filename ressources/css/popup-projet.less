@@ -62,11 +62,20 @@
 				}
 			}
 
+			.close {
+				cursor: pointer;
+				opacity: .8;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
 		}
 
 		/** POPUP DONATE ***/
 		.donate {
-			display: none;
+			//display: none;
 		
 			.proj-don {
 				padding: 0 50px;
@@ -249,6 +258,7 @@
 		/*** POPUP CONFIRMATION ***/
 
 		.confirmation {
+			display: none;
 			padding: 0 50px;
 			p {
 				ont-size: 36px;

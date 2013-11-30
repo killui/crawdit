@@ -145,6 +145,10 @@
 
 
 // BUTTON
+
+
+
+
 .btn {
 	font-family: "ff-dagny-web-pro",sans-serif;
 	font-weight: bold;
@@ -173,12 +177,36 @@
 	position:relative;
 	overflow:hidden;
 	height:18px;
-}&:hover div.btn-background-hover{
-
-.translate;
-
 	.borderradius(3px);
-	.transition(all,.2s,linear);
+
+	.btn-background-hover{
+		position:absolute;
+		width:100%;
+		height:48px;
+		top: 48px;
+		background:@white;
+		.transition-timing;
+		z-index:2;
+
+	}
+
+	.link-cta{
+		width:100%;
+		position:absolute;
+		z-index:5;
+		left: 0;
+	}
+
+	&:hover{
+		.btn-background-hover {
+			top:0;
+			.transition-timing;
+		}
+
+	}
+
+
+
 }
 
 .btn-red {
@@ -197,20 +225,13 @@
 		/*background: @white;*/
 		color: @turquoise;
 	}
-.btn-background-hover{
-
-	position:absolute;
-	width:100%;
-	height:48px;
-	margin-top:38px;
-	background:@white;
-	.transition-timing;
-	z-index:2;
-
+	
 }
-.btn.txt{
-	width:100%;
-	position:absolute;
-	z-index:3;
-}
+
+.btn-grey {
+	.btn-cta;
+
+	&:hover {
+		color: @darkgrey;
+	}
 }
