@@ -42,15 +42,15 @@ $(document).ready(function () {
 
 	//GET the closest value in the array
 	Array.prototype.closest = function(t) {
-		var don = $('.input-don').val();
-        var res = don;
-        console.log(res);
-        for (i = 0; res <= array[i]; i++) {
-            if (array[i] > res && array[i] < t) res <= array[i];
-        }
-        return res;
-    };
-    //console.log(value);
+ 	  	var res = 0;
+ 	  	
+	 	for (i = 0; res < array[i]; i++) {
+	 	  	if (array[i] >= res && array[i] <= t) res = array[i];	        
+	 	}
+	 	console.log(res);
+	 	return res;
+	};
+	//console.log(value);
     console.log(array);
 
 	$('.input-don').stop().keyup(function(){
