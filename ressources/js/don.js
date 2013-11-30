@@ -45,8 +45,8 @@ $(document).ready(function () {
 		var don = $('.input-don').val();
         var res = don;
         console.log(res);
-        for (i = 0; res == array[i]; i++) {
-            if (array[i] > res && array[i] < t) res == array[i];
+        for (i = 0; res <= array[i]; i++) {
+            if (array[i] > res && array[i] < t) res <= array[i];
         }
         return res;
     };

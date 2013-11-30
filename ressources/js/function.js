@@ -1,5 +1,20 @@
 $(document).ready(function () {
 
+
+
+	// Masonry
+	
+	$('.container').masonry({
+		// options
+		columnWidth: 310,
+		gutterWidth: 0,
+		isAnimated: false,
+		isFitWidth: true,
+		itemSelector: '.fiche'
+	})
+	
+
+
 	/***Anim Intro Home page***/
 
 	$('#intro-freelance-content').animate({'right':'0','opacity':'1'},1600);
@@ -341,12 +356,13 @@ $(document).ready(function () {
 			var scrollNewProjReverse = scrollY - 400;
 			if(gaga == 0 || gaga == undefined){
 			
-			$('html, body').animate({scrollTop:scrollNewProj},700);
-			$('.proj-new').animate({"height":"420px","overflow":"auto"},'slow');
-			$(this).children().attr('src','ressources/images/croix-2.png')
-			console.log('tr')
-			gaga = 1;
-			console.log(gaga);
+				$('html, body').animate({scrollTop:scrollNewProj},700);
+				$('.proj-new').animate({"height":"420px","overflow":"auto"},'slow');
+				$(this).children().attr('src','ressources/images/croix-2.png')
+				console.log('tr')
+				gaga = 1;
+				console.log(gaga);
+
 			}else if(gaga = 1){
 				$('html, body').animate({scrollTop:-scrollNewProjReverse},700);
 				$('.proj-new').animate({"height":"0px","overflow":"hidden"},'slow');
@@ -365,11 +381,12 @@ $(document).ready(function () {
 
 			if(fafa == 0 || fafa == undefined){
 				$('html, body').animate({scrollTop:scrollNewProj},700);
-			$('.freelance-new').animate({"height":"420px","overflow":"auto"},'slow');
-			$(this).children().attr('src','ressources/images/croix-2.png')
+				$('.freelance-new').animate({"height":"420px","overflow":"auto"},'slow');
+				$(this).children().attr('src','ressources/images/croix-2.png')
 
 
-			fafa = 1;
+				fafa = 1;
+
 			}else if(fafa = 1){
 				$('html, body').animate({scrollTop:scrollNewProjReverse},700);
 				$('.freelance-new').animate({"height":"0px","overflow":"hidden"},'slow');
