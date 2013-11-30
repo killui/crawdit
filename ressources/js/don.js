@@ -7,9 +7,11 @@ $(document).ready(function () {
 		$('.popups, .donate, .payement, .confirmation').fadeOut(500);
 	})
 	//Popup
+	
+
 	$('.back_project').on('click',function(){
-		 $('.popup-mode').fadeIn(500);
-		 $('.popups, .donate').fadeIn(500);
+		$('.popup-mode').fadeIn(500);
+		$('.popups,.donate').fadeIn(500);
 	})
 	
 	var don = $('.input-don').val();

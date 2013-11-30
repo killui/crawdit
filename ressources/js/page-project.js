@@ -2,14 +2,37 @@ $(document).ready(function(){
 	
 
 	// JOBS scroll
-	var firstjobs = $('#jobs').first('.job');
-	var lastjobs = $('#jobs').last('.job');
-	var jobs = $('.jobs').length;
-	console.log(jobs);
-
-	$('.more-jobs down').bind('click', function(){
-
-	});
+	var firstjobs = $('#jobs .job').first();
+	//console.log(firstjobs);
+	var lastjobs = $('#jobs .job').last();
+	//console.log(lastjobs);
+	var jobs = $('.job').length;
+	//console.log(jobs);
+	
+	
+	if(jobs > 9){
+		
+		$('.more-jobs').addClass('down').html('<i class="icon arrow-down"></i>');
+		
+		//Scroll up
+		$('.more-jobs.up').bind('click', function(){
+			console.log('sucess up');
+			$('#jobs').scrollTo(firstjobs,400);
+			$('.more-jobs .icon').removeClass('arrow-up').addClass('arrow-down');
+			$('.more-jobs').removeClass('up').addClass('down');
+		});
+		//Scroll down
+		$('.more-jobs.down').bind('click', function(){
+			//console.log('sucess down');
+			$('#jobs').scrollTo(lastjobs,400);
+			$('.more-jobs .icon').removeClass('arrow-down').addClass('arrow-up');
+			$('.more-jobs').removeClass('down').addClass('up');
+		});
+		
+	}
+	
+	
+	
 
 	/**** Video mode cinema ***/
 	var videoproj = $('.video-proj');
