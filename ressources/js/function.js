@@ -105,10 +105,8 @@ $('.proj-featured-list').on('mouseover',function(){
 
 
 	$('.proj-list-cta a').on('mouseover',function(){
-		console.log('in');
 
 	var player = $(this).closest('.proj-featured-list').children()[0];
-	console.log(player);
 	player.play();
  	player.muted = true;
 
@@ -116,7 +114,6 @@ $('.proj-featured-list').on('mouseover',function(){
 
 	var player = $(this).closest('.proj-featured-list').children()[0];
 
-console.log('out');
  	player.pause();
     player.load();
 		
@@ -440,9 +437,9 @@ var zoomFreelancer = $($(this).closest('.freelance-featured-list').children()[0]
 			$('html, body').animate({scrollTop:scrollNewProj},700);
 			$('.proj-new').animate({"height":"420px","overflow":"auto"},'slow');
 			$(this).children().attr('src','ressources/images/croix-2.png')
-			console.log('tr')
+	
 			gaga = 1;
-			console.log(gaga);
+		
 		}else if(gaga = 1){
 			$('html, body').animate({scrollTop:-scrollNewProjReverse},700);
 			$('.proj-new').animate({"height":"0px","overflow":"hidden"},'slow');
