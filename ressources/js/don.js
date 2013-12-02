@@ -42,12 +42,13 @@ $(document).ready(function () {
 
 	//GET the closest value in the array
 	Array.prototype.closest = function(t) {
-		var don = $('.input-don').val();
-		var res = 0;
- 	  	for (i = 0; res < array[i]; i++) {
-	 	   	if (array[i] >= res && array[i] <= t) res = array[i];	        
+		
+		var res = 1;
+ 	  	for (i = 0; i < array[i]; i++) {
+	 	   	
+	 	   	if (array[i] >= res && array[i] <= t) res = array[i];
 	 	}
-	 	console.log(don);
+	 	
 	 	console.log(res);
 	 	return res;
 	};
@@ -61,9 +62,9 @@ $(document).ready(function () {
 		$("input[type=radio]").prop("checked",false);
 
 		var don = $(this).val();
-		//console.log(don);
+		console.log(don);
 		var numb = array.closest(don);
-		console.log(numb);
+		console.log('closest to '+don+' = '+numb);
 
 		//checked perks
 		$("input[type=radio]").attr("checked",false);
