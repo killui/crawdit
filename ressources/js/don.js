@@ -14,7 +14,7 @@ $(document).ready(function () {
 		$('.popups,.donate').fadeIn(500);
 	})
 	
-	var don = $('.input-don').val();
+	
 
     $('.next').on('click',function (){
         
@@ -36,32 +36,34 @@ $(document).ready(function () {
 	//console.log(funded);
 	//var array = new Array();
 	var array = [];
-	var value = $('input[type=radio]').each(function(){ var arr = $(this).val(); array.push(arr); });
+	var value = $('input[type=radio]').each(function(){ var arr = array.push(parseInt($(this).val())); });
 	//var arrayvalue = $.makeArray(value);
 	//console.log(array);
 
 	//GET the closest value in the array
 	Array.prototype.closest = function(t) {
 		
-		var res = 1;
- 	  	for (i = 0; i < array[i]; i++) {
+	 	var res = 0;
+  	  	for (i = 0; i < array[i]; i++) {
 	 	   	
-	 	   	if (array[i] >= res && array[i] <= t) res = array[i];
-	 	}
+	  	   	if (array[i] >= res && array[i] <= t) res = array[i];
+	  	}
 	 	
-	 	console.log(res);
-	 	return res;
+	  	console.log(res);
+	  	return res;
 	};
-	//console.log(value);
-    //console.log(array);
 
-	$('.input-don').stop().keyup(function(){
+	//console.log(value);
+    console.log(array);
+
+	$('.input-don').keyup(function(){
 		//unchecked perks
 		var uncheck = $('.choice');
 		uncheck.removeClass('checked');
 		$("input[type=radio]").prop("checked",false);
 
-		var don = $(this).val();
+		var don = $('.input-don').val();
+
 		console.log(don);
 		var numb = array.closest(don);
 		console.log('closest to '+don+' = '+numb);
