@@ -31,7 +31,6 @@ class login {
                     $_SESSION["user_name"] = $infocompte->user_name;
                     $_SESSION["user_surname"] = $infocompte->user_surname;
                     $_SESSION["user_email"] = $infocompte->user_email;
-                    $_SESSION["user_freelance"] = $infocompte->user_freelance;
             }
         }
 
