@@ -1,12 +1,18 @@
 <?php
 
 class projectdev extends Controller{
+    
+    
 
-    function __construct($app, $url) {
+    function __construct($app, $url, $page) {
         parent::__construct();
+        print_r($url);
         
-        //print_r($url);
-        $projectId = $url[1];
+        $projectName = preg_replace('$-$', ' ', $url[1]);
+        
+        var_dump($projectName);
+        $title = $projectName;
+        $projectId = $url[2];
         
         $Project = new ProjectModel();
         
@@ -21,7 +27,7 @@ class projectdev extends Controller{
         $ressources = $Project->getRessources($projectId);
         //array_push($dataProject, $ressources);
         
-        $this->View->projectRender('projectdev', $dataProject, $perks, $ressources, $genres);
+        $this->View->projectRender('projectdev', $title, $page, $dataProject, $perks, $ressources, $genres);
     }
 
 }

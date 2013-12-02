@@ -2,10 +2,12 @@
 
 class project extends Controller{
 
-    function __construct() {
+    function __construct($app, $url, $page) {
         parent::__construct();
         
-        $this->View->render('project');
+        $title = "Crawd It Project";
+        
+        $this->View->render('project', $page, $title);
     }
 
 }

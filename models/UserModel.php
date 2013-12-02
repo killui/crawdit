@@ -6,19 +6,18 @@ class UserModel extends Model {
         parent::__construct();
     }
 
-    function verif_log($name, $mdp)
+    function loginCheck($email, $mdp)
         {
             global $database;
 
-            $query = $database->prepare('SELECT * FROM user WHERE user_name = :name AND user_password = :mdp');
+            $query = $database->prepare('SELECT * FROM user WHERE user_email = :email AND user_password = :mdp');
 
-            $query->bindParam(':name', $name);
-            $query->bindParam(':mdp', md5($mdp));
+            $query->bindParam(':email', $email);
+            $query->bindParam(':mdp', $mdp);
             
             $query->execute();
             $nbrligne = $query->rowCount();
             
-
             if ($nbrligne == 1) 
             {   
                 $infocompte = $query->fetch(PDO::FETCH_OBJ);    
