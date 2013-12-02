@@ -1,44 +1,63 @@
 <?php
 
-if (isset($_POST["nomco"])) {
-    $veriflog = new UserModel;
+class login {
 
-    $infocompte = $veriflog->verif_log($_POST['nomco'], $_POST['mdpco']);
+    function __construct($app, $url, $page) {
 
-    if ($infocompte) {
-        /*
+        if (isset($_POST["email"])) {
+            
+            $email = $_POST['email'];
+            $password = md5($_POST['password']);
+            
+            $User = new UserModel;
 
-          if($infocompte->USER_ADMIN == 0)
-          {
-          header("location:index");
-          }
+            $infocompte = $User->loginCheck($email, $password);
+            
+            //var_dump($infocompte);
+            
+            if ($infocompte) {
 
+//                if ($infocompte->USER_ADMIN == 0) {
+//                    header("location:index");
+//                } else {
 
-          else
-          {
-
-          if ($_POST["remember"]=="checked")
-          {
-          setcookie("nom",$_POST['nomco'],time()+3600*24*31);
-          setcookie("mdp",md5($_POST['mdpco']),time()+3600*24*31);
-
-          }
-         */
-
-        session_start();
-
-        $_SESSION["user_name"] = $infocompte->user_name;
-        $_SESSION["user_mail"] = $infocompte->user_mail;
-        $_SESSION["user_password"] = $infocompte->user_password;
-        $_SESSION["user_freelance"] = $infocompte->user_freelance;
+                    /* if ($_POST["remember"] == "checked") {
+                      setcookie("nom", $_POST['nomco'], time() + 3600 * 24 * 31);
+                      setcookie("mdp", md5($_POST['mdpco']), time() + 3600 * 24 * 31);
+                      } */
 
 
+                    $_SESSION["user_id"] = $infocompte->user_id;
+                    $_SESSION["user_name"] = $infocompte->user_name;
+                    $_SESSION["user_surname"] = $infocompte->user_surname;
+                    $_SESSION["user_email"] = $infocompte->user_email;
+                    $_SESSION["user_freelance"] = $infocompte->user_freelance;
+            }
+        }
 
+//        echo "session : ";
+//        var_dump($_SESSION);
+//        echo "post : ";
+//        var_dump($_POST);
+//        echo "url : ";
+//        var_dump($url);
+//        echo "webroot : ";
+//        var_dump(WEBROOT);
+//        echo "page not trimmed : ";
+//        var_dump($page);
+//        $page = ltrim($page, 'login');
+//        echo "page trimmed : ";
+//        var_dump($page);
 
-        header("location:project");
-    } else {
-        header("location:don");
+        $page = ltrim($page, 'login');
+        if($page == "/index"){
+            header("location: ".WEBROOT);
+            exit();
+        } else {
+            $page = ltrim($page, '/');
+            header("location: ".WEBROOT.$page);
+            exit();
+        }
     }
+
 }
-?>
-					
