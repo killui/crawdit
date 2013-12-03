@@ -15,7 +15,10 @@
 <script src="ressources/js/less.js" type="text/javascript"></script>
 <script src="ressources/js/modernizr.js" type="text/javascript"></script>
 <script src="ressources/js/scrollTo.js" type="text/javascript"></script>
+<script src="ressources/js/masonry.js" type="text/javascript"></script>
 <script src="ressources/js/function.js" type="text/javascript"></script>
+<script src="ressources/js/don.js" type="text/javascript"></script>
+<script src="ressources/js/page-project.js" type="text/javascript"></script>
 
 </head>
 <body >
@@ -24,8 +27,6 @@
 
 <header>
 	<div class="container-960">
-		
-
 		<nav>
 			<div class="logo"><a href="page_index.html"><img src="ressources/images/logo.png" alt="Crawdit"></a></div>
 			<ul>
@@ -81,13 +82,19 @@
 
 		
 		<div class="video-proj">
-			<video poster="ressources/images/cover.jpg">
+			<video poster="ressources/images/cover.jpg" >
+
+				<source src="ressources/video/frankenweenie-ft.mp4" type="video/mp4"></source>
+				<source src="ressources/video/frankenweenie-ft.theora.ogv" type="video/ogg"></source>
 			
 			</video>
 
 			<a href="#" class="play">Play video</a>
 
-			<a href="#" class="hide-cine-mode">Back to normal mode</a>
+			<a href="#" class="btn-grey hide-cine-mode">
+				<div class="btn-background-hover"></div>
+				<span class="link-cta">Close</span>
+			</a>
 
 			
 		</div>
@@ -101,10 +108,9 @@
 
 		<div id="finance" class="need f-left">
 
-				<a href="#" class="btn-red back_project">
+			<a href="#" class="btn-red back_project" >
 				<div class="btn-background-hover"></div>
-				<div class="btn-txt"><p>Back this project</p></div>
-				
+				<span class="link-cta">Back this project</span>
 			</a>
 
 			<ul id="number">
@@ -120,8 +126,11 @@
 			
 		<div id="human" class="need f-right">
 			
-			
-			<a href="#" class="btn-blue">Apply for this project</a>
+			<a href="#" class="btn-blue ">
+				<div class="btn-background-hover"></div>
+				<span class="link-cta">Apply for this project</span>
+				
+			</a>
 
 			<ul id="jobs">
 				<li class="job"> Cameraman <span>0/1</span></li>
@@ -133,11 +142,8 @@
 				<li class="job"> Animator <span><i class="icon check"></i></span></li>
 				<li class="job"> Unit Manager <span>0/1</span></li>
 				<li class="job"> Coordinator <span>0/1</span></li>
-				<li class="job"> Animator <span><i class="icon check"></i></span></li>
-				<li class="job"> Unit Manager <span>0/1</span></li>
-				<li class="job"> Coordinator <span>0/1</span></li>
 			</ul>
-			<span class="more-jobs"><i class="icon arrow-down"></i></span>
+			<span class="more-jobs "></span>
 			
 		</div>
 
@@ -254,8 +260,8 @@
 
 			<div class="clear"></div>
 		</div>
+				<!-- DONATE -->
 
-		<!-- DONATE -->
 		<div class="donate">
 			
 		
@@ -270,9 +276,9 @@
 				</div>
 
 				<div class="form-don">
-					<form>
+					<form id="form-donate">
 						<label>$</label>
-						<input type="text" placeholder="1" class="input-don"/>
+						<input type="text" placeholder="1" class="input-don" />
 					</form>
 					<div class="info-don">
 						<ul>
@@ -286,16 +292,16 @@
 					<h4>Please select a perk :</h4>
 					
 					<form>
-						<div class="choice" for="0">
+						<div class="choice" id="1">
 							<span class="amount">No perk</span>
 							<span class="gift">I don't want any perk.</span>
 							<div class="radio">
-								<input type="radio" value="0" />
+								<input type="radio" value="1" />
 								<label></label>
 							</div>
 						</div>
 
-						<div class="choice">
+						<div class="choice" id="5">
 							<span class="amount">$5</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -304,7 +310,7 @@
 							</div>
 						</div>
 
-						<div class="choice">
+						<div class="choice" id="20">
 							<span class="amount">$20</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -312,7 +318,7 @@
 								<label></label>
 							</div>
 						</div>
-						<div class="choice">
+						<div class="choice" id="50">
 							<span class="amount">$50</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -321,7 +327,7 @@
 							</div>
 						</div>
 
-						<div class="choice">
+						<div class="choice " id="100">
 							<span class="amount">$100</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -329,7 +335,7 @@
 								<label></label>
 							</div>
 						</div>
-						<div class="choice">
+						<div class="choice" id="250">
 							<span class="amount">$250</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -337,7 +343,7 @@
 								<label></label>
 							</div>
 						</div>
-						<div class="choice">
+						<div class="choice" id="1000">
 							<span class="amount">$1000</span>
 							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
 							<div class="radio">
@@ -352,7 +358,6 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- PAYEMENT -->
 		<div class="payement">
 		
@@ -465,7 +470,7 @@
  -->
  <script type="text/javascript">
 
-var _gaq = _gaq || [];
+  var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-45578759-1']);
   _gaq.push(['_trackPageview']);
 
@@ -476,5 +481,6 @@ var _gaq = _gaq || [];
   })();
 
 </script>
-</body>
+
+ </body>
 </html>

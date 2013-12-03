@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,9 @@
 <script src="ressources/js/less.js" type="text/javascript"></script>
 <script src="ressources/js/modernizr.js" type="text/javascript"></script>
 <script src="ressources/js/scrollTo.js" type="text/javascript"></script>
+<script src="ressources/js/masonry.js" type="text/javascript"></script>
 <script src="ressources/js/function.js" type="text/javascript"></script>
+
 
 <!-- Google Analytics Content Experiment code -
 <script>function utmx_section(){}function utmx(){}(function(){var
@@ -37,49 +40,53 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		
 
 		<nav>
-			<div class="logo"><a href="page_index.html"><img src="ressources/images/logo.png" alt="Crawdit"></a></div>
+			<div class="logo"><a href="index.html"><img src="ressources/images/logo.png" alt="Crawdit"></a></div>
 			<ul>
 				<li><a href="project-list.html"><strong>Browse</strong><br/>projects</a></li>
 				<li><a href="fail.html"><strong>Meet</strong><br/>freelancers</a></li>
 				<li><a href="fail.html"><strong>Start</strong><br/>your project</a></li>
 			</ul>
-			<div>
+<!-- 			<div>
 				<form id="search-bar">
 					<input type="search" placeholder="Comedy, Drama ..."/>
 				</form>
-			</div>
-			<div id="connect-btn">
+			</div> -->
+			<div id="search-btn">
 				
-					<img src="ressources/images/connect.png">
+					<img src="ressources/images/loupe-icon.png">
 				
 			</div>
+			<a class="log">Log in</a>
+			<a class="sign">Sign up</a>
 		
 		</nav>
 
 	</div>
-	<div class="signin-container">
+	<div class="search-container">
 
-		<div class="signin">
+		<div class="search">
 			<div class="container-960">
-			<div class="account f-left">
+			<!-- <div class="account f-left">
 				<h4>Already have an account?</h4>
 				<form id="search-bar">
 					<input type="text" placeholder="Email" required/>
 					<input type="password" placeholder="Password" required/>
 					<button type="submit" onclick="formSubmit()" >Log in</button>
 				</form>
-				<!-- <a href="#">Log in</a> -->
+				
 			</div>
 			<div class="sign f-right">
 				<h4>If not, sign up now!</h4>
-				<!-- <img src="ressources/images/sign-in.png" alt="sign-in"/> -->
+				
 				<a href="#" class="classic-sign">Sign in</a>
 				<a href="#" class="fb-sign">Log in with Facebook</a>
-				<!-- <img src="ressources/images/facebooklog.png" alt="facebook-connect"> -->
-			</div>
+				
+			</div> -->
 			</div>
 		</div>
 	</div>
+	
+
 </header>
 
 <div id="intro-project" class="f-left"><h2>Discover great projects</h2></div>
@@ -108,10 +115,13 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 <section class="proj-featured">
 
-	<div class="container-960">
+	<h2>Discover great projects</h2>
+	
+	<div class="container">
 
-		<h2>Discover great projects</h2>
-		<div class="proj-featured-list">
+		
+
+		<div class="fiche proj-featured-list">
 			
 			<video poster="ressources/images/retro-cover.jpg" id="test">
 
@@ -123,7 +133,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 				<div class="proj-list-cta">
 
-					<a href="project.html">learn more</a>
+					<a href="project.html" onClick="_gaq.push(['_trackEvent', 'Videos', 'Play', 'Baby\'s First Birthday']);">learn more</a>
 
 				</div>
 
@@ -148,7 +158,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
 
-		<div class="proj-featured-list">
+		<div class="fiche  proj-featured-list">
 
 			<video poster="ressources/images/robot-cover.jpg" id="test">
 
@@ -184,7 +194,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
 
-		<div class="proj-featured-list">
+		<div class="fiche  proj-featured-list">
 
 			<video poster="ressources/images/frankenweenie-cover.jpg" id="test">
 
@@ -220,15 +230,16 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			</div>
 			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
+	
 	</div>
 
 </section>
 
 <section class="proj-new">
 
-	<div class="container-960">
+	<div class="container">	
 
-		<div class="proj-featured-list">
+		<div class="fiche proj-featured-list">
 
 			<video poster="ressources/images/frankenweenie-cover.jpg" id="test">
 
@@ -263,7 +274,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 			</div>
 			<img src="ressources/images/proj-ombre-featured.png">
-		</div><div class="proj-featured-list">
+		</div>
+		<div class=" fiche proj-featured-list">
 
 			<video poster="ressources/images/frankenweenie-cover.jpg" id="test">
 
@@ -297,7 +309,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 			</div>
 			<img src="ressources/images/proj-ombre-featured.png">
-		</div><div class="proj-featured-list">
+		</div>
+		<div class="fiche proj-featured-list">
 
 			<video poster="ressources/images/frankenweenie-cover.jpg" id="test">
 
@@ -333,14 +346,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			</div>
 			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
-	
-	
-
 	</div>
-
-
-
-
 </section>
 
 <div class="more-proj-btn">
@@ -356,16 +362,18 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </div>
 
 
-<section class="freelance-featured">
+<section class=" freelance-featured">
 
-	<div class="container-960">
-		<h2>Meet awesome freelancers</h2>
+	
+	<h2>Meet awesome freelancers</h2>
 
-		<div class="freelance-featured-list">
+	<div class="container">
 
-				<div class="freelance-pics">
-					<img src="ressources/images/freelancers/thomas.jpg">
-				</div>
+		<div class="fiche freelance-featured-list">
+
+			<div class="freelance-pics">
+				<img src="ressources/images/freelancers/thomas.jpg">
+			</div>
 
 			<div class="freelance-list-desc">
 
@@ -376,6 +384,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				</div>
 
 				<h3 class="freelance-list-title"><a href="freelance-list.html">Frankenweenie</a></h3>
+
 				<span class="freelance-list-tag">Camera</span><span class="freelance-list-tag">Assistant</span><span class="freelance-list-tag">Actor</span>
 				<ul>
 					<li><span class="freelance-location">Location : </span>USA</li>
@@ -385,14 +394,16 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				</ul>
 
 			</div>
-			<img src="ressources/images/proj-ombre-featured.png">
+
+			<img src="ressources/images/proj-ombre-featured.png"/>
+
 		</div>
 
-		<div class="freelance-featured-list">
+		<div class="fiche freelance-featured-list">
 
-				<div class="freelance-pics">
-					<img src="ressources/images/freelancers/thomas.jpg">
-				</div>
+			<div class="freelance-pics">
+				<img src="ressources/images/freelancers/thomas.jpg">
+			</div>
 
 			<div class="freelance-list-desc">
 
@@ -403,6 +414,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				</div>
 
 				<h3 class="freelance-list-title"><a href="freelance-list.html">Frankenweenie</a></h3>
+
 				<span class="freelance-list-tag">Camera</span><span class="freelance-list-tag">Assistant</span><span class="freelance-list-tag">Actor</span>
 				<ul>
 					<li><span class="freelance-location">Location : </span>USA</li>
@@ -412,44 +424,51 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				</ul>
 
 			</div>
-			<img src="ressources/images/proj-ombre-featured.png">
-		</div>
 
-		<div class="freelance-featured-list">
+			<img src="ressources/images/proj-ombre-featured.png"/>
 
-				<div class="freelance-pics">
-					<img src="ressources/images/freelancers/thomas.jpg">
-				</div>
-
-			<div class="freelance-list-desc">
-
-				<div class="freelance-list-cta">
-
-					<a href="freelance-list.html">learn more</a>
-
-				</div>
-
-				<h3 class="freelance-list-title"><a href="freelance-list.html">Frankenweenie</a></h3>
-				<span class="freelance-list-tag">Camera</span><span class="freelance-list-tag">Assistant</span><span class="freelance-list-tag">Actor</span>
-				<ul>
-					<li><span class="freelance-location">Location : </span>USA</li>
-					<li><span class="freelance-experience">Experience : </span>15 years in the film industry</li>
-					<li><span class="freelance-bio">Bio : </span>born in 1978, one of the first man to use a camera x512-340 in the desert. Quite a Pioneer!</li>
-
-				</ul>
-
-			</div>
-			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
 		
 
+		<div class="fiche freelance-featured-list">
+
+			<div class="freelance-pics">
+				<img src="ressources/images/freelancers/thomas.jpg">
+			</div>
+
+			<div class="freelance-list-desc">
+
+				<div class="freelance-list-cta">
+
+					<a href="freelance-list.html">learn more</a>
+
+				</div>
+
+				<h3 class="freelance-list-title"><a href="freelance-list.html">Frankenweenie</a></h3>
+
+				<span class="freelance-list-tag">Camera</span><span class="freelance-list-tag">Assistant</span><span class="freelance-list-tag">Actor</span>
+				<ul>
+					<li><span class="freelance-location">Location : </span>USA</li>
+					<li><span class="freelance-experience">Experience : </span>15 years in the film industry</li>
+					<li><span class="freelance-bio">Bio : </span>born in 1978, one of the first man to use a camera x512-340 in the desert. Quite a Pioneer!</li>
+
+				</ul>
+
+			</div>
+
+			<img src="ressources/images/proj-ombre-featured.png"/>
+
+		</div>
+		
 	</div>
+	
 </section>
 
 <section class="freelance-new">
 
-	<div class="container-960">
-		<div class="freelance-featured-list">
+	<div class="container">
+
+		<div class="fiche freelance-featured-list">
 
 				<div class="freelance-pics">
 					<img src="ressources/images/freelancers/thomas.jpg">
@@ -476,7 +495,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
 
-		<div class="freelance-featured-list">
+		<div class="fiche freelance-featured-list">
 
 				<div class="freelance-pics">
 					<img src="ressources/images/freelancers/thomas.jpg">
@@ -503,7 +522,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<img src="ressources/images/proj-ombre-featured.png">
 		</div>
 		
-		<div class="freelance-featured-list">
+		<div class="fiche freelance-featured-list">
 
 				<div class="freelance-pics">
 					<img src="ressources/images/freelancers/thomas.jpg">
@@ -532,6 +551,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		
 	</div>
 </section>
+
 <div class="more-freelance-btn">
 
 	<div class="more-freelance-line"></div>
@@ -653,10 +673,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 </footer>
 
- <!--
-<script type="text/javascript">
+ <script type="text/javascript">
 
-var _gaq = _gaq || [];
+  var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-45578759-1']);
   _gaq.push(['_trackPageview']);
 
@@ -666,6 +685,6 @@ var _gaq = _gaq || [];
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>-->
+</script>
 </body>
 </html>

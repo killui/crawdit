@@ -1,0 +1,141 @@
+#create {
+
+	#onglets {
+		position: relative;
+		padding: 20px 0;
+
+		.onglet {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 99px;
+			background: @lightgrey;
+			color: #b9b9b9;
+			padding: 18px 0;
+			text-align: center;
+			font-size: 18px;
+			.borderradius(4px);
+			cursor: pointer;
+			margin: 0 4px 0 0;
+
+			&.preview {
+				background: @darkgrey;
+				color: @white;
+			}
+
+			&:hover {
+				background: @newred;
+				color: @white;
+
+				&.preview {
+					background: @darkgreyhover;
+				}
+			}
+
+			&.active {
+				background: @newred;
+				color: @white;
+			}
+			&.done {
+				background: @turquoise;
+				color: @white;
+
+			}
+
+		}
+	}
+
+	#bar-step {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		background: @lightgrey;
+		width: 100%;
+		text-align: right;
+
+		a {
+			padding: 10px 15px;
+			font-size: 18px;
+			font-family: @bold;
+			vertical-align: top;
+			margin-right: 20px;
+
+			&#delete {
+				width: 170px;
+			}
+			&#save {
+				width: 150px;
+
+			}
+			&#next {
+				padding: 8px 30px 7px;
+				.borderradius-right(4px);
+				margin-right: 0;
+			}
+			&#prev {
+				padding: 8px 30px 7px;
+				.borderradius-left(4px);
+				margin-right: -2px;
+			}
+		}
+	}
+
+	.title-create {
+		background: @lightgrey;
+		padding: 18px 0;
+		text-align: center;
+
+		h2 {
+			font-size: 48px;
+			color: @darkgrey;
+			font-family: @bold;
+		}
+		span {
+			margin: 10px 0 0;
+			display: block;
+		}
+	}
+
+	.content-create {
+		position: relative;
+		margin: 30px 0 0;
+		padding: 0 0 100px;
+		h3 {
+			font-size: 24px;
+			color: @newred;
+			margin: 0 0 25px;
+			font-family: @bold;
+		}
+
+		p {
+			font-size: 14px;
+			margin: 0 0 25px;
+		}
+
+		ul {
+			margin: 0 0 25px;
+
+			li {
+				font-size: 14px;
+				text-indent: 35px; 
+			}
+		}
+		#guidelines {
+			display: none;
+			#agree {
+				background: @lightgrey;
+				.borderradius(4px);
+				text-align: center;
+				padding: 30px 0;
+				display: block;
+				margin: 0 0 25px;
+			}
+
+		}
+
+		#aboutyou {
+
+		}
+		
+	}
+}
