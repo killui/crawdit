@@ -82,7 +82,10 @@
 
 		
 		<div class="video-proj">
-			<video poster="ressources/images/cover.jpg">
+			<video poster="ressources/images/cover.jpg" >
+
+				<source src="ressources/video/frankenweenie-ft.mp4" type="video/mp4"></source>
+				<source src="ressources/video/frankenweenie-ft.theora.ogv" type="video/ogg"></source>
 			
 			</video>
 
@@ -90,7 +93,7 @@
 
 			<a href="#" class="btn-grey hide-cine-mode">
 				<div class="btn-background-hover"></div>
-				<span class="link-cta">Back to normal mode</span>
+				<span class="link-cta">Close</span>
 			</a>
 
 			
@@ -105,7 +108,7 @@
 
 		<div id="finance" class="need f-left">
 
-			<a href="#" class="btn-red back_project">
+			<a href="#" class="btn-red back_project" >
 				<div class="btn-background-hover"></div>
 				<span class="link-cta">Back this project</span>
 				
@@ -277,7 +280,7 @@
 				<div class="form-don">
 					<form id="form-donate">
 						<label>$</label>
-						<input type="text" placeholder="1" class="input-don" pattern="[0-9]{1-10}"/>
+						<input type="text" placeholder="1" class="input-don" />
 					</form>
 					<div class="info-don">
 						<ul>
@@ -469,7 +472,7 @@
  -->
  <script type="text/javascript">
 
-var _gaq = _gaq || [];
+  var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-45578759-1']);
   _gaq.push(['_trackPageview']);
 
@@ -480,5 +483,6 @@ var _gaq = _gaq || [];
   })();
 
 </script>
-</body>
+
+ </body>
 </html>

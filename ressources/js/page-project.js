@@ -40,6 +40,8 @@ $(document).ready(function(){
 
 	$('.need-proj video, .play').on('click',function(){
 		
+		
+
 		$(document).scrollTo(videoproj,500);
 		$('.cine-mode').fadeIn(500);
 		$('.play').fadeOut(500);
@@ -50,9 +52,14 @@ $(document).ready(function(){
 			queue:true,
 			duration:500
 		});
+		$('video').attr('controls',true);
+		$('video')[0].play();
 	});
 
 	$('.hide-cine-mode').on('click',function(){
+
+		
+
 		$('.cine-mode').fadeOut(1500);
 		$('.play').fadeIn(1000);
 		$('.video-proj').animate({
@@ -64,6 +71,8 @@ $(document).ready(function(){
 		});
 		
 		$(document).scrollTo(infoproj,1000);
+		$('video').attr('controls',false);
+		$('video')[0].pause();
 	});
 
 })

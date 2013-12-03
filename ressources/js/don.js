@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+	
 
 	//POPUP CLOSE
 	$('.close,.finish').on('click',function(){
@@ -17,12 +18,13 @@ $(document).ready(function () {
 	
 
     $('.next').on('click',function (){
-        
+        var don = $('.input-don').val();
         if(don >= 1){
             //console.log(don);
             $('#form-donate').submit();
             $('.donate').fadeOut(500);
 			$('.payement').fadeIn(800);
+
         } else {
             alert('Please pledge at least $1!');
         }

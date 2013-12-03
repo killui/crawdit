@@ -56,18 +56,26 @@
 
 //VARIABLE
 /***color***/
-@darkgrey: #444444;
+@darkgrey: #333333;
+@darkgreyhover:#232323;
 @lightgrey: #eeeeee;
 @white: #ffffff;
 @darkgreyborder:#252525;
 @lightgreyborder:#424242;
 @turquoise:#82dbde;
+@turquoisehover:#88e5e5;
 @newred:#d54544;
+@hoverred:#e54c4c;
 
 /***hover btn***/
 @timing: 0.15s;
 @translatex:0px;
 @translatey:-53px;
+
+/*** Police ***/
+@regular: 'dinpro-regularregular';
+@bold: 'dinprobold';
+@light: 'dinprolight';
 
 //MIXIN
 .borderradius(@width){
@@ -77,6 +85,23 @@
 	-ms-border-radius:@width;
 	-o-border-radius:@width;
 }
+
+.borderradius-left(@width){
+	border-radius:@width 0 0 @width;
+	-moz-border-radius:@width 0 0 @width;
+	-webkit-border-radius:@width 0 0 @width;
+	-ms-border-radius:@width 0 0 @width;
+	-o-border-radius:@width 0 0 @width;
+}
+
+.borderradius-right(@width){
+	border-radius:0 @width @width 0;
+	-moz-border-radius:0 @width @width 0;
+	-webkit-border-radius:0 @width @width 0;
+	-ms-border-radius:0 @width @width 0;
+	-o-border-radius:0 @width @width 0;
+}
+
 
 .transition-timing{
 	transition: all @timing ease-in;
@@ -141,11 +166,50 @@
 		background: url('../images/ellipse.png')no-repeat ;
 	}
 
+	&.done {
+		width: 20px;
+		height: 21px;
+		background: url('../images/onglet-done.png')no-repeat ;
+		position: absolute;
+		bottom: -8px;
+		left: 40px;
+	}
+
+	&.delete {
+		width: 19px;
+		height: 22px;
+		background: url('../images/delete.png')no-repeat ;
+		margin: -8px 10px 0 0;
+	}
+	&.prev {
+		width: 16px;
+		height: 23px;
+		background: url('../images/arrow-l.png')no-repeat ;
+		
+	}
+	&.next {
+		width: 16px;
+		height: 23px;
+		background: url('../images/arrow-r.png')no-repeat ;
+		
+	}
+
 }
 
 
 // BUTTON
 
+.btn-background-hover{
+	position:absolute;
+	width:100%;
+	height:48px;
+	top: 48px;
+	left:0;
+	background:@white;
+	.transition-timing;
+	z-index:2;
+
+}
 
 
 
@@ -155,12 +219,14 @@
 	text-align: center;
 	color: #fff;
 	border:solid 3px @white;
-	display: block;
+	display: inline-block;
 	margin: 0 auto;
 	text-decoration: none;
 	font-size: 18px;
 	.transition(all,.3s,linear);
+	.borderradius(4px);
 }
+
 .btn-cta {
 	font-family: "ff-dagny-web-pro",sans-serif;
 	font-weight: bold;
@@ -173,22 +239,11 @@
 	margin: 0 auto;
 	text-decoration: none;
 	font-size: 18px;
-	/***thomas modif***/
 	position:relative;
 	overflow:hidden;
 	height:18px;
 	.borderradius(3px);
-
-	.btn-background-hover{
-		position:absolute;
-		width:100%;
-		height:48px;
-		top: 48px;
-		background:@white;
-		.transition-timing;
-		z-index:2;
-
-	}
+	
 
 	.link-cta{
 		width:100%;
@@ -200,7 +255,6 @@
 	&:hover{
 		.btn-background-hover {
 			top:0;
-			.transition-timing;
 		}
 
 	}
@@ -218,6 +272,8 @@
 	}
 }
 
+
+
 .btn-blue {
 	.btn-cta;
 	
@@ -233,5 +289,116 @@
 
 	&:hover {
 		color: @darkgrey;
+	}
+}
+
+.btn-create-red {
+	.btn;
+	background: @newred;
+	border-color: @newred;
+	padding: 25px 40px; 
+	font-size: 18px;
+	margin: 15px auto;
+
+
+	&:hover {
+		background: @hoverred;
+		border-color: @hoverred;
+	}
+}
+
+.btn-create-blue {
+	.btn;
+	background: @turquoise;
+	border-color: @turquoise;
+	padding: 25px 40px; 
+	font-size: 18px;
+	margin: 15px auto;
+
+
+	&:hover {
+		background: @turquoisehover;
+		border-color: @turquoisehover;
+	}
+}
+
+.btn-create-grey {
+	.btn;
+	background: @darkgrey;
+	border-color: @darkgrey;
+	padding: 25px 40px; 
+	font-size: 18px;
+	margin: 15px auto;
+
+
+	&:hover {
+		background: @darkgreyhover;
+		border-color: @darkgreyhover;
+	}
+}
+
+
+////Input 
+
+.form {
+	display: inline-block;
+	margin: 0 80px 20px 0;
+	width: 380px;
+
+	label {
+		margin: 0 0 10px;
+	}
+	input[type=text]{
+		border: solid 1px @lightgrey;
+		outline: none;
+		.borderradius(4px);
+		width: 360px;
+		padding: 15px 10px;
+		font-size: 14px;
+
+		&:focus {
+			border-color: #b9b9b9;
+		}
+
+		&.birth {
+			width: 40px;
+		}
+		&.birthdouble {
+			width: 100px;
+		}
+	}
+	textarea {
+		min-width: 850px;
+		border: solid 1px @lightgrey;
+		outline: none;
+		.borderradius(4px);
+		padding: 15px 5px 5px 10px;
+		min-height: 215px;
+		max-width: 850px;
+
+		&:focus {
+			border-color: #b9b9b9;
+		}
+	}
+}
+
+
+.checkbox {
+	input[type=checkbox]{
+		background-color: @white;
+		width: 25px;
+		height: 25px;
+		border: solid 1px @lightgrey;
+		box-shadow:none;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+	label {
+		font-size: 18px;
+		color: @newred;
+		display: inline-block;
+		vertical-align: top;
+		margin: 4px 0 0;
 	}
 }

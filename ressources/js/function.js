@@ -1,12 +1,9 @@
 $(document).ready(function () {
-
-
-
-	// Masonry
 	
+	// Masonry
 	$('.container').masonry({
 		// options
-		columnWidth: 310,
+		columnWidth: 300,
 		gutterWidth: 0,
 		isAnimated: false,
 		isFitWidth: true,
