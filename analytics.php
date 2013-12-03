@@ -1,6 +1,3 @@
-
-<?php
-
 <script type="text/javascript">
 
 var _gaq = _gaq || [];
@@ -14,5 +11,3 @@ var _gaq = _gaq || [];
   })();
 
 </script>
-
-?>

@@ -20,8 +20,10 @@ class profile extends Controller{
     
     public function getUser($user) {
         $User = new UserModel;
-        $data = $User->getUser($user);
+        //$data = $User->getUser($user);
+        $data = $User->verif_log($user);
         $this->View->profileRender('profile',$data);
+
     }
 
 }
