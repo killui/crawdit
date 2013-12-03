@@ -123,19 +123,19 @@ header {
 	z-index:
 	10; 
 	/*border-bottom:1px solid @lightgreyborder;*/
-	.signin-container{
+	.search-container{
 		/*border-top:@darkgreyborder 1px solid;*/
 		width:100%;
 		/*padding:1px;*/
-		.signin{
+		.search{
 			height:0px;
 			width:100%;
 			/*border-top:@lightgreyborder 1px solid;*/
 			overflow:hidden;
 			border-top:1px solid @lightgrey;
-			.account{
+			/*.account{
 				width:63%;
-				/*background:#ccc;*/
+				
 				
 				height:120px;
 				h4{
@@ -162,9 +162,7 @@ header {
 						vertical-align:bottom;
 						border:none;
 						cursor:pointer;
-						/*-webkit-transition:all ease-in 0.4s;
-						-moz-transition:all ease-in 0.4s;
-						transition:all ease-in 0.4s;*/
+						
 						&:hover{
 
 							
@@ -174,10 +172,10 @@ header {
 				}
 				
 				
-			}
-			.sign{
+			}*/
+	/*		.sign{
 				width:37%;
-				/*background:#ccc;*/
+				
 				
 				height:120px;
 				h4{
@@ -209,7 +207,7 @@ header {
 					padding:7px 20px;
 				}
 				
-			}
+			}*/
 		} 
 	}
 
@@ -217,9 +215,9 @@ header {
 		text-align:right;
 		.logo{
 			float:left;
-			height:33px;
-			width:180px;
+			margin-top:3px;
 			text-align:left;
+			margin-right:55px;
 
 			}
 		div{
@@ -238,7 +236,7 @@ header {
 				border-right:@lightgreyborder 1px solid;
 				}*/
 
-			&:last-child{
+			&#search-btn{
 				/*border:none;
 				border-left:@darkgreyborder 1px solid;*/
 				width:63px;
@@ -251,6 +249,34 @@ header {
 				}
 			}
 		}
+		.sign, .log{
+			display:inline-block;
+			text-decoration:none;
+			color:black;
+			font-family:'dinprobold'!important;
+			padding:10px 10px!important;
+			border:#000 2px solid;
+			.borderradius(5px);
+			width:110px;
+			text-align:center;
+			margin-top:17px;
+			vertical-align:top;
+			&.sign{
+				background:#000;
+				color:@white;
+				position:relative;
+				overflow:hidden;
+				&:hover{
+					
+					.btn-background-hover{
+						top:0;
+						color:#000!important;
+
+					}
+
+				}
+			}
+			}
 		ul{
 			display:inline-block;
 			float:left;
@@ -266,12 +292,12 @@ header {
 					background:@lightgrey;
 					}
 				a{
-					width:125px;
+					width:110px;
 					color:@darkgrey;
 					text-decoration:none;
 					font-size:1.06em;
 					font-family:'dinpro-regularregular';
-					padding: 20px 10px;
+					padding: 22px 0px;
 					margin:0;
 					display:inline-block;
 					text-align:left;

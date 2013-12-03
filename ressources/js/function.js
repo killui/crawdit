@@ -20,14 +20,14 @@ $(document).ready(function () {
 
 	/***MORE BUTTON***/
 
-	$('#connect-btn').click(function(){
+	$('#search-btn').click(function(){
 
-		var signHeight = $('.signin').height();
+		var signHeight = $('.search').height();
 
 			if(signHeight<3){
-		$('.signin').animate({'height':'90px'},'slow');
+		$('.search').animate({'height':'90px'},'slow');
 			}else{
-				$('.signin').animate({'height':'0px'},'slow');
+				$('.search').animate({'height':'0px'},'slow');
 			}
 
 	});
