@@ -49,9 +49,9 @@
 
 		<div id="finance" class="need f-left">
 
-				<a href="#" class="btn-red back_project">
+			<a href="#" class="btn-red back_project">
 				<div class="btn-background-hover"></div>
-				<div class="btn-txt"><p>Back this project</p></div>
+				<div class="link-cta"><p>Back this project</p></div>
 				
 			</a>
 
@@ -78,7 +78,11 @@
 		<div id="human" class="need f-right">
 			
 			
-			<a href="#" class="btn-blue">Apply for this project</a>
+			<a href="#" class="btn-blue">
+				<div class="btn-background-hover"></div>
+				<div class="link-cta"><p>Back this project</p></div>
+				
+			</a>
 
 			<ul id="jobs">
 				<li class="job"> Cameraman <span>0/1</span></li>
@@ -190,136 +194,9 @@
 
 			<div class="clear"></div>
 		</div>
-
-		<!-- DONATE -->
-		<div class="donate">
-			
 		
-			<div class="proj-don">
-
-				<h2>Frankenweenie</h2>
-				
-
-				<div class="progress-bar-don" >
-					<div class="avancement"></div>
-					<div class="don"></div>
-				</div>
-
-				<div class="form-don">
-					<form>
-						<label>$</label>
-						<input type="text" placeholder="1" class="input-don"/>
-					</form>
-					<div class="info-don">
-						<ul>
-							<li>1.Minimum donnation is $1.</li>
-							<li>2.Donations are based on a principle of pledge. The amount on the left will be charged only if the project reach 100% of its objectives. Otherwise, the amount of your donation won’t be debited from your account.</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="choose-perk">
-					<h4>Please select a perk :</h4>
-					
-					<form>
-						<div class="choice" for="0">
-							<span class="amount">No perk</span>
-							<span class="gift">I don't want any perk.</span>
-							<div class="radio">
-								<input type="radio" value="0" />
-								<label></label>
-							</div>
-						</div>
-
-						<div class="choice">
-							<span class="amount">$5</span>
-							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-							<div class="radio">
-								<input type="radio" value="5" />
-								<label></label>
-							</div>
-						</div>
-
-						<div class="choice">
-							<span class="amount">$20</span>
-							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-							<div class="radio">
-								<input type="radio" value="20" />
-								<label></label>
-							</div>
-						</div>
-						<div class="choice">
-							<span class="amount">$50</span>
-							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-							<div class="radio">
-								<input type="radio" value="50" />
-								<label></label>
-							</div>
-						</div>
-
-						<div class="choice">
-							<span class="amount">$100</span>
-							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-							<div class="radio">
-								<input type="radio" value="100" />
-								<label></label>
-							</div>
-						</div>
-						<div class="choice">
-							<span class="amount">$250</span>
-							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-							<div class="radio">
-								<input type="radio" value="250" />
-								<label></label>
-							</div>
-						</div>
-						<div class="choice">
-							<span class="amount">$1000</span>
-							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-							<div class="radio">
-								<input type="radio" value="1000" />
-								<label></label>
-							</div>
-						</div>
-					</form>
-
-					<a href="#" class="next">Next Step ></a>
-
-				</div>
-			</div>
-		</div>
-
-		<!-- PAYEMENT -->
-		<div class="payement">
-		
-			<p>You will be redirected to Paypal in a second...<br/>
-			<span>If it doesn't redirect you automatically, <a href="#">click here.</a></span></p>
-
-		</div>
-
-
-		<!-- CONFIRMATION -->
-
-		<div class="confirmation">
-		
-			<p>Thank you for supporting this project!</p>
-
-			<form>
-				<textarea placeholder="Message"></textarea>
-				<button type="submit">Send comment</button>
-			</form>
-
-			<div class="share share-thanks">
-				<h6>Want all of your friends to know how good of a person you are? Share the news!</h6>
-				<div class="api "><img src="ressources/images/fb.png" alt="facebook" class="small" /></div>
-				<div class="api"><img src="ressources/images/tw.png" alt="twitter" class="small"/></div>
-				<div class="api"><img src="ressources/images/rd.png" alt="reddit" class="small"/></div>
-			</div>
-
-			<a href="#" class="finish">Close</a>
-
-		</div>
-
 	</div>
+
+</div>
 
 </div>

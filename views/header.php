@@ -32,32 +32,63 @@
     </head>
     <body>
 
-        <header>
-            <div class="container-960">
+    <header>
+        <div class="container-960">
+            
 
+            <nav>
+                <div class="logo"><a href="<?php echo WEBROOT; ?>"><img src="<?php echo WEBROOT; ?>ressources/images/logo.png" alt="Crawdit"></a></div>
+                <ul>
+                    <li><a href="project-list.html"><strong>Browse</strong><br/>projects</a></li>
+                    <li><a href="fail.html"><strong>Meet</strong><br/>freelancers</a></li>
+                    <li><a href="fail.html"><strong>Start</strong><br/>your project</a></li>
+                </ul>
+    <!--            <div>
+                    <form id="search-bar">
+                        <input type="search" placeholder="Comedy, Drama ..."/>
+                    </form>
+                </div> -->
+                <div id="search-btn">
+                    
+                        <img src="ressources/images/loupe-icon.png">
+                    
+                </div>
+                <a class="log">Log in</a>
+                <a class="sign">Sign up</a>
+            
+            </nav>
 
-                <nav>
-                    <div class="logo"><a href="<?php echo WEBROOT; ?>"><img src="<?php echo WEBROOT; ?>ressources/images/logo.png" alt="Crawdit"></a></div>
-                    <ul>
-                        <li><a href="project-list.html"><strong>Browse</strong><br/>projects</a></li>
-                        <li><a href="fail.html"><strong>Meet</strong><br/>freelancers</a></li>
-                        <li><a href="fail.html"><strong>Start</strong><br/>your project</a></li>
-                    </ul>
-                    <div>
-                        <form id="search-bar" >
-                            <input type="search" placeholder="Comedy, Drama ..."/>
-                        </form>
-                    </div>
-                    <div id="connect-btn">
+        </div>
+        <div class="search-container">
 
-                        <img src="<?php echo WEBROOT; ?>ressources/images/connect.png">
-
-                    </div>
-
-                </nav>
-
+            <div class="search">
+                <div class="container-960">
+                <!-- <div class="account f-left">
+                    <h4>Already have an account?</h4>
+                    <form id="search-bar">
+                        <input type="text" placeholder="Email" required/>
+                        <input type="password" placeholder="Password" required/>
+                        <button type="submit" onclick="formSubmit()" >Log in</button>
+                    </form>
+                    
+                </div>
+                <div class="sign f-right">
+                    <h4>If not, sign up now!</h4>
+                    
+                    <a href="#" class="classic-sign">Sign in</a>
+                    <a href="#" class="fb-sign">Log in with Facebook</a>
+                    
+                </div> -->
+                </div>
             </div>
-            <div class="signin-container">
+        </div>
+        
+
+    </header>
+
+            <!-- A reutiliser le code pour la popup de connexion--->
+        
+            <!-- <div class="signin-container">
                 <?php if(!isset($_SESSION['user_name'])): ?>
                 <div class="signin">
                     <div class="container-960">
@@ -68,14 +99,14 @@
                                 <input type="password" placeholder="Password" name="password" required/>
                                 <button type="submit" onclick="formSubmit()" >Log in</button>
                             </form>
-                            <!-- <a href="#">Log in</a> -->
+                            
                         </div>
                         <div class="sign f-right">
                             <h4>If not, sign up now!</h4>
-                            <!-- <img src="ressources/images/sign-in.png" alt="sign-in"/> -->
+                            
                             <a href="#" class="classic-sign">Sign in</a>
                             <a href="#" class="fb-sign">Log in with Facebook</a>
-                            <!-- <img src="ressources/images/facebooklog.png" alt="facebook-connect"> -->
+                            
                         </div>
                     </div>
                 </div>
@@ -88,13 +119,13 @@
                         </div>
                         <div class="sign f-right">
                             <h4>If not, sign up now!</h4>
-                            <!-- <img src="ressources/images/sign-in.png" alt="sign-in"/> -->
+                            
                             <a href="#" class="classic-sign">Sign in</a>
                             <a href="#" class="fb-sign">Log in with Facebook</a>
-                            <!-- <img src="ressources/images/facebooklog.png" alt="facebook-connect"> -->
+                            
                         </div>
                     </div>
                 </div>
                 <?php endif; ?>
-            </div>
-        </header>
+            </div> -->
+        
