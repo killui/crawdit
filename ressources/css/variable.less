@@ -102,7 +102,13 @@
 	-ms-border-radius:0 @width @width 0;
 	-o-border-radius:0 @width @width 0;
 }
-
+.borderradius-bottom(@width){
+	border-radius:0 0 @width @width ;
+	-moz-border-radius:0 0 @width @width;
+	-webkit-border-radius:0 0 @width @width;
+	-ms-border-radius:0 0 @width @width ;
+	-o-border-radius:0 0 @width @width ;
+}
 
 .transition-timing{
 	transition: all @timing ease-in;
@@ -161,7 +167,14 @@
 		height: 9px;
 		background: url('../images/flèche-bas.png')no-repeat ;
 	}
-
+	&.arrow-d-dark{
+		position: absolute;
+		right: 10px;
+		top: 18px;
+		width: 19px;
+		height: 13px;
+		background: url('../images/arrow-d-dark.png')no-repeat ;
+	}
 	&.ellipse {
 		width: 21px;
 		height: 19px;
@@ -186,14 +199,12 @@
 	&.prev {
 		width: 16px;
 		height: 23px;
-		background: url('../images/arrow-l.png')no-repeat ;
-		
+		background: url('../images/arrow-l.png')no-repeat ;	
 	}
 	&.next {
 		width: 16px;
 		height: 23px;
 		background: url('../images/arrow-r.png')no-repeat ;
-		
 	}
 
 }
@@ -341,8 +352,18 @@
 .form {
 	display: inline-block;
 	margin: 0 80px 20px 0;
-	width: 380px;
+	//width: 380px;
+	position: relative;
 
+	&.border {
+		.borderradius(4px);
+		border: solid 1px @lightgrey;
+		padding: 10px 0;
+	}
+
+	&.center {
+		text-align: center;
+	}
 	label {
 		margin: 0 0 10px;
 	}
@@ -373,11 +394,76 @@
 		padding: 15px 5px 5px 10px;
 		min-height: 215px;
 		max-width: 850px;
-
+		font-size: 14px;
 		&:focus {
 			border-color: #b9b9b9;
 		}
+
+		&.medium {
+			min-height: 100px;
+			max-height: 100px;
+		}
 	}
+	.select {
+		min-width: 360px;
+		padding: 15px 10px;
+		border: solid 1px @lightgrey;
+		outline: none;
+		background: @white;
+		position: relative;
+		.borderradius(4px);
+		cursor: pointer;
+		&:hover {
+			background: @lightgrey;
+		}
+
+		span {
+			font-style: italic;
+			font-size: 14px;
+		}
+		
+	}
+	#options {
+		display: none;
+		position: absolute;
+		padding: 5px 10px;
+		width: 360px;
+		background: @lightgrey;
+		top: 71px;
+		left: 0;
+		border: solid 1px @lightgrey;
+		.borderradius-bottom(4px;)
+
+		.option {
+			text-indent: inherit;
+			padding: 2px 0;
+		}
+			
+	}
+
+	.upload {
+		width: 370px;
+		text-align: center;
+		margin: 0 5px;
+		h4 {
+			font-family: @bold;
+			font-size: 16px;
+			display: inline-block;
+		}
+		button {
+			padding: 10px 0;
+			width: 260px;
+
+		}
+		span {
+			font-size: 14px;
+			display: inline-block;
+		}
+	}
+
+	
+
+
 }
 
 

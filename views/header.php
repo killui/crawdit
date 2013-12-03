@@ -42,9 +42,9 @@
             <nav>
                 <div class="logo"><a href="<?php echo WEBROOT; ?>"><img src="<?php echo WEBROOT; ?>ressources/images/logo.png" alt="Crawdit"></a></div>
                 <ul>
-                    <li><a href="project-list.html"><strong>Browse</strong><br/>projects</a></li>
-                    <li><a href="fail.html"><strong>Meet</strong><br/>freelancers</a></li>
-                    <li><a href="fail.html"><strong>Start</strong><br/>your project</a></li>
+                    <li><a href="list-project"><strong>Browse</strong><br/>projects</a></li>
+                    <li><a href="list-freelance"><strong>Meet</strong><br/>freelancers</a></li>
+                    <li><a href="create-project.php"><strong>Start</strong><br/>your project</a></li>
                 </ul>
     <!--            <div>
                     <form id="search-bar">

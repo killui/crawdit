@@ -1,56 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8"></meta>
-	<title>Project</title>
-
-<!-- Style -->
-<link rel="stylesheet" type="text/css" href="ressources/css/reset.css">
-<link rel="stylesheet/less" type="text/css" href="ressources/css/style.less">
-
-<!-- Script -->
-<script type="text/javascript" src="//use.typekit.net/rzc8hjb.js"></script>
-<!--<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
-<script src="ressources/js/jquery-1.10.2.min.js" type="text/javascript"></script>
-<script src="ressources/js/less.js" type="text/javascript"></script>
-<script src="ressources/js/modernizr.js" type="text/javascript"></script>
-<script src="ressources/js/scrollTo.js" type="text/javascript"></script>
-<script src="ressources/js/masonry.js" type="text/javascript"></script>
-<script src="ressources/js/function.js" type="text/javascript"></script>
-<script src="ressources/js/don.js" type="text/javascript"></script>
-<script src="ressources/js/page-project.js" type="text/javascript"></script>
-<script src="ressources/js/create-project.js" type="text/javascript"></script>
-
-</head>
-<body >
-
-
-
-<header>
-	<div class="container-960">
-		<nav>
-			<div class="logo"><a href="index.html"><img src="ressources/images/logo.png" alt="Crawdit"></a></div>
-			<ul>
-				<li><a href="project-list.html"><strong>Browse</strong><br/>projects</a></li>
-				<li><a href="#"><strong>Start</strong><br/>your project</a></li>
-				<li><a href="#"><strong>Get in touch</strong><br/>with freelancer</a></li>
-			</ul>
-			<div>
-				<form id="search-bar">
-					<input type="search" placeholder="Comedy, Drama ..."/>
-				</form>
-			</div>
-			<div>
-				<a href="#" id="connect">
-					<img src="ressources/images/connect.png">
-				</a>
-			</div>
-		
-		</nav>
-	</div>
-
-</header>
-
 <section id="create">
 
 	<div class="container-960">
@@ -114,8 +61,6 @@
 	<div class="content-create">
 
 		<div class="container-960">
-
-			<!-- Guidelines -->
 			<div id="guidelines">
 				<h3>1. Make clear project</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin adipiscing elit non enim lobortis, et bibendum augue mollis. Cras vitae dapibus nisi. Nunc dictum ante in convallis rhoncus. Nullam ultrices velit nec quam pharetra, vel scelerisque sapien scelerisque. In ac nulla metus. Nulla lobortis elit non tortor accumsan, quis faucibus neque aliquam. Nullam tristique metus magna, sed commodo massa convallis sed. Vestibulum suscipit quam in feugiat cursus. Aenean at congue diam, nec cursus nisi.</p>
@@ -152,7 +97,6 @@
 				</div>
 			</div>
 
-			<!-- About you-->
 			<div id="aboutyou">
 				<form>
 					<div class="form">
@@ -173,9 +117,7 @@
 					</div>
 					
 					<div class="form">
-
 						<label>Location</label>
-						<input type="text" placeholder="New York, USA"/>
 					</div>
 
 					<div class="form">
@@ -184,67 +126,12 @@
 					</div>
 				</form>
 			</div>
-
-			<!-- Basics -->
-			<div id="basics">
-				<form>
-					
-					<div class="form">
-						<label>Project title</label>
-						<input type="text" />
-					</div>
-
-					<div class="form">
-						<label>Category</label>
-						<div class="select">
-							<span>Select one</span>
-							<i class="icon arrow-d-dark"></i>
-						</div>
-						<ul id="options">
-							<li class="option">Animation</li>
-							<li class="option">Science-fiction</li>
-							<li class="option"> Comedy</li>
-							<li class="option">Science-fiction</li>
-							<li class="option"> Comedy</li>
-						</ul>
-					</div>
-
-					<div class="form">
-						<label>Shortly describe your project</label>
-						<textarea class="medium"></textarea>
-					</div>
-
-					<div class="form border">
-						<div class="upload">
-							<h4>Project video</h4>
-							<span>(It will appear at the top of the project page)</span>
-							<button class="btn-create-grey">Upload from computer</button>
-							<br/>
-							<span>Supported formats : <i>.mp4 / .avi /.mov </i></span>
-							<br/>
-							<span>Minimum ratio must be 4:3</span>
-						</div>
-					</div>
-
-
-				</form>
-			</div>
-
-			<!-- Description -->
+			<div id="basics"></div>
 			<div id="description"></div>
-
-			<!-- Ressources -->
 			<div id="ressources"></div>
-
-			<!-- Perks -->
 			<div id="perks"></div>
-
-			<!-- Payement -->
 			<div id="payement"></div>
-
-			<!-- Validation -->
 			<div id="validation"></div>
-
 			<div id="preview"></div>
 		</div>
 	</div>
@@ -263,20 +150,3 @@
 	
 	
 </section>
-
-	
- <script type="text/javascript">
-
-var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-45578759-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</body>
-</html>
