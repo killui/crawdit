@@ -1,56 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8"></meta>
-	<title>Project</title>
-
-<!-- Style -->
-<link rel="stylesheet" type="text/css" href="ressources/css/reset.css">
-<link rel="stylesheet/less" type="text/css" href="ressources/css/style.less">
-
-<!-- Script -->
-<script src="ressources/js/jquery-1.10.2.min.js" type="text/javascript"></script>
-<script src="ressources/js/less.js" type="text/javascript"></script>
-<script src="ressources/js/modernizr.js" type="text/javascript"></script>
-<script src="ressources/js/scrollTo.js" type="text/javascript"></script>
-<script src="ressources/js/function.js" type="text/javascript"></script>
-
-</head>
-<body >
-
-
-
-<header>
-	<div class="container-960">
-		
-
-		<nav>
-			<div class="logo"><a href="index.html"><img src="ressources/images/logo.png" alt="Crawdit"></a></div>
-			<ul>
-				<li><a href="#"><strong>Browse</strong><br/>projects</a></li>
-				<li><a href="#"><strong>Start</strong><br/>your project</a></li>
-				<li><a href="#"><strong>Get in touch</strong><br/>with freelancer</a></li>
-			</ul>
-			<div>
-				<form id="search-bar">
-					<input type="search" placeholder="Comedy, Drama ..."/>
-				</form>
-			</div>
-			<div>
-				<a href="#" id="connect">
-					<img src="ressources/images/connect.png">
-				</a>
-			</div>
-		
-		</nav>
-	</div>
-
-</header>
-
-
-<div class="cine-mode">
-	
-</div>
+<div class="cine-mode"></div>
+<div class="popup-mode"></div>
 
 <section class="info-proj">
 	
@@ -77,70 +26,85 @@
 			</li>
 		</ul>
 
-	</div>
 
-</section>
-
-<section class="need-proj">
-	<div class="container-960 border">
 		
 		<div class="video-proj">
-			<video poster="ressources/images/cover.jpg">
+			<video poster="<?php echo WEBROOT;?>/ressources/images/cover.jpg">
 			
 			</video>
 
-			<img src="ressources/images/Play-Icon.png" alt="play" class="play" />
+			<a href="#" class="play">Play video</a>
 
 			<a href="#" class="hide-cine-mode">Back to normal mode</a>
 
 			
 		</div>
 		
+	</div>
+</section>
 
-		<div id="needed">
+<section id="needed">
 
-			<ul id="number-need">
+	<div class="container-960">
+
+		<div id="finance" class="need f-left">
+
+				<a href="#" class="btn-red back_project">
+				<div class="btn-background-hover"></div>
+				<div class="btn-txt"><p>Back this project</p></div>
+				
+			</a>
+
+			<ul id="number">
 				<li><span>$5678</span> Pledged</li>
 				<li><span>$10,000</span> Goal</li>
 				<li><span>751</span> Backers</li>
 				<li><span>26</span> Days left</li>
 			</ul>
 
-			<div id="human-need">
-				<h6>Human resources needed :</h6>
-				<ul>
-					<li>- <span>1 cadreur </span><span>0/1</span></li>
-					<li>- <span>1 cadreur </span><span>1/1</span></li>
-					<li>- <span>1 cadreur </span><span>2/4</span></li>
-					<li>- <span>1 cadreur </span><span>0/1</span></li>
-				</ul>
-
-				<ul>
-					<li>- <span>1 cadreur </span><span>0/1</span></li>
-					<li>- <span>1 cadreur </span><span>1/1</span></li>
-					<li>- <span>1 cadreur </span><span>2/4</span></li>
-					<li>- <span>1 cadreur </span><span>0/1</span></li>
-				</ul>
-
-			</div>
-
 			
-			
+
 		</div>
-		<div id="cta-proj">
-			<a href="don" class="btn-red">Back this project</a>
-			<a href="#" class="btn-disabled">Apply for this project</a>
+			
+		<div id="human" class="need f-right">
+			
+			
+			<a href="#" class="btn-blue">Apply for this project</a>
+
+			<ul id="jobs">
+				<li class="job"> Cameraman <span>0/1</span></li>
+				<li class="job"> Scenarist <span><i class="icon check"></i></span></li>
+				<li class="job"> Actor <span>1/3</span></li>
+				<li class="job"> Musician <span><i class="icon check"></i></span></li>
+				<li class="job"> Screenwriter <span>0/1</span></li>
+				<li class="job"> Editor <span><i class="icon check"></i></span></li>
+				<li class="job"> Animator <span><i class="icon check"></i></span></li>
+				<li class="job"> Unit Manager <span>0/1</span></li>
+				<li class="job"> Coordinator <span>0/1</span></li>
+				<li class="job"> Animator <span><i class="icon check"></i></span></li>
+				<li class="job"> Unit Manager <span>0/1</span></li>
+				<li class="job"> Coordinator <span>0/1</span></li>
+			</ul>
+			<span class="more-jobs"><i class="icon arrow-down"></i></span>
+			
 		</div>
 
 		<div class="clear"></div>
-
-	</div>
 
 </section>
 
 <section class="desc-proj container-960">
 
+	<div id="onglets">
+		<a href="#" class="onglet active"> Project description </a>
+		<a href="#" class="onglet"> Comments (53)</a>
+		<a href="#" class="onglet"> Updates </a>
+	</div>
 	
+	<div id="perks" class="f-right">
+		<h3>Perks</h3>
+	</div>
+
 	<article>
 
 		<div class="update">
@@ -155,71 +119,54 @@
 
 		<p>Quisque malesuada elementum scelerisque. Aliquam consectetur erat vitae quam tristique, eget pretium magna dapibus. Suspendisse dapibus risus eget risus venenatis, a suscipit orci malesuada. Curabitur orci erat, tristique eu lorem non, ullamcorper consectetur orci. Etiam nec facilisis nisl. Integer id eros fermentum, vestibulum orci ac, dapibus dui. Duis sodales consequat massa, quis feugiat purus. Vivamus condimentum dolor sed urna fringilla, quis fringilla diam lacinia. Praesent quam ante, tincidunt at ligula eu, dictum mattis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut convallis sit amet sapien id vestibulum. Curabitur justo nunc, adipiscing sed euismod vel, sagittis sed leo. Nulla consectetur vestibulum elit. Suspendisse mattis ut enim sed tincidunt. In suscipit tristique nibh at sagittis. Suspendisse venenatis, est sit amet elementum condimentum, lectus urna placerat nunc, id auctor augue risus ac lacus.</p>
 
-		<img src="ressources/images/cover.jpg" alt="image">
+		<img src="<?php echo WEBROOT;?>/ressources/images/cover.jpg" alt="image">
 
 		<h6>More about Frankenweenie</h6>
 
 		<p>Maecenas sit amet bibendum nulla, eget convallis metus. Sed malesuada adipiscing ipsum nec viverra. Curabitur luctus eros sed iaculis egestas. Proin et dui sagittis, fringilla libero at, varius metus. Donec justo dolor, tristique non rutrum ut, adipiscing id sapien. Curabitur fringilla sit amet mauris ut pretium. Sed consectetur metus sit amet nulla porta, sed faucibus mauris laoreet. Praesent auctor lacus augue, sed auctor ante hendrerit sit amet. Sed sit amet nisl ornare, adipiscing augue sit amet, tincidunt lorem. Morbi fermentum, massa sit amet consectetur venenatis, elit odio suscipit justo, quis aliquam metus arcu eget purus. Donec condimentum purus elementum tellus mollis fermentum a nec libero. Quisque nec varius turpis. Vestibulum porttitor fringilla est, eget vestibulum dolor fringilla nec.</p>
 
 		<div class="share">
-			<div class="api "><img src="ressources/images/fb.png" alt="facebook" class="small" /></div>
-			<div class="api"><img src="ressources/images/tw.png" alt="twitter" class="small"/></div>
-			<div class="api"><img src="ressources/images/rd.png" alt="reddit" class="small"/></div>
+			<h5>Share the love about this project :</h5>
+			<div class="api "><img src="<?php echo WEBROOT;?>/ressources/images/fb.png" alt="facebook" class="small" /></div>
+			<div class="api"><img src="<?php echo WEBROOT;?>/ressources/images/tw.png" alt="twitter" class="small"/></div>
+			<div class="api"><img src="<?php echo WEBROOT;?>/ressources/images/rd.png" alt="reddit" class="small"/></div>
 		</div>
 
 	</article>
 
 	<aside >
-		<h3>Perks</h3>
+		
 		<form class="pre-select">
 			
-			<div class="perks">
-				<span>$5</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio" />
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$5</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
-			<div class="perks">
-				<span>$20</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio"/>
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$20</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
-			<div class="perks">
-				<span>$50</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio"/>
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$50</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
-			<div class="perks">
-				<span>$100</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio"/>
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$100</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
-			<div class="perks">
-				<span>$250</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio"/>
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$250</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
-			<div class="perks">
-				<span>$1000</span>
-				<span>Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
-				<div class="radio">
-					<input type="radio"/>
-					<label></label>
-				</div>
+			<div class="perk">
+				<span class="amount">$1000</span>
+				<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+				
 			</div>
 
 		</form>
@@ -230,95 +177,161 @@
 
 </section>
 
-
-
-<footer>
+<!-- POPUP-->
+<div class="popups">
 	
-	<div class="container-960">
-	
-		<ul>
-			<h6>Genres</h6>
-			<li><a href="#">Action</a></li>
-			<li><a href="#">Adventure</a></li>
-			<li><a href="#">Drama</a></li>
-			<li><a href="#">Comedy</a></li>
-			<li><a href="#">Animation</a></li>
-			<li><a href="#">Science-fiction</a></li>
-			<li><a href="#">Horror</a></li>
-			<li><a href="#">Nature</a></li>
-		</ul>
+	<div class="popup">
 
-		<ul>
-			<h6>Crawd.it</h6>
-			<li><a href="#">What's Crawd.it?</a></li>
-			<li><a href="#">How does it work?</a></li>
-			<li><a href="#">Who are we?</a></li>
-			<li><a href="#">Press</a></li>
-			
-		</ul>
-
-		<ul>
-			<h6>Help</h6>
-			<li><a href="#">F.A.Q</a></li>
-			<li><a href="#">Support</a></li>
-			<li><a href="#">Contact</a></li>
-			<li><a href="#">Ressources</a></li>
-			
-		</ul>
-
-		<ul>
-			<h6>Note</h6>
-			
-		</ul>
-
-
-	</div>
-
-</footer>
-
-	<!-- <div class="proj-list">
-
-		<video poster="images/cover.jpg" id="test">
-
-			<source src="video/frankenweenie-ft.mp4" type="video/mp4"></source>
-			<source src="video/frankenweenie-ft.theora.ogv" type="video/ogg"></source>
-
-		</video>
-		<div class="proj-list-desc">
-
-			<h3 class="proj-list-title"><a href="#">Frankenweenie</a></h3>
-			<span class="proj-list-tag">Animation - Horor - Halloween</span>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<a href="#"> Read More...</a></p>
-
-			<div class="proj-list-stats">
-
-				<div class="funded proj-list-stats-details"><span>60%</span><span>funded</span></div>
-				<div class="pledge proj-list-stats-details"><span>6024â‚¬</span><span>pledge</span></div>
-				<div class="freelance proj-list-stats-details"><span>2</span><span>freelance</span></div>
-				<div class="togo proj-list-stats-details"><span>36 days</span><span>to go</span></div>
-				
-				<div class="progress-bar">
-					<div class="progress-bar-value"></div>
-				</div>
-
+		<!-- STEP -->
+		<div class="steps">
+			<span class="trait-step"></span>
+			<div class="step active">
+				<span><i class="icon ellipse"></i></span>
+				<p >Amount & Perks</p>
+			</div>
+			<div class="step unactive">
+				<span><i class="icon ellipse"></i></span>
+				<p>Payement Information</p>
+			</div>
+			<div class="step unactive">
+				<span><i class="icon ellipse"></i></span>
+				<p>Thank you!</p>
 			</div>
 
+			<div class="close f-right"><i class="icon close"></i></div>
+
+			<div class="clear"></div>
 		</div>
-		<img src="images/proj-ombre.png">
+
+		<!-- DONATE -->
+		<div class="donate">
+			
+		
+			<div class="proj-don">
+
+				<h2>Frankenweenie</h2>
+				
+
+				<div class="progress-bar-don" >
+					<div class="avancement"></div>
+					<div class="don"></div>
+				</div>
+
+				<div class="form-don">
+					<form>
+						<label>$</label>
+						<input type="text" placeholder="1" class="input-don"/>
+					</form>
+					<div class="info-don">
+						<ul>
+							<li>1.Minimum donnation is $1.</li>
+							<li>2.Donations are based on a principle of pledge. The amount on the left will be charged only if the project reach 100% of its objectives. Otherwise, the amount of your donation won’t be debited from your account.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="choose-perk">
+					<h4>Please select a perk :</h4>
+					
+					<form>
+						<div class="choice" for="0">
+							<span class="amount">No perk</span>
+							<span class="gift">I don't want any perk.</span>
+							<div class="radio">
+								<input type="radio" value="0" />
+								<label></label>
+							</div>
+						</div>
+
+						<div class="choice">
+							<span class="amount">$5</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" value="5" />
+								<label></label>
+							</div>
+						</div>
+
+						<div class="choice">
+							<span class="amount">$20</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" value="20" />
+								<label></label>
+							</div>
+						</div>
+						<div class="choice">
+							<span class="amount">$50</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" value="50" />
+								<label></label>
+							</div>
+						</div>
+
+						<div class="choice">
+							<span class="amount">$100</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" value="100" />
+								<label></label>
+							</div>
+						</div>
+						<div class="choice">
+							<span class="amount">$250</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" value="250" />
+								<label></label>
+							</div>
+						</div>
+						<div class="choice">
+							<span class="amount">$1000</span>
+							<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+							<div class="radio">
+								<input type="radio" value="1000" />
+								<label></label>
+							</div>
+						</div>
+					</form>
+
+					<a href="#" class="next">Next Step ></a>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- PAYEMENT -->
+		<div class="payement">
+		
+			<p>You will be redirected to Paypal in a second...<br/>
+			<span>If it doesn't redirect you automatically, <a href="#">click here.</a></span></p>
+
+		</div>
+
+
+		<!-- CONFIRMATION -->
+
+		<div class="confirmation">
+		
+			<p>Thank you for supporting this project!</p>
+
+			<form>
+				<textarea placeholder="Message"></textarea>
+				<button type="submit">Send comment</button>
+			</form>
+
+			<div class="share share-thanks">
+				<h6>Want all of your friends to know how good of a person you are? Share the news!</h6>
+				<div class="api "><img src="ressources/images/fb.png" alt="facebook" class="small" /></div>
+				<div class="api"><img src="ressources/images/tw.png" alt="twitter" class="small"/></div>
+				<div class="api"><img src="ressources/images/rd.png" alt="reddit" class="small"/></div>
+			</div>
+
+			<a href="#" class="finish">Close</a>
+
+		</div>
+
 	</div>
- -->
- <script type="text/javascript">
 
-var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-45578759-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</body>
-</html>
+</div>

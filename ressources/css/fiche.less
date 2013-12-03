@@ -1,0 +1,335 @@
+.list{
+	width:300px;
+	height:394px;
+}
+/***PROJECT FICHES***/
+.fiche {
+	width: 300px;
+	height: 394px;
+}
+.proj-featured, .proj-new {
+
+	background-color:@lightgrey;
+	padding-bottom:50px;
+	h2{
+		color:@newred;
+		font-size:32px;
+		font-family:'dinpromedium';
+		padding:25px 0;
+		text-align:center;
+		padding-top:45px;
+	}
+
+	.proj-featured-list {
+		overflow: hidden;
+		position:relative;
+		width:300px;
+		display: inline-block;
+
+
+
+		video {
+			display:block;
+			vertical-align:top;
+			width: 100%;
+			margin:0;
+			padding:0px;
+			position: relative;
+		}
+
+		.proj-list-desc{
+			display:block;
+			width:299px;
+			line-height:1;
+			padding: 0px;
+			background:#f7f7f7;
+			height:200px;
+			position:relative;
+
+			.proj-list-cta{
+				width:100%;
+				height:100%;
+				background:rgba(207,38,37,0.9);
+				position:absolute;
+				z-index:9999;
+				display:none;
+				text-align:center;
+				a{
+					.btn;
+					padding:20px 30px;
+					display:inline-block;
+					.borderradius(7px);
+					line-height:1.5;
+					text-transform:uppercase;
+					margin-top:60px;
+					-webkit-transition:all ease-in-out 0.2s;
+					-moz-transition:all ease-in-out 0.2s;
+					transition:all ease-in-out 0.2s;
+					&:hover{
+
+						background:#fff;
+						color:@newred;
+					}
+				}
+			}
+
+			h3{
+				margin:0!important;
+				padding-top:10px!important;
+				margin-left:5px!important;
+
+			}
+			.proj-list-title { 
+				padding-top:0;
+				font-size:1em;
+				line-height:0.6;
+				color:@newred;
+				font-weight:bold;
+				position: relative;
+
+				a {	
+					color:@newred;
+					text-decoration:none;
+
+					&:hover {
+						text-decoration:underline;
+					}
+				}
+			}
+
+			p {
+				font-size:0.75em;
+				line-height:1.1;
+				margin: 5px 0 15px;
+				margin-right:5px;
+				margin-top:5px;
+				margin-left:5px;
+				
+
+				a {
+					font-size:0.75em;
+					line-height:1;
+					text-decoration:none;
+					color:@newred;
+					font-size:0.9em;
+
+					&:hover {
+						text-decoration:underline;
+					}
+				}
+			}
+
+			.proj-list-stats {
+				background:#f7f7f7;
+				position:absolute;
+				bottom:10px;
+				margin-left:5px;
+
+				.proj-list-stats-details {
+					text-transform:uppercase;
+					display:inline-block;
+					border-right:#ddd solid 1px;
+					padding: 0 7px;
+					font-size:0.7em;
+				}
+				&.togo{border-right:none;}
+				&.funded{padding-left:0;}
+
+				.progress-bar{
+					height:20px;
+					width:288px;
+					border:#ccc solid 1px;
+					position:relative;
+					margin-top:3px;
+					background-color:#ddd;
+
+					&.big {
+						width: 100%;
+					}
+				}
+				.progress-bar-value{
+					position:absolute;height:100%;width:50%;
+					background:@newred;	
+				}
+
+				span {
+					display:block;color:#333;
+
+					&:first-child{
+
+						font-weight:bold;
+						color:@newred;
+						font-size:1.4em;
+						margin-bottom:5px;
+						text-transform:lowercase;
+						margin:0;
+					}
+				}
+			}
+
+			.proj-list-tag{
+				font-size:0.6em;
+				color:@newred;
+				margin-left:5px;
+				line-height:0;
+			}
+		}
+
+	}
+
+
+}
+.proj-new{
+		height:0px;
+		overflow:hidden;
+		padding-bottom:0px;
+	}
+
+
+
+
+
+
+
+/*** FREELANCE FICHE***/
+
+.freelance-featured, .freelance-new {
+
+	background-color:@white;
+	padding-bottom:50px;
+	h2{
+		color:@turquoise;
+		font-size:32px;
+		font-family:'dinpromedium';
+		padding:25px 0;
+		text-align:center;
+		padding-top:80px;
+	}
+
+	.freelance-featured-list {
+		overflow: hidden;
+		position:relative;
+		width:300px;
+		display: inline-block;
+
+
+
+		.freelance-pics {
+			display:block;
+			width: 100%;
+			margin:0;
+			padding:0px;
+			overflow:hidden;
+			height:162px;
+			position:relative;
+			img{
+				position:absolute;
+				top:0;
+			}
+		}
+
+		.freelance-list-desc{
+			display:block;
+			width:299px;
+			line-height:1;
+			padding: 0px;
+			background:#f7f7f7;
+			height:200px;
+			position:relative;
+
+			.freelance-list-cta{
+				width:100%;
+				height:100%;
+				background:rgba(130,219,222,0.9);
+				position:absolute;
+				z-index:9999;
+				display:none;
+				text-align:center;
+				a{
+					.btn;
+					padding:20px 30px;
+					display:inline-block;
+					.borderradius(7px);
+					line-height:1.5;
+					text-transform:uppercase;
+					margin-top:60px;
+					-webkit-transition:all ease-in-out 0.2s;
+					-moz-transition:all ease-in-out 0.2s;
+					transition:all ease-in-out 0.2s;
+					&:hover{
+
+						background:#fff;
+						color:@turquoise;
+					}
+				}
+			}
+
+			h3{
+				margin:0!important;
+				padding-top:10px!important;
+				margin-left:5px!important;
+
+			}
+			.freelance-list-title { 
+				padding-top:0;
+				margin-bottom:0;
+				font-size:1em;
+				margin-top:3px;
+				line-height:0.8;
+				margin-top:10px;
+				color:@turquoise;
+				margin-bottom:2px;
+				font-weight:bold;
+
+				a {	
+					color:@turquoise;
+					text-decoration:none;
+
+					&:hover {
+						text-decoration:underline;
+					}
+				}
+			}
+
+			ul{
+				padding-left:5px;
+				padding-right:5px;
+				margin-top:10px;
+				li{
+					font-size:0.85em;
+					margin-bottom:10px;
+					color:#909090;
+					span{
+						color:@turquoise;
+						font-weight:bold;
+					}
+				}
+			}
+
+			.freelance-list-tag{
+				font-size:0.7em;
+				color:@white;
+				margin-left:5px;
+				padding:5px 15px;
+				background:@turquoise;
+				.borderradius(5px);
+				display:inline-block;
+				margin-top:12px;
+			}
+		}
+
+	}
+
+	
+
+
+
+}
+.freelance-new{
+		height:0px;
+		overflow:hidden;
+		padding-bottom:0;
+	}
+
+
+

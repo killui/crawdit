@@ -1,0 +1,311 @@
+/*** PAGE PROJECT ***/
+
+
+.cine-mode {
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 12;
+	display: none;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+
+
+.info-proj {
+	text-align: center;
+	padding: 20px  0  0;
+	background:#eeeeee;
+	h2 {
+		color: @newred;
+		text-transform: uppercase;
+		font-size: 2.25em;
+		font-weight: bold;
+		//font-family: 'dinprobold';
+
+	}
+
+	ul {
+		margin: 1em 0 0;
+
+		li {
+			display: inline-block;
+			width: 230px;
+			font-size: 18px;
+
+			span {
+				color: @newred;
+				display: block;
+
+				//font-family: 'dinprolight';
+				
+
+				&.first {
+					font-weight: bold;
+					//font-family: 'dinprobold';
+
+				}
+			}
+		}
+	}
+
+	.video-proj {
+		margin: 20px 0 0;
+		height: 300px;
+		z-index: 30;
+		position: relative;
+		overflow: hidden;
+
+		video {
+			width: 100%;
+			height: 525px;
+			z-index: 10;
+		}
+
+		.play {
+			background: rgba(0, 0, 0, 0.4);
+			position: absolute;
+			top: 125px;
+			left:380px;
+			width: 200px;
+			z-index: 20;
+			padding: 15px 48px;
+			.borderradius(3px);
+			border: solid 3px @white;
+			width: auto;
+			font-size: 20px;
+			color:@white;
+			&:hover {
+				background: rgba(0, 0, 0, 0.8);
+				
+			}
+		}
+
+		
+		a {
+			width: 225px;
+			.btn-cta;
+			.borderradius(3px);
+			z-index: 15;
+			position: relative;
+			margin: 10px auto 0;
+
+			&.hide-cine-mode {
+
+				&:hover {
+					color: @darkgrey;
+				}
+			}
+
+		}
+	}
+	
+}
+
+#needed {
+	margin: 10px 0 0;
+
+	.need {
+		display: inline-block;
+		width: 470px;
+		height: 180px;
+		vertical-align: top;
+		.borderradius(5px);
+		padding: 10px 0;
+		text-align: center;
+
+	}
+
+	#finance {
+		background: @newred;
+
+		#number {
+			li {
+				font-size: 20px;
+				color: @white;
+				display: inline-block;
+				width: 200px;
+				margin: 15px 0;
+				span {
+					font-size: 30px;
+					font-weight: bolder;
+				}
+			}
+		}
+	}
+
+	#human {
+		background: @turquoise;
+
+		#jobs {
+			margin: 10px 0 0;
+			height: 100px;
+			overflow: hidden;
+			li {
+				background: @white;
+				.borderradius(3px);
+				color: @turquoise;
+				display: inline-block;
+				font-size: 14px;
+				font-weight: bold;
+				padding: 5px 5px;
+				margin: 5px 4px;
+				width: 130px;
+				text-align: left;
+
+				span {
+					float: right;
+					text-align: right;
+					font-weight: lighter;
+				}
+			}
+		}
+
+		.more-jobs {
+			display: block;
+			cursor: pointer;
+		}
+	}
+}
+
+.desc-proj {
+
+	#onglets {
+		margin: 20px 0;
+		padding: 0 0 20px 0;
+		border-bottom:solid 1px @lightgrey;
+		width: 610px;
+		display: inline-block;
+
+		.onglet {
+
+			.borderradius(3px);
+			font-size: 16px;
+			color: #b9b9b9;
+			padding: 5px 0;
+			margin: 0 10px 0 0;
+			text-align: center;
+			width: 170px;
+			background: #eeeeee;
+			display: inline-block;
+			text-decoration: none;
+
+			&.active {
+				background: #333333;
+				color: @white
+			}
+			&:hover {
+				background: #333333;
+				color: @white;
+			}
+		}
+	}
+
+
+	#perks {
+		width: 300px;
+		text-align: left;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 30px;
+		border-bottom:solid 1px @lightgrey;
+		margin: 16px 0 0;
+		padding: 0 0 20px;
+	}
+
+	article {
+		width: 610px;
+		display: inline-block;
+		float: left;
+		overflow:hidden;
+		//padding: 0 20px 0 0;
+		.update {
+			color: @newred;
+			padding: 1em 0;
+
+			strong {
+				font-weight: bold;
+			}
+		}
+
+		h6 {
+			color: @darkgrey;
+			font-family: 'dinprobold';
+
+
+			margin: 1em 0;
+			font-weight: bold;
+		}
+		p {
+			font-size: 0.875em;
+			text-align: justify;
+			line-height: 1.2em;
+		}
+
+		img {
+			width: 100%;
+			margin: .625em 0;
+
+			&.small {
+				width: 45px;
+			}
+		}
+
+		
+	}
+
+	aside {
+		width: 300px;
+		display: inline-block;
+		vertical-align: top;
+		float: right;
+
+		h3 {
+			color: @darkgrey;
+			padding: .865em 0;
+			text-align: center;
+			//font-family: 'dinprobold';
+			font-size: 1.75em;
+			border-bottom:solid 1px #e8e8e8;
+			display: block; 
+		}
+		
+		form {
+
+			.perk {
+				display: block;
+				cursor: pointer;
+				padding: 20px 0;
+				background: @lightgrey;
+				margin:0 0 10px;
+				.borderradius(3px);
+				span {
+					display: inline-block;
+					vertical-align: middle;
+
+					&.amount {
+						width: 75px;
+						text-align: center;
+						font-size: 24px;
+						font-weight: bold;
+					}
+
+					&.gift {
+						width: 210px;
+					}
+				}
+
+				&:hover {
+					
+					background: @newred;
+					color: @white;
+				}
+
+			}
+
+		}
+	}	
+}

@@ -1,0 +1,309 @@
+/*** POPUP PAGE PROJET ***/
+.popup-mode {
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 40;
+	display: none;
+	top: 0;
+	left: 0;
+	text-align: center;
+
+}
+.popups {
+	z-index: 100;
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	.popup {
+		background: @white;
+		.borderradius(5px);
+		width: 960px;
+		margin: 75px auto 0;
+		padding: 15px 0;
+
+		
+	
+
+		.steps {
+			display:block;
+			border-bottom:solid 1px #eeeeee;
+			text-align: center;
+			padding: 0 0 15px;
+			position: relative;
+
+			.trait-step {
+				width: 600px;
+				position: absolute;
+				z-index: 1px;
+				height: 3px;
+				background: #eeeeee;
+				//background: url('../images/trait-step.png')repeat;
+				left: 160px;
+				top: 9px;
+			}
+
+			.step {
+				color: @lightgrey;
+				display: inline-block;
+				position: relative;
+				z-index: 2;
+				width: 300px;
+				//margin: 0 20px;
+
+				&.active {
+					color: @newred;
+					font-weight: bold;
+				}
+			}
+
+			.close {
+				cursor: pointer;
+				opacity: .8;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+		}
+
+		/** POPUP DONATE ***/
+		.donate {
+			//display: none;
+		
+			.proj-don {
+				padding: 0 50px;
+				background: @white;
+				h2 {
+					color: @newred;
+					text-transform: uppercase;
+					font-size: 2.25em;
+					text-align: center;
+					margin: 20px 0;
+				}
+
+				a {
+					margin: 30px 0;
+				}
+
+				.progress-bar-don {
+					width:838px;
+					height: 34px;
+					background: #eee;
+					border: solid 1px #cacaca;
+					overflow: hidden;
+					position: relative;
+					.borderradius(2px);
+					.avancement {
+						height: 34px;
+						background: @newred;
+						display: inline-block;
+						z-index: 4;
+						position: absolute;
+					}
+					.don {
+						display: inline-block;
+						background: @darkgrey;
+						height: 34px;
+						display: inline-block;
+						z-index: 2;
+						position: absolute;
+					}
+
+				}
+
+				.form-don {
+					margin: 30px 0 0;
+					
+					form {
+						width: 360px;
+						//background: #eee;
+						//border: solid 1 #cacaca;
+						font-size: 60px;
+						//font-family: 'HelveticaNeueBold';
+						display: inline-block;
+
+						label {
+							display: inline-block;
+							width: 40px;
+							color: @newred;
+						}
+						input {
+							display: inline-block;
+							vertical-align: middle;
+							padding: 15px 0;
+							font-size: 60px;
+							background: none;
+							outline: none;
+							border: solid 1px #cacaca;
+							text-align: center;
+							width: 298px;
+							.borderradius(5px);
+						}
+					}
+					.info-don {
+						margin-left: 10px;
+						display: inline-block;
+						vertical-align: top;
+						width: 470px;
+						ul {
+							li {
+
+								font-size: 14px;
+								margin: 0 0 20px;
+								list-style-type: none;
+							}
+						}
+					}
+				}
+
+				.choose-perk {
+					text-align: center;
+					h4 {
+						font-size: 30px;
+						margin: 30px 0 20px ;
+						vertical-align: middle;
+						color: @newred;
+						text-align: left;
+					}
+						.choice {
+							display: inline-block;
+							width: 300px;
+							cursor: pointer;
+							padding: 20px 0;
+							background: @lightgrey;
+							margin:10px;
+							.borderradius(3px);
+
+							span {
+								display: inline-block;
+								vertical-align: middle;
+
+								&.amount {
+									width: 75px;
+									text-align: center;
+									font-size: 24px;
+									font-weight: bold;
+								}
+
+								&.gift {
+									width: 210px;
+									text-align: left;
+								}
+							}
+
+							&:hover {	
+								background: @newred;
+								color: @white;
+							}
+
+							&.checked {
+								background: @newred;
+								color: @white;
+							}
+
+							.radio {
+								display: none;
+							}			
+						}
+					
+
+					.next {
+						.btn;
+						.borderradius(8px);
+						background: @darkgrey;
+						width: 150px;
+						padding: 20px 10px;
+
+						&:hover {
+							background: #000;
+						}
+					}
+				}
+			}
+		}
+
+		/*** POPUP PAYEMENT ***/
+
+		.payement {
+			display: none;
+			height: 795px;
+			padding: 20px 0;
+
+			p {
+				font-size: 36px;
+				text-align: center;
+				color: @newred;
+				margin: 150px 0 0;
+
+				span {
+					font-size: 24px;
+					color: #000;
+
+					a {
+						color: @newred;
+						
+					}
+				}
+			}
+		}
+
+
+		/*** POPUP CONFIRMATION ***/
+
+		.confirmation {
+			display: none;
+			padding: 0 50px;
+			p {
+				ont-size: 36px;
+				text-align: center;
+				color: @newred;
+				margin: 20px 0;
+			}
+
+			form {
+				width: 350px;
+				text-align: center;
+				display: inline-block;
+				vertical-align: top;
+				textarea {
+					.borderradius(5px);
+					padding: 15px 10px;
+					background: @lightgrey;
+					border: none;
+					display: block;
+					min-width: 350px;
+					max-width: 350px;
+					min-height: 175px;
+					max-height:175px;
+				}
+
+				button {
+					display: block;
+					.btn;
+					.borderradius(5px);
+					padding: 15px 0;
+					width: 374px;
+					background: @newred;
+					cursor: pointer;
+				}
+			}
+
+			.finish {
+				width: 170px;
+				padding: 20px 0;
+				font-size: 24px;
+				margin:20px 0;
+				.btn;
+				.borderradius(5px);
+				background: @darkgrey;
+			}
+		}
+	}
+}

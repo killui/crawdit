@@ -2,10 +2,12 @@
 
 class error extends Controller{
 
-    function __construct() {
+    function __construct($app, $url, $page) {
         parent::__construct();
         
-        $this->View->render('error');
+        $page = "index";
+        
+        $this->View->render('error', $page);
     }
 
 }
