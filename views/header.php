@@ -13,8 +13,11 @@
         <script src="<?php echo WEBROOT; ?>ressources/js/less.js" type="text/javascript"></script>
         <script src="<?php echo WEBROOT; ?>ressources/js/modernizr.js" type="text/javascript"></script>
         <script src="<?php echo WEBROOT; ?>ressources/js/scrollTo.js" type="text/javascript"></script>
+        <script src="<?php echo WEBROOT; ?>ressources/js/masonry.js" type="text/javascript"></script>
         <script src="<?php echo WEBROOT; ?>ressources/js/function.js" type="text/javascript"></script>
-
+        <script src="<?php echo WEBROOT; ?>ressources/js/page-project.js" type="text/javascript"></script>
+        <script src="<?php echo WEBROOT; ?>ressources/js/don.js" type="text/javascript"></script>
+        
         <!-- Google Analytics Content Experiment code -
         <script>function utmx_section(){}function utmx(){}(function(){var
         k='78870240-0',d=document,l=d.location,c=d.cookie;
