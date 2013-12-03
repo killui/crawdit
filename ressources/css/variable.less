@@ -62,6 +62,10 @@
 @lightgreyborder:#424242;
 @turquoise:#82dbde;
 @newred:#d54544;
+@timing: 0.15s;
+@x:0px;
+@y:-53px;
+
 
 
 //
@@ -71,6 +75,21 @@
 	-webkit-border-radius:@width;
 	-ms-border-radius:@width;
 	-o-border-radius:@width;
+}
+
+.transition-timing{
+	transition: all @timing ease-in;
+	-moz-transition: all @timing ease-in;
+    -o-transition: all @timing ease-in;
+    transition: all @timing ease-in;
+}
+
+.translate{
+	-webkit-transform: translate(@x,@y);
+    -moz-transform: translate(@x,@y);
+    -o-transform: translate(@x,@y);
+    -ms-transform: translate(@x,@y);
+    transform: translate(@x,@y);
 }
 
 
@@ -93,6 +112,7 @@
 	}
 
 }
+
 
 
 // BUTTON
@@ -119,6 +139,13 @@
 	margin: 0 auto;
 	text-decoration: none;
 	font-size: 18px;
+	position:relative;
+	overflow:hidden;
+	height:18px;
+
+	&:hover div.btn-background-hover {
+		.translate;
+	}
 }
 
 .btn-red {
@@ -126,7 +153,6 @@
 	.borderradius(3px);
 	
 	&:hover {
-		background: @white;
 		color: @newred;
 	}
 }
@@ -136,7 +162,24 @@
 	.borderradius(3px);
 	
 	&:hover {
-		background: @white;
 		color: @turquoise;
 	}
 }
+
+.btn-background-hover{
+	position:absolute;
+	width: 100%;
+	height: 48px;
+	margin-top:38px;
+	background-color: @white;
+	.transition-timing;
+    z-index:2;
+}
+
+.btn-txt{
+	width:100%;
+	position:absolute;
+	z-index:3;
+}
+
+
