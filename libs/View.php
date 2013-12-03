@@ -22,7 +22,7 @@ class View {
         require 'views/'.$view.'.php';
     }
     
-    public function projectRender($view, $title, $page, $project, $perks, $ressources, $genres){
+    public function projectRender($view, $title, $page, $projects, $perks, $ressources, $genres){
         require 'views/header.php';
         require 'views/'.$view.'.php';
         require 'views/footer.php';

@@ -18,7 +18,7 @@ class ProjectModel extends Model {
         $query->bindParam(':id', $id);
 
         $query->execute();
-        $data = $query->fetchAll();
+        $data = $query->fetch(PDO::FETCH_OBJ);
         return $data;
     }
     
@@ -33,7 +33,7 @@ class ProjectModel extends Model {
         $query->bindParam(':id', $id);
 
         $query->execute();
-        $genres = $query->fetchAll();
+        $genres = $query->fetch(PDO::FETCH_OBJ);
         return $genres;
     }
     
