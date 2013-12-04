@@ -109,6 +109,13 @@
 	-ms-border-radius:0 0 @width @width ;
 	-o-border-radius:0 0 @width @width ;
 }
+.borderradius-top(@width){
+	border-radius:@width @width 0 0 ;
+	-moz-border-radius:@width @width 0 0 ;
+	-webkit-border-radius: @width @width 0 0 ;
+	-ms-border-radius:@width @width 0 0 ;
+	-o-border-radius:@width @width 0 0 ;
+}
 
 .transition-timing{
 	transition: all @timing ease-in;
@@ -206,6 +213,12 @@
 		height: 23px;
 		background: url('../images/arrow-r.png')no-repeat ;
 	}
+	&.add {
+		width: 25px;
+		height: 25px;
+		background: url('../images/add.png')no-repeat ;
+		margin: -4px 15px 0 0;
+	}
 
 }
 
@@ -250,12 +263,11 @@
 	padding: 15px 0;
 	display: block;
 	width: 372px;
-	margin: 0 auto;
 	text-decoration: none;
 	font-size: 18px;
 	position:relative;
 	overflow:hidden;
-	height:18px;
+	
 	.borderradius(3px);
 	
 
@@ -274,8 +286,9 @@
 }
 
 .btn-red {
+	height:18px;
 	.btn-cta;
-	
+	margin: 0 auto;
 	&:hover {
 		color: @newred;
 	}
@@ -284,10 +297,22 @@
 
 
 .btn-blue {
+	height:18px;
 	.btn-cta;
-	
+	margin: 0 auto;
 	&:hover {
 		color: @turquoise;
+	}
+	
+}
+.btn-white-blue {
+	.btn-cta;
+	background: @white;
+	color: @turquoise;
+	padding: 10px 0;
+	&:hover {
+		background: @lightgrey;
+		border-color:@lightgrey; 
 	}
 	
 }
@@ -367,7 +392,31 @@
 	label {
 		margin: 0 0 10px;
 	}
+
+	h5 {
+		font-family: @bold;
+		font-size: 18px;
+		margin: 0 0 5px;
+	}
+	&.small {
+		width: 90px;
+		label {
+			display: inline-block;
+		}
+		i {
+			display: inline-block;
+		}
+		input[type=text]{
+			width: 70px!important;
+			padding: 10px;
+			outline: none;
+			box-shadow: none;
+		}
+		
+	}
+
 	input[type=text]{
+		z-index: 2;
 		border: solid 1px @lightgrey;
 		outline: none;
 		.borderradius(4px);
@@ -386,7 +435,58 @@
 			width: 100px;
 		}
 	}
+	.styles {
+		background: @lightgrey;
+		.borderradius-top(4px);
+		position: relative;
+		margin: 10px 0 0;
+		padding: 5px 0;
+
+		.style {
+			width: 80px;
+			background: @darkgrey;
+			color: @white;
+			.borderradius(4px);
+			padding: 5px 0;
+			text-align: center;
+			display: inline-block;
+			cursor: pointer;
+			margin: 0 0 0 10px;
+			&.bold {
+				font-family: @bold;
+			}
+			&.italic {
+				font-style: italic;
+			}
+			&.link {
+				text-decoration: underline;
+			}
+			&.image {
+				background: @newred;
+			}
+			&.video {
+				background: @turquoise;
+			}
+
+			&:hover {
+
+				background: @darkgreyhover;
+
+				&.image {
+					background: @hoverred;
+				}
+				&.video {
+					background: @turquoisehover;
+				}
+			}
+
+			
+		}
+	}
 	textarea {
+		position: relative;
+		margin: 10px 0 0;
+		z-index: 2;
 		min-width: 850px;
 		border: solid 1px @lightgrey;
 		outline: none;
@@ -403,8 +503,14 @@
 			min-height: 100px;
 			max-height: 100px;
 		}
+
+		&.display {
+			.borderradius-bottom(4px);
+			margin: 0;
+		}
 	}
 	.select {
+		z-index: 4;
 		min-width: 360px;
 		padding: 15px 10px;
 		border: solid 1px @lightgrey;
@@ -414,32 +520,42 @@
 		.borderradius(4px);
 		cursor: pointer;
 		&:hover {
-			background: @lightgrey;
+			background: #f6f6f6;
+			border-color: #b9b9b9;
 		}
 
 		span {
 			font-style: italic;
 			font-size: 14px;
 		}
+
+		#options {
+			display: none;
+			position: absolute;
+			padding: 0;
+			width: 380px;
+			background: #f6f6f6;
+			top: 44px;
+			left: -1px;
+			border: solid 1px #b9b9b9;
+			
+			.borderradius-bottom(4px);
+
+			.option {
+				text-indent: 10px;
+				padding: 15px 0;
+				
+				&:hover {
+					background: @lightgrey;
+				}
+				
+
+			}
+				
+		}
 		
 	}
-	#options {
-		display: none;
-		position: absolute;
-		padding: 5px 10px;
-		width: 360px;
-		background: @lightgrey;
-		top: 71px;
-		left: 0;
-		border: solid 1px @lightgrey;
-		.borderradius-bottom(4px;)
-
-		.option {
-			text-indent: inherit;
-			padding: 2px 0;
-		}
-			
-	}
+	
 
 	.upload {
 		width: 370px;
@@ -486,4 +602,36 @@
 		margin: 4px 0 0;
 	}
 }
+
+///// PERK
+.perk {
+				display: block;
+				cursor: pointer;
+				padding: 20px 0;
+				background: @lightgrey;
+				margin:0 0 10px;
+				.borderradius(3px);
+				span {
+					display: inline-block;
+					vertical-align: middle;
+
+					&.amount {
+						width: 75px;
+						text-align: center;
+						font-size: 24px;
+						font-weight: bold;
+					}
+
+					&.gift {
+						width: 210px;
+					}
+				}
+
+				&:hover {
+					
+					background: @newred;
+					color: @white;
+				}
+
+			}
 

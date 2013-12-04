@@ -199,14 +199,15 @@
 						<div class="select">
 							<span>Select one</span>
 							<i class="icon arrow-d-dark"></i>
+
+							<ul id="options">
+								<li class="option">Animation</li>
+								<li class="option">Science-fiction</li>
+								<li class="option"> Comedy</li>
+								<li class="option">Science-fiction</li>
+								<li class="option"> Comedy</li>
+							</ul>
 						</div>
-						<ul id="options">
-							<li class="option">Animation</li>
-							<li class="option">Science-fiction</li>
-							<li class="option"> Comedy</li>
-							<li class="option">Science-fiction</li>
-							<li class="option"> Comedy</li>
-						</ul>
 					</div>
 
 					<div class="form">
@@ -231,13 +232,96 @@
 			</div>
 
 			<!-- Description -->
-			<div id="description"></div>
+			<div id="description">
+				
+				<div class="form">
+					<h5>Project Description</h5>
+					<span>Find the words to describe your project in the best possible way. We are sure your idea is amazing, make us feel it.</span>
+					<div class="styles">
+						<span class="style bold">Bold</span>
+						<span class="style italic">Italic</span>
+						<span class="style title">TITLE</span>
+						<span class="style link">Link</span>
+						<span class="style unlink">Unlink</span>
+						<span class="style image">Image</span>
+						<span class="style video">Video</span>
+					</div>
+					<textarea class="display"></textarea>
+				</div>
+
+				<div class="form">
+					<h5>Project Storyline</h5>
+					<span>Find the words to describe your project in the best possible way. We are sure your idea is amazing, make us feel it.</span>
+					<div class="styles">
+						<span class="style bold">Bold</span>
+						<span class="style italic">Italic</span>
+						<span class="style title">TITLE</span>
+						<span class="style link">Link</span>
+						<span class="style unlink">Unlink</span>
+						<span class="style image">Image</span>
+						<span class="style video">Video</span>
+					</div>
+					<textarea class="display"></textarea>
+				</div>
+
+			</div>
 
 			<!-- Ressources -->
-			<div id="ressources"></div>
+			<div id="ressources">
+				
+				<form class="create-need create-finance f-left">
+
+					<h5>Financial ressources</h5>
+
+					<div class="form">
+						<label>Funding goal</label>
+
+						<div class="fund">
+							<span>$</span>
+							<input type="text" />
+						</div>
+					</div>
+					<div class="form no-margin">
+						<p>Funding duration</p>
+						<i>(number of days)</i>
+					</div>
+					
+					
+					<div class="form small">
+						<input type="text" />
+					</div>
+				</form>
+
+				<form class="create-need create-human f-right">
+					<h5>Human ressources</h5>
+
+					<div class="form jobs">
+						<label>Jobs</label>
+						<i>(ex: actor, screnarist...)</i>
+						<input type="text"/>
+					</div>
+					<div class="form small">
+						<label>Number</label>
+						<br/>
+						<input type="text"/>
+					</div>
+					<button class="btn-white-blue"><i class="icon add"></i>Add a job</button>
+				</form>
+
+				<div class="clear"></div>
+			</div>
 
 			<!-- Perks -->
-			<div id="perks"></div>
+			<div id="create-perks">
+				<h5>Project perks</h5>
+				<span>How do you want to reward your backers? Type the minimum amount and the reward associated. Add as many as you want.</span>
+				<br/>
+				<div class="perk">
+					<span class="amount">$5</span>
+					<span class="gift">Donec justo dolor, tristique non rutrum ut, adipiscing id sapien.</span>
+					
+				</div>
+			</div>
 
 			<!-- Payement -->
 			<div id="payement"></div>

@@ -52,6 +52,7 @@
 		background: @lightgrey;
 		width: 100%;
 		text-align: right;
+		z-index: 10;
 
 		a {
 			padding: 10px 15px;
@@ -136,6 +137,116 @@
 		#aboutyou {
 			display: none;
 		}
-		
+
+		#basics {
+			display: none;
+		}
+
+		#description {
+			display: none;
+		}
+		#ressources {
+			display: none;
+			.create-need {
+				width: 420px;
+				display: inline-block;
+				vertical-align: top;
+				height: 230px;
+				.borderradius(4px);
+				padding: 20px ;
+				color: @white;
+
+				&.create-finance {
+					background: @newred;
+
+				}
+				&.create-human {
+					background: @turquoise;
+				}
+				h5 {
+					font-size: 30px;
+					font-family: @bold;
+					margin: 0 0 20px;
+					text-align: center;
+				}
+
+				.form {
+					margin: 0 0 20px ;
+					width: 380px;
+					label {
+						font-family: @bold;
+						font-size: 18px;
+					}
+					p{
+						display: inline-block;
+						font-family: @bold;
+						font-size: 18px;
+						margin: 0;
+					}
+					&.no-margin {
+						margin: 0 0 10px;
+
+					}
+					.btn-white-blue {
+						width: 260px;
+					}
+					.fund {
+						background: @white;
+						color:@newred;
+						padding: 10px;
+						width: 360px;
+						font-size: 14px;
+						.borderradius(4px);
+
+
+						span {
+							display: inline-block;
+							width: 10px;
+							font-family: @bold;
+						}
+						input[type=text]{
+							background: none;
+							outline: none;
+							border: none;
+							display: inline-block;
+							padding: 0;
+							width: 340px;
+							font-family: @bold;
+							color: @newred;
+
+							&:focus {
+								border: none;
+							}
+						}
+					}
+					&.small {
+						width: 90px;
+						i {
+							font-size: 14px;
+							font-style: italic;
+						}
+						input[type=text]{
+							color: @newred;
+						}
+					}
+					&.jobs {
+						display: inline-block;
+						width: 250px;
+						margin-right: 20px;
+						label, i {
+							display: inline-block;
+						}
+						input[type=text]{
+							width: 230px;
+							padding: 10px;
+						}
+					}
+				}
+				
+			}
+		}
+		#create-perks {
+
+		}
 	}
 }

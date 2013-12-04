@@ -7,7 +7,7 @@ class create-project extends Controller{
         
         $title = "Crawd It Project";
         
-        $this->View->render('project', $page, $title);
+        $this->View->render('create-project', $page, $title);
     }
 
 }
